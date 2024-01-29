@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      height: {
+        heightWithoutNavbar: "calc(100vh - 80px)",
+      },
     },
   },
   plugins: [],
