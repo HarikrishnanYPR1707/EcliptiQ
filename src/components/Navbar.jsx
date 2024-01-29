@@ -8,7 +8,7 @@ const Navbar = () => {
           {/* <img src="" alt="" /> */}
           logo
         </div>
-        <button className="absolute right-6 rounded-xl bg-green-600 px-5 py-2 font-extrabold active:bg-green-700">
+        <button className="absolute right-6 rounded-xl bg-green-600 px-5 py-2 font-bold active:bg-green-700">
           SignUp
         </button>
       </div>
