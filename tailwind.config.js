@@ -10,6 +10,9 @@ export default {
       height: {
         heightWithoutNavbar: "calc(100vh - 80px)",
       },
+      colors: {
+        lightBlack: "#3C3633",
+      },
     },
   },
   plugins: [],
