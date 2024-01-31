@@ -13,120 +13,130 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Template = () => {
   return (
-    <section className="h-full border border-red-500">
+    <section className="h-full">
       {/* Banking  */}
-      <div className="flex flex-col items-center justify-center border border-white text-white">
+      <div className="justify-cente flex flex-col items-center text-white">
+        {/* header  */}
         <Link
           to="/template/banking"
-          className="flex w-full items-center justify-start border border-white text-2xl font-black uppercase"
+          className="justify-star flex w-full items-center text-2xl font-black uppercase lg:text-4xl"
         >
           <span>Banking</span>
           <MdOutlineKeyboardDoubleArrowRight />
           <MdOutlineKeyboardDoubleArrowRight className="-ml-[10px]" />
         </Link>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:flex-nowrap md:justify-start">
+        {/* bottom section */}
+        <div className="mt-4 flex w-full flex-wrap items-center justify-center gap-4 lg:justify-start lg:gap-7">
           {/* Entry Level  */}
-          <div className="relative w-[200px] overflow-hidden rounded-lg">
+          <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
             <Link to="/">
               <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Entry Level Resume</h2>
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Entry Level Resume</h2>
               </div>
             </Link>
           </div>
           {/* junior Level  */}
           <Link to="">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Junior Level Resume</h2>
+            <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+              <img src={BankingMidLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Junior Level Resume</h2>
               </div>
             </div>
           </Link>
           {/* Senior Level  */}
           <Link to="">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Senior Level Resume</h2>
+            <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+              <img src={BankingSeniorLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Senior Level Resume</h2>
               </div>
             </div>
           </Link>
         </div>
       </div>
-      {/* Data Analyst  */}
-      <div className="flex flex-col items-center justify-center border border-white text-white">
-        <Link
-          to="/template/banking"
-          className="flex w-full items-center justify-start border border-white text-2xl font-black uppercase"
-        >
-          <span>Banking</span>
-          <MdOutlineKeyboardDoubleArrowRight />
-        </Link>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:flex-nowrap md:justify-start">
-          {/* Entry Level  */}
-          <Link to="/">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Entry Level Resume</h2>
-              </div>
-            </div>
-          </Link>
-          {/* junior Level  */}
-          <Link to="">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Junior Level Resume</h2>
-              </div>
-            </div>
-          </Link>
-          {/* Senior Level  */}
-          <Link to="">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Senior Level Resume</h2>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </div>
+
       {/* Software Development Engineer  */}
-      <div className="flex flex-col items-center justify-center border border-white text-white">
+      <div className="justify-cente mt-6 flex flex-col items-center text-white">
+        {/* header  */}
         <Link
           to="/template/banking"
-          className="flex w-full items-center justify-start border border-white text-2xl font-black uppercase"
+          className="justify-star flex w-full items-center text-2xl font-black uppercase lg:text-4xl"
         >
-          <span>Banking</span>
+          <span>Software Development Engineer</span>
           <MdOutlineKeyboardDoubleArrowRight />
+          <MdOutlineKeyboardDoubleArrowRight className="-ml-[10px]" />
         </Link>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:flex-nowrap md:justify-start">
+        {/* bottom section */}
+        <div className="mt-4 flex w-full flex-wrap items-center justify-center gap-4 lg:justify-start lg:gap-7">
           {/* Entry Level  */}
-          <Link to="/">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Entry Level Resume</h2>
+          <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+            <Link to="/">
+              <img src={SDEEntryLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Entry Level Resume</h2>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
           {/* junior Level  */}
           <Link to="">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Junior Level Resume</h2>
+            <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+              <img src={SDEMidLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Junior Level Resume</h2>
               </div>
             </div>
           </Link>
           {/* Senior Level  */}
           <Link to="">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
-              <img src={BankingEntryLevel} alt="" />
-              <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
-                <h2 className="font-black">Senior Level Resume</h2>
+            <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+              <img src={SDESeniorLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Senior Level Resume</h2>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Software Development Engineer  */}
+      <div className="justify-cente mt-6 flex flex-col items-center text-white">
+        {/* header  */}
+        <Link
+          to="/template/banking"
+          className="justify-star flex w-full items-center text-2xl font-black uppercase lg:text-4xl"
+        >
+          <span>Data Analyst</span>
+          <MdOutlineKeyboardDoubleArrowRight />
+          <MdOutlineKeyboardDoubleArrowRight className="-ml-[10px]" />
+        </Link>
+        {/* bottom section */}
+        <div className="mt-4 flex w-full flex-wrap items-center justify-center gap-4 lg:justify-start lg:gap-7">
+          {/* Entry Level  */}
+          <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+            <Link to="/">
+              <img src={DAEntryLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Entry Level Resume</h2>
+              </div>
+            </Link>
+          </div>
+          {/* junior Level  */}
+          <Link to="">
+            <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+              <img src={DAMidLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Junior Level Resume</h2>
+              </div>
+            </div>
+          </Link>
+          {/* Senior Level  */}
+          <Link to="">
+            <div className="relative w-[200px] overflow-hidden rounded-lg lg:w-[300px]">
+              <img src={DASeniorLevel} alt="" />
+              <div className="absolute inset-0 grid place-content-center bg-black bg-opacity-70">
+                <h2 className="font-black lg:text-2xl">Senior Level Resume</h2>
               </div>
             </div>
           </Link>
