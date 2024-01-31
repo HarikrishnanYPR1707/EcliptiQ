@@ -15,6 +15,17 @@ const Navbar = () => {
     }
   };
 
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      setUser(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  console.log(user);
+
   return (
     <div className="flex h-[80px] items-center justify-center border px-6 py-2">
       <div className="relative flex h-full w-full max-w-[1550px] items-center justify-start border  border-purple-500 lg:justify-center">
@@ -22,14 +33,25 @@ const Navbar = () => {
           {/* <img src="" alt="" /> */}
           EcliptiQ
         </div>
-        <Button
-          className="absolute right-0"
-          onClick={() => {
-            handleSignIn();
-          }}
-        >
-          SignUp
-        </Button>
+        {user ? (
+          <Button
+            className="absolute right-0 bg-red-600"
+            onClick={() => {
+              logout();
+            }}
+          >
+            LogOut
+          </Button>
+        ) : (
+          <Button
+            className="absolute right-0"
+            onClick={() => {
+              handleSignIn();
+            }}
+          >
+            SignUp
+          </Button>
+        )}
       </div>
     </div>
   );
