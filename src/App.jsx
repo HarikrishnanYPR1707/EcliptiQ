@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Router>
         <Navbar />
-        <div className="stopper:px-0 mx-auto h-heightWithoutNavbar w-full max-w-[1550px] border border-purple-500 px-6">
+        <div className="stopper:px-0 stopper:border-white mx-auto w-full max-w-[1550px] border border-purple-500 px-6 sm:border-red-500 md:border-blue-500 lg:border-green-500 xl:border-amber-500 2xl:border-rose-500">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
