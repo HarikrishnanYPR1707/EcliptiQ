@@ -10,6 +10,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/templates" element={<div>Template Page</div>} />
+          {/* <Route path="/templates/Banking" element={<div>Template Page</div>} /> */}
+          {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
         </Routes>
       </Router>
     </>
