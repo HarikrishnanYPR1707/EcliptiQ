@@ -1,4 +1,4 @@
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import { auth, googleProvider } from "../config/Firebase";
 import { Button } from "./ui/button";
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
         {user ? (
           <Button
-            className="absolute right-0 bg-red-600"
+            className="absolute right-0 bg-red-600 hover:bg-red-700"
             onClick={() => {
               logout();
             }}
