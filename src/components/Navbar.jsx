@@ -2,7 +2,7 @@ import { signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import { auth, googleProvider } from "../config/Firebase";
 import { Button } from "./ui/button";
-import { ModeToggle } from "./ui/ModeToggle";
+// import { ModeToggle } from "./ui/ModeToggle";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
