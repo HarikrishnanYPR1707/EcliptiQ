@@ -28,7 +28,7 @@ const Navbar = () => {
   console.log(user);
 
   return (
-    <div className="flex h-[80px] items-center justify-center border px-6 py-2">
+    <div className="flex h-[80px] items-center justify-center border-b px-6 py-2">
       <div className="relative flex h-full w-full max-w-[1550px] items-center justify-start lg:justify-center">
         <div className="flex h-full items-center justify-center font-honk text-3xl font-black uppercase lg:text-5xl">
           {/* <img src="" alt="" /> */}
