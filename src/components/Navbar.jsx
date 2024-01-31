@@ -1,7 +1,20 @@
-import React, { useState } from "react";
+import { signInWithPopup } from "firebase/auth";
+import { useState } from "react";
+import { auth, googleProvider } from "../config/Firebase";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
+  const [user, setUser] = useState(false);
+
+  const handleSignIn = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      setUser(true);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="flex h-[80px] items-center justify-center border px-6 py-2">
       <div className="relative flex h-full w-full max-w-[1550px] items-center justify-start border  border-purple-500 lg:justify-center">
@@ -9,10 +22,14 @@ const Navbar = () => {
           {/* <img src="" alt="" /> */}
           EcliptiQ
         </div>
-        {/* <button className="absolute right-0 rounded-xl bg-green-600 px-5 py-2 font-bold active:bg-green-700">
+        <Button
+          className="absolute right-0"
+          onClick={() => {
+            handleSignIn();
+          }}
+        >
           SignUp
-        </button> */}
-        <Button className="absolute right-0">SignUp</Button>
+        </Button>
       </div>
     </div>
   );
