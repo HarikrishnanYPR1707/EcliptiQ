@@ -11,7 +11,7 @@ export default {
         heightWithoutNavbar: "calc(100vh - 80px)",
       },
       colors: {
-        lightBlack: "#3C3633",
+        lightBlack: "#0f0f0f",
       },
     },
   },
