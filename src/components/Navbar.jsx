@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="flex h-[80px] items-center justify-center border px-6 py-2">
       <div className="relative flex h-full w-full max-w-[1550px] items-center  justify-start border border-red-500 lg:justify-center">
-        <div className="font-honk flex h-full items-center justify-center border border-purple-500 text-3xl font-black uppercase lg:text-5xl">
+        <div className="font-honk flex h-full items-center justify-center text-3xl font-black uppercase lg:text-5xl">
           {/* <img src="" alt="" /> */}
           EcliptiQ
         </div>
