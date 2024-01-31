@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
         {user ? (
           <Button
-            className="absolute right-16 bg-red-600 hover:bg-red-700"
+            className="absolute right-0 bg-red-600 hover:bg-red-700"
             onClick={() => {
               logout();
             }}
@@ -45,7 +45,7 @@ const Navbar = () => {
           </Button>
         ) : (
           <Button
-            className="absolute right-16"
+            className="absolute right-0"
             onClick={() => {
               handleSignIn();
             }}
@@ -53,9 +53,9 @@ const Navbar = () => {
             SignUp
           </Button>
         )}
-        <div className="absolute right-0">
+        {/* <div className="absolute right-0">
           <ModeToggle className="" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
