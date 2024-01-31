@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        honk: ["Honk", "system-ui"],
       },
       height: {
         heightWithoutNavbar: "calc(100vh - 80px)",
