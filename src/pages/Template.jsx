@@ -22,17 +22,18 @@ const Template = () => {
         >
           <span>Banking</span>
           <MdOutlineKeyboardDoubleArrowRight />
+          <MdOutlineKeyboardDoubleArrowRight className="-ml-[10px]" />
         </Link>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:flex-nowrap md:justify-start">
           {/* Entry Level  */}
-          <Link to="/">
-            <div className="relative w-[200px] overflow-hidden rounded-lg">
+          <div className="relative w-[200px] overflow-hidden rounded-lg">
+            <Link to="/">
               <img src={BankingEntryLevel} alt="" />
               <div className="absolute inset-0 grid place-content-center border border-green-400 bg-black bg-opacity-70">
                 <h2 className="font-black">Entry Level Resume</h2>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
           {/* junior Level  */}
           <Link to="">
             <div className="relative w-[200px] overflow-hidden rounded-lg">
@@ -53,7 +54,7 @@ const Template = () => {
           </Link>
         </div>
       </div>
-      {/* Banking  */}
+      {/* Data Analyst  */}
       <div className="flex flex-col items-center justify-center border border-white text-white">
         <Link
           to="/template/banking"
@@ -92,7 +93,7 @@ const Template = () => {
           </Link>
         </div>
       </div>
-      {/* Banking  */}
+      {/* Software Development Engineer  */}
       <div className="flex flex-col items-center justify-center border border-white text-white">
         <Link
           to="/template/banking"
