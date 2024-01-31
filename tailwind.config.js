@@ -18,6 +18,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        // My Config
+        lightBlack: "#0f0f0f",
+
+        // ShadCN UI - Config
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
