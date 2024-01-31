@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        stopper: "1549px",
+      },
       colors: {
         // My Config
         lightBlack: "#0f0f0f",

@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Router>
         <Navbar />
-        <div className="mx-auto h-heightWithoutNavbar w-full max-w-[1550px] border border-purple-500">
+        <div className="stopper:px-0 mx-auto h-heightWithoutNavbar w-full max-w-[1550px] border border-purple-500 px-6">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
