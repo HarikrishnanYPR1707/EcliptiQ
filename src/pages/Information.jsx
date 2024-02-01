@@ -1,6 +1,4 @@
 import { InputWithLabel } from "@/components/ui/InputWithLabel";
-import { Input } from "@/components/ui/input";
-import React from "react";
 
 const Information = () => {
   return (
