@@ -1,3 +1,4 @@
+import { DatePicker } from "@/components/ui/DatePicker";
 import { InputWithLabel } from "@/components/ui/InputWithLabel";
 
 const Information = () => {
