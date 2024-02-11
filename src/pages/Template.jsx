@@ -1,4 +1,4 @@
-import React from "react";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import BankingEntryLevel from "../assets/Banking/Banking-Entry-Level.jpeg";
 import BankingMidLevel from "../assets/Banking/Banking-Mid-Career.jpeg";
@@ -9,7 +9,6 @@ import DASeniorLevel from "../assets/DataAnalyst/Data-Analyst-Senior-Level.png";
 import SDEEntryLevel from "../assets/SDE/SDE-Entry-Level.png";
 import SDEMidLevel from "../assets/SDE/SDE-Junior-Level.png";
 import SDESeniorLevel from "../assets/SDE/SDE-Senior-Level.png";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Template = () => {
   return (
