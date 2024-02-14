@@ -2,8 +2,50 @@ import { DatePicker } from "@/components/ui/DatePicker";
 import { InputWithLabel } from "@/components/ui/InputWithLabel";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 const Information = () => {
+  const [sampleState, setSampleState] = useState({
+    basicInformation: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      website: "",
+      github: "",
+      linkedin: "",
+      twitter: "",
+    },
+    educationDetails: {
+      college: "",
+      collegeStartDate: "",
+      collegeEndDate: "",
+      courseName: "",
+      schoolName: "",
+      schoolStartDate: "",
+      schoolEndDate: "",
+      schoolScore: "",
+    },
+    experience: {
+      experience1Organisation: "",
+      experience1Position: "",
+      experience1Duration: "",
+      experience1Description: "",
+      experience2Organisation: "",
+      experience2Position: "",
+      experience2Duration: "",
+      experience2Description: "",
+    },
+    skills: {
+      skill1: "",
+      skill2: "",
+      skill3: "",
+      skill4: "",
+      skill5: "",
+      skill6: "",
+    },
+  });
+  console.log(sampleState);
   return (
     <div className="mx-auto flex max-w-[900px] items-start justify-center py-4">
       <div className="w-full ">
@@ -11,8 +53,8 @@ const Information = () => {
           Enter your information
         </h1>
         {/* Basic Information  */}
-        <div className="mt-4  ">
-          <h1 className="text-center text-xl font-black text-gray-300 underline lg:text-3xl">
+        <div className="mt-10">
+          <h1 className="text-center text-xl font-black text-gray-300 underline lg:text-3xl ">
             Basic Information
           </h1>
           <div className="mt-4 grid grid-cols-1 justify-items-center gap-4  sm:grid-cols-2">
@@ -21,48 +63,72 @@ const Information = () => {
               type="text"
               placeholder="Enter your First Name..."
               required
+              sectionName="basicInformation"
+              inputName="firstName"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="Last Name"
               type="text"
               placeholder="Enter your Last Name..."
               required
+              sectionName="basicInformation"
+              inputName="lastName"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="Email"
               type="text"
               placeholder="Enter your Email..."
               required
+              sectionName="basicInformation"
+              inputName="email"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="Phone Number"
               type="text"
               placeholder="Enter your Phone Number..."
+              sectionName="basicInformation"
+              inputName="phoneNumber"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="Website"
               type="url"
               placeholder="Enter your Website..."
+              sectionName="basicInformation"
+              inputName="website"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="Github"
               type="url"
               placeholder="Enter your Github..."
+              sectionName="basicInformation"
+              inputName="github"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="LinkedIn"
               type="url"
               placeholder="Enter your LinkedIn..."
+              sectionName="basicInformation"
+              inputName="linkedin"
+              setSampleState={setSampleState}
             />
             <InputWithLabel
               label="Twitter"
               type="url"
               placeholder="Enter your Twitter..."
+              sectionName="basicInformation"
+              inputName="twitter"
+              setSampleState={setSampleState}
             />
           </div>
         </div>
         {/* Education Details */}
-        <div className="mt-4  ">
+        <div className="mt-10">
           <h1 className="text-center text-xl font-black text-gray-300 underline lg:text-3xl">
             Education Details
           </h1>
@@ -73,9 +139,23 @@ const Information = () => {
                 label="College/University"
                 type="url"
                 placeholder="Enter your College/University..."
+                sectionName="educationDetails"
+                inputName="college"
+                setSampleState={setSampleState}
               />
-              <DatePicker text="Start Date" />
-              <DatePicker text="End Date" />
+              {/* <DatePicker text="Start Date" />
+              <DatePicker text="End Date" /> */}
+              <div className="w-full max-w-[340px]">
+                <DatePicker
+                  text="Start Date"
+                  sectionName="educationDetails"
+                  inputName="college"
+                  setSampleState={setSampleState}
+                />
+              </div>
+              <div className="w-full max-w-[340px]">
+                <DatePicker text="End Date" />
+              </div>
               <InputWithLabel
                 label="Course Name"
                 type="url"
@@ -90,8 +170,14 @@ const Information = () => {
                 type="url"
                 placeholder="Enter your School Name..."
               />
-              <DatePicker text="Start Date" />
-              <DatePicker text="End Date" />
+              {/* <DatePicker text="Start Date" />
+              <DatePicker text="End Date" /> */}
+              <div className="w-full max-w-[340px]">
+                <DatePicker text="Start Date" />
+              </div>
+              <div className="w-full max-w-[340px]">
+                <DatePicker text="End Date" />
+              </div>
               <InputWithLabel
                 label="Score"
                 type="url"
@@ -101,7 +187,7 @@ const Information = () => {
           </div>
         </div>
         {/* Experience Section */}
-        <div className="mt-4  ">
+        <div className="mt-10">
           <h1 className="text-center text-xl font-black text-gray-300 underline lg:text-3xl">
             Experience Section
           </h1>
@@ -169,7 +255,7 @@ const Information = () => {
           </div>
         </div>
         {/* Skills */}
-        <div className="mt-4  ">
+        <div className="mt-10">
           <h1 className="text-center text-xl font-black text-gray-300 underline lg:text-3xl">
             Skills
           </h1>

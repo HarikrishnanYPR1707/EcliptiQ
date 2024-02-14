@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Router>
         <Navbar />
-        <div className="mx-auto w-full max-w-[1550px] border border-purple-500 px-6 sm:border-red-500 md:border-blue-500 lg:border-green-500 xl:border-amber-500 2xl:border-rose-500 stopper:border-white stopper:px-0">
+        <div className="mx-auto w-full max-w-[1550px] stopper:px-0">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
@@ -25,3 +25,5 @@ const App = () => {
 };
 
 export default App;
+
+// border border-purple-500 px-6 sm:border-red-500 md:border-blue-500 lg:border-green-500 xl:border-amber-500 2xl:border-rose-500 stopper:border-white
