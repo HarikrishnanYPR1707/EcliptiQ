@@ -26,7 +26,8 @@ const Navbar = () => {
     }
   };
 
-  console.log(user);
+  // console.log(user);
+  console.log(auth?.currentUser?.photoURL);
 
   return (
     <div className="flex h-[80px] items-center justify-center border-b px-6 py-2">
@@ -39,14 +40,19 @@ const Navbar = () => {
           EcliptiQ
         </Link>
         {user ? (
-          <Button
-            className="absolute right-0 bg-red-600 hover:bg-red-700"
-            onClick={() => {
-              logout();
-            }}
-          >
-            LogOut
-          </Button>
+          <div className="absolute right-0 flex items-center justify-center gap-5">
+            <div className="w-[50px] overflow-hidden rounded-full border-2 border-purple-500">
+              <img src={auth?.currentUser?.photoURL} alt="" />
+            </div>
+            <Button
+              className=" bg-red-600 hover:bg-red-700"
+              onClick={() => {
+                logout();
+              }}
+            >
+              LogOut
+            </Button>
+          </div>
         ) : (
           <Button
             className="absolute right-0"
