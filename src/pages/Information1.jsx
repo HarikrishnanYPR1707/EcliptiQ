@@ -3,9 +3,9 @@ import { FaInfoCircle } from "react-icons/fa";
 
 const Information1 = () => {
   return (
-    <div className="flex flex-col items-center justify-center border border-white">
+    <div className="flex flex-col items-center justify-center border-white">
       {/* image container */}
-      <div className="bg-banner relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-cover bg-center">
+      <div className="relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-banner bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
         <p className="relative text-center text-3xl font-bold uppercase text-white">
           Enter your information for resume
