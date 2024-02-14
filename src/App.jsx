@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Template from "./pages/Template";
 import Information from "./pages/Information";
+import Information1 from "./pages/Information1";
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
-            <Route path="/information" element={<Information />} />
+            {/* <Route path="/information" element={<Information />} /> */}
+            <Route path="/information" element={<Information1 />} />
             {/* <Route path="/templates/Banking" element={<div>Template Page</div>} /> */}
             {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
           </Routes>
