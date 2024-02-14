@@ -27,7 +27,9 @@ module.exports = {
       backgroundImage: {
         banner: "url(./img/banner.jpg)",
       },
-
+      transitionTimingFunction: {
+        inOutQuint: "cubic-bezier(0.83, 0, 0.17, 1)",
+      },
       screens: {
         stopper: "1549px",
       },
