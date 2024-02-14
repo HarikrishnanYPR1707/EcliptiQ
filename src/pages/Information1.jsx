@@ -1,4 +1,3 @@
-import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
 const Information1 = () => {
@@ -18,9 +17,9 @@ const Information1 = () => {
         <div className="w-full rounded-xl bg-[#040a1a] p-6">
           {/* header */}
           <div className="font-bold">
-            <h1 className="flex w-fit items-center justify-center gap-2 text-xl">
+            <h1 className="group flex w-fit items-center justify-center gap-2 text-xl">
               <FaInfoCircle className="text-purple-500" />
-              <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500">
+              <span className="before:ease-inOutQuint relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 group-hover:before:w-full">
                 Basic Information
               </span>
             </h1>
@@ -84,9 +83,9 @@ const Information1 = () => {
         <div className="w-full rounded-xl bg-[#040a1a] p-6">
           {/* header */}
           <div className="py-2 font-bold">
-            <h1 className="flex w-fit items-center justify-center gap-2 text-xl">
+            <h1 className="group flex w-fit items-center justify-center gap-2 text-xl">
               <FaInfoCircle className="text-purple-500" />
-              <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500">
+              <span className="before:ease-inOutQuint relative  before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 group-hover:before:w-full">
                 Professional Summary
               </span>
             </h1>
