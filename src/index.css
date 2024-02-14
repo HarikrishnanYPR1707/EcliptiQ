@@ -60,3 +60,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #2f2f2f;
+  /* background: #061029; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5d5d5d;
+}
