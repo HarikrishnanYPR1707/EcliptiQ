@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 
 const Information1 = () => {
+  // const [testData, setTestData] = useState("");
   return (
     <div className="flex flex-col items-center justify-center border-white">
       {/* image container */}
@@ -14,12 +16,12 @@ const Information1 = () => {
       <div className="flex w-full max-w-[800px] flex-col items-center justify-center gap-5 border border-purple-500 px-5 py-10">
         {/* Basic Information Container */}
         {/* border border-[#07102d] */}
-        <div className="w-full rounded-xl bg-[#040a1a] p-6">
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
           {/* header */}
           <div className="font-bold">
-            <h1 className="group flex w-fit items-center justify-center gap-2 text-xl">
+            <h1 className="flex w-fit items-center justify-center gap-2 text-xl">
               <FaInfoCircle className="text-purple-500" />
-              <span className="before:ease-inOutQuint relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 group-hover:before:w-full">
+              <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
                 Basic Information
               </span>
             </h1>
@@ -80,12 +82,12 @@ const Information1 = () => {
         </div>
 
         {/* Professional Summary Container */}
-        <div className="w-full rounded-xl bg-[#040a1a] p-6">
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
           {/* header */}
           <div className="py-2 font-bold">
-            <h1 className="group flex w-fit items-center justify-center gap-2 text-xl">
+            <h1 className="flex w-fit items-center justify-center gap-2 text-xl">
               <FaInfoCircle className="text-purple-500" />
-              <span className="before:ease-inOutQuint relative  before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 group-hover:before:w-full">
+              <span className="relative before:absolute  before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
                 Professional Summary
               </span>
             </h1>
@@ -96,6 +98,7 @@ const Information1 = () => {
               <textarea
                 placeholder="Enter your summary"
                 className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500"
+                // onChange={(e) => setTestData(e.target.value)}
               />
             </div>
           </div>
