@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Information1 = () => {
   // const [testData, setTestData] = useState("");
+
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="flex flex-col items-center justify-center border-white">
       {/* image container */}
@@ -100,6 +104,74 @@ const Information1 = () => {
                 className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500"
                 // onChange={(e) => setTestData(e.target.value)}
               />
+            </div>
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
+          {/* header */}
+          <div className="font-bold">
+            <h1 className="flex w-fit items-center justify-center gap-2 text-xl">
+              <FaInfoCircle className="text-purple-500" />
+              <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+                Education
+              </span>
+            </h1>
+          </div>
+          {/* input section */}
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                College
+              </label>
+              <input
+                type="text"
+                placeholder="eg. Universal College of Engineering"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500"
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Degree
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. John"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500"
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Start Date
+              </label>
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                End Date
+              </label>
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
+              />
+            </div>
+            <div className="mt-5  sm:col-span-2">
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="font-bold" htmlFor="">
+                  Description
+                </label>
+                <textarea
+                  placeholder="Enter your summary"
+                  className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#4d4d4d] focus:border-none focus:outline focus:outline-purple-500"
+                  // onChange={(e) => setTestData(e.target.value)}
+                />
+              </div>
             </div>
           </div>
         </div>
