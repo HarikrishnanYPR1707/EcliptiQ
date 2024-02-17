@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   // console.log(user);
-  console.log(auth?.currentUser?.photoURL);
+  // console.log(auth?.currentUser?.photoURL);
 
   return (
     <div className="flex h-[80px] items-center justify-center border-b px-6 py-2">
