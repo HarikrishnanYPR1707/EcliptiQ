@@ -4,7 +4,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Information1 = () => {
-  // const [testData, setTestData] = useState("");
+  const [dateVal, setDateVal] = useState(new Date());
+
   const [userResumeData, setUserResumeData] = useState({
     personalDetails: {
       jobTitle: "",
@@ -53,6 +54,50 @@ const Information1 = () => {
   console.log(userResumeData);
   // ---------------------------
 
+  const handleDate = (date) => {
+    let month = "";
+    setStartDate(date);
+    switch (date.getMonth() + 1) {
+      case 1:
+        month = "Jan";
+        break;
+      case 2:
+        month = "Feb";
+        break;
+      case 3:
+        month = "Mar";
+        break;
+      case 4:
+        month = "Apr";
+        break;
+      case 5:
+        month = "May";
+        break;
+      case 6:
+        month = "Jun";
+        break;
+      case 7:
+        month = "Jul";
+        break;
+      case 8:
+        month = "Aug";
+        break;
+      case 9:
+        month = "Sep";
+        break;
+      case 10:
+        month = "Oct";
+        break;
+      case 11:
+        month = "Nov";
+        break;
+      case 12:
+        month = "Dec";
+        break;
+    }
+    console.log(`${month} ${date.getFullYear()}`);
+  };
+
   const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="flex flex-col items-center justify-center border-white">
@@ -67,7 +112,7 @@ const Information1 = () => {
       </div>
       {/* Main Input Container */}
       <div className="flex w-full max-w-[800px] flex-col items-center justify-center gap-5 px-5 py-10">
-        {/* Basic Information Container */}
+        {/* Personal Details Container */}
         {/* border border-[#07102d] */}
         <div className="group w-full rounded-xl bg-[#040a1a] p-6">
           {/* header */}
@@ -76,7 +121,6 @@ const Information1 = () => {
               <FaInfoCircle className="text-purple-500" />
               <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
                 Personal Details
-                {/* Basic Information */}
               </span>
             </h1>
           </div>
@@ -202,7 +246,12 @@ const Information1 = () => {
               <textarea
                 placeholder="Enter your summary"
                 className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                // onChange={(e) => setTestData(e.target.value)}
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    professionalSummary: e.target.value,
+                  }));
+                }}
               />
             </div>
           </div>
@@ -234,6 +283,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. Universal College of Engineering"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    education: {
+                      ...prev.education,
+                      college: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -244,6 +302,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="e.g. John"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    education: {
+                      ...prev.education,
+                      degree: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -252,7 +319,9 @@ const Information1 = () => {
               </label>
               <DatePicker
                 selected={startDate}
-                onChange={(date) => setStartDate(date)}
+                onChange={(date) => {
+                  handleDate(date);
+                }}
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
