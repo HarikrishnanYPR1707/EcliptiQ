@@ -4,7 +4,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Information1 = () => {
-  const [dateVal, setDateVal] = useState(new Date());
+  const [visibleDateValue, setVisibleDateValue] = useState(new Date());
+  const [formatedDate, setFormatedDate] = useState("");
 
   const [userResumeData, setUserResumeData] = useState({
     personalDetails: {
@@ -51,12 +52,13 @@ const Information1 = () => {
     language: [],
   });
   // printing userResumeData ---
-  console.log(userResumeData);
+  // console.log(userResumeData);
   // ---------------------------
 
   const handleDate = (date) => {
+    setVisibleDateValue(date);
+    console.log(visibleDateValue);
     let month = "";
-    setStartDate(date);
     switch (date.getMonth() + 1) {
       case 1:
         month = "Jan";
@@ -95,10 +97,11 @@ const Information1 = () => {
         month = "Dec";
         break;
     }
-    console.log(`${month} ${date.getFullYear()}`);
+    // console.log(`${month} ${date.getFullYear()}`);
+    setFormatedDate(`${month} ${date.getFullYear()}`);
+    console.log(formatedDate);
   };
 
-  const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="flex flex-col items-center justify-center border-white">
       {/* image container */}
@@ -318,7 +321,8 @@ const Information1 = () => {
                 Start Date
               </label>
               <DatePicker
-                selected={startDate}
+                selected={visibleDateValue}
+                placeholderText={visibleDateValue}
                 onChange={(date) => {
                   handleDate(date);
                 }}
@@ -333,8 +337,7 @@ const Information1 = () => {
                 End Date
               </label>
               <DatePicker
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
+                placeholderText="Select Date"
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
@@ -399,8 +402,7 @@ const Information1 = () => {
                 Start Date
               </label>
               <DatePicker
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
+                selected={visibleDateValue}
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
@@ -412,8 +414,7 @@ const Information1 = () => {
                 End Date
               </label>
               <DatePicker
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
+                selected={visibleDateValue}
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
