@@ -617,5 +617,3 @@ const Information1 = () => {
 };
 
 export default Information1;
-
-// lkjasdklfj
