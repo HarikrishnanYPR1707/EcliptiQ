@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
 
 const Information1 = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -49,8 +50,19 @@ const Information1 = () => {
         link: "",
       },
     },
-    skills: [],
-    language: [],
+    skills: {
+      skill1: "",
+      skill2: "",
+      skill3: "",
+      skill4: "",
+      skill5: "",
+      skill6: "",
+    },
+    language: {
+      lang1: "",
+      lang2: "",
+      lang3: "",
+    },
   });
   // printing userResumeData ---
   console.log(userResumeData);
@@ -410,6 +422,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. SDE-3"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    experience: {
+                      ...prev.experience,
+                      jobTitle: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -420,6 +441,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="e.g. Google"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    experience: {
+                      ...prev.experience,
+                      employer: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             {/* 
@@ -464,7 +494,15 @@ const Information1 = () => {
                 <textarea
                   placeholder="Enter your summary"
                   className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                  // onChange={(e) => setTestData(e.target.value)}
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      experience: {
+                        ...prev.experience,
+                        description: e.target.value,
+                      },
+                    }));
+                  }}
                 />
               </div>
             </div>
@@ -500,6 +538,18 @@ const Information1 = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link1: {
+                          ...prev.socialLink.link1,
+                          label: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
               <div className="w-full">
@@ -510,6 +560,18 @@ const Information1 = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link1: {
+                          ...prev.socialLink.link1,
+                          link: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
             </div>
@@ -523,6 +585,18 @@ const Information1 = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link2: {
+                          ...prev.socialLink.link2,
+                          label: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
               <div className="w-full">
@@ -533,6 +607,18 @@ const Information1 = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link2: {
+                          ...prev.socialLink.link2,
+                          link: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
             </div>
@@ -546,6 +632,18 @@ const Information1 = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link3: {
+                          ...prev.socialLink.link3,
+                          label: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
               <div className="w-full">
@@ -556,6 +654,18 @@ const Information1 = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link3: {
+                          ...prev.socialLink.link3,
+                          link: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
             </div>
@@ -569,6 +679,18 @@ const Information1 = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link4: {
+                          ...prev.socialLink.link2,
+                          label: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
               <div className="w-full">
@@ -579,6 +701,18 @@ const Information1 = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      socialLink: {
+                        ...prev.socialLink,
+                        link4: {
+                          ...prev.socialLink.link4,
+                          link: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
                 />
               </div>
             </div>
@@ -611,6 +745,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. React.js"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill1: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -621,6 +764,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. React.js"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill2: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -631,6 +783,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. React.js"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill3: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -641,6 +802,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. React.js"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill4: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -651,6 +821,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. React.js"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill5: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -661,6 +840,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. React.js"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill6: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
           </div>
@@ -692,6 +880,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. English"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    language: {
+                      ...prev.language,
+                      lang1: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -702,6 +899,15 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. English"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    language: {
+                      ...prev.language,
+                      lang2: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-1">
@@ -712,11 +918,21 @@ const Information1 = () => {
                 type="text"
                 placeholder="eg. English"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    language: {
+                      ...prev.language,
+                      lang3: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
           </div>
         </div>
       </div>
+      <Link to="/sampleTemplate">template</Link>
     </div>
   );
 };
