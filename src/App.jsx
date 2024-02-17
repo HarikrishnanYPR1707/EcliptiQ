@@ -17,6 +17,14 @@ const App = () => {
             <Route path="/templates" element={<Template />} />
             {/* <Route path="/information" element={<Information />} /> */}
             <Route path="/information" element={<Information1 />} />
+            <Route
+              path="/sampleTemplate"
+              element={
+                <div className="flex h-screen items-center justify-center text-5xl font-black">
+                  sampleTemplate
+                </div>
+              }
+            />
             {/* <Route path="/templates/Banking" element={<div>Template Page</div>} /> */}
             {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
           </Routes>
