@@ -4,7 +4,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Information1 = () => {
-  const [visibleDateValue, setVisibleDateValue] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
+  const [isDateSelected, setIsDateSelected] = useState(false);
   const [formatedDate, setFormatedDate] = useState("");
 
   const [userResumeData, setUserResumeData] = useState({
@@ -52,12 +53,12 @@ const Information1 = () => {
     language: [],
   });
   // printing userResumeData ---
-  // console.log(userResumeData);
+  console.log(userResumeData);
   // ---------------------------
 
   const handleDate = (date) => {
-    setVisibleDateValue(date);
-    console.log(visibleDateValue);
+    console.log(startDate);
+    setStartDate(date);
     let month = "";
     switch (date.getMonth() + 1) {
       case 1:
@@ -99,7 +100,7 @@ const Information1 = () => {
     }
     // console.log(`${month} ${date.getFullYear()}`);
     setFormatedDate(`${month} ${date.getFullYear()}`);
-    console.log(formatedDate);
+    // console.log(formatedDate);
   };
 
   return (
@@ -316,15 +317,21 @@ const Information1 = () => {
                 }}
               />
             </div>
+            {/* 
+                ------------------------------
+                DATE VALUE
+                ------------------------------
+            */}
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
                 Start Date
               </label>
               <DatePicker
-                selected={visibleDateValue}
-                placeholderText={visibleDateValue}
+                selected={isDateSelected ? startDate : null}
+                placeholderText="Select Date"
                 onChange={(date) => {
                   handleDate(date);
+                  setIsDateSelected(true);
                 }}
                 showYearDropdown
                 scrollableYearDropdown
@@ -332,12 +339,22 @@ const Information1 = () => {
                 className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
               />
             </div>
+            {/* 
+                ------------------------------
+                DATE VALUE
+                ------------------------------
+            */}
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
                 End Date
               </label>
               <DatePicker
+                selected={isDateSelected ? startDate : null}
                 placeholderText="Select Date"
+                onChange={(date) => {
+                  handleDate(date);
+                  setIsDateSelected(true);
+                }}
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
@@ -352,7 +369,15 @@ const Information1 = () => {
                 <textarea
                   placeholder="Enter your summary"
                   className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                  // onChange={(e) => setTestData(e.target.value)}
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      education: {
+                        ...prev.education,
+                        description: e.target.value,
+                      },
+                    }));
+                  }}
                 />
               </div>
             </div>
@@ -397,24 +422,34 @@ const Information1 = () => {
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
               />
             </div>
+            {/* 
+                ------------------------------
+                DATE VALUE
+                ------------------------------
+            */}
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
                 Start Date
               </label>
               <DatePicker
-                selected={visibleDateValue}
+                selected={startDate}
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
                 className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
               />
             </div>
+            {/* 
+                ------------------------------
+                DATE VALUE
+                ------------------------------
+            */}
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
                 End Date
               </label>
               <DatePicker
-                selected={visibleDateValue}
+                selected={startDate}
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
