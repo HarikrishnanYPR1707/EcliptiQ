@@ -5,11 +5,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
 
 const Information1 = () => {
-  const [educationStartDate, setEducationStartDate] = useState(new Date());
-  // const [EducationStartDate, setEducationStartDate] = useState(new Date());
-  const [isDateSelected, setIsDateSelected] = useState(false);
-  const [formatedDate, setFormatedDate] = useState("");
-
   const [userResumeData, setUserResumeData] = useState({
     personalDetails: {
       jobTitle: "",
@@ -68,51 +63,6 @@ const Information1 = () => {
   // printing userResumeData ---
   console.log(userResumeData);
   // ---------------------------
-
-  const handleDate = (date) => {
-    let month = "";
-    switch (date.getMonth() + 1) {
-      case 1:
-        month = "Jan";
-        break;
-      case 2:
-        month = "Feb";
-        break;
-      case 3:
-        month = "Mar";
-        break;
-      case 4:
-        month = "Apr";
-        break;
-      case 5:
-        month = "May";
-        break;
-      case 6:
-        month = "Jun";
-        break;
-      case 7:
-        month = "Jul";
-        break;
-      case 8:
-        month = "Aug";
-        break;
-      case 9:
-        month = "Sep";
-        break;
-      case 10:
-        month = "Oct";
-        break;
-      case 11:
-        month = "Nov";
-        break;
-      case 12:
-        month = "Dec";
-        break;
-    }
-    // console.log(`${month} ${date.getFullYear()}`);
-    setFormatedDate(`${date.getDate()} ${month} ${date.getFullYear()}`);
-    console.log(formatedDate);
-  };
 
   return (
     <div className="flex flex-col items-center justify-center border-white">
