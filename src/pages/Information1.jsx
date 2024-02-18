@@ -5,7 +5,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
 
 const Information1 = () => {
-  const [startDate, setStartDate] = useState(new Date());
+  const [educationStartDate, setEducationStartDate] = useState(new Date());
+  // const [EducationStartDate, setEducationStartDate] = useState(new Date());
   const [isDateSelected, setIsDateSelected] = useState(false);
   const [formatedDate, setFormatedDate] = useState("");
 
@@ -69,8 +70,6 @@ const Information1 = () => {
   // ---------------------------
 
   const handleDate = (date) => {
-    console.log(startDate);
-    setStartDate(date);
     let month = "";
     switch (date.getMonth() + 1) {
       case 1:
@@ -111,8 +110,8 @@ const Information1 = () => {
         break;
     }
     // console.log(`${month} ${date.getFullYear()}`);
-    setFormatedDate(`${month} ${date.getFullYear()}`);
-    // console.log(formatedDate);
+    setFormatedDate(`${date.getDate()} ${month} ${date.getFullYear()}`);
+    console.log(formatedDate);
   };
 
   return (
@@ -338,17 +337,19 @@ const Information1 = () => {
               <label className="font-bold" htmlFor="">
                 Start Date
               </label>
-              <DatePicker
-                selected={isDateSelected ? startDate : null}
-                placeholderText="Select Date"
-                onChange={(date) => {
-                  handleDate(date);
-                  setIsDateSelected(true);
+              <input
+                type="date"
+                placeholder="eg. Feb, 2024"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    education: {
+                      ...prev.education,
+                      startDate: e.target.value,
+                    },
+                  }));
                 }}
-                showYearDropdown
-                scrollableYearDropdown
-                yearDropdownItemNumber={100}
-                className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
               />
             </div>
             {/* 
@@ -360,17 +361,19 @@ const Information1 = () => {
               <label className="font-bold" htmlFor="">
                 End Date
               </label>
-              <DatePicker
-                selected={isDateSelected ? startDate : null}
-                placeholderText="Select Date"
-                onChange={(date) => {
-                  handleDate(date);
-                  setIsDateSelected(true);
+              <input
+                type="date"
+                placeholder="eg. Feb, 2024"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    education: {
+                      ...prev.education,
+                      endDate: e.target.value,
+                    },
+                  }));
                 }}
-                showYearDropdown
-                scrollableYearDropdown
-                yearDropdownItemNumber={100}
-                className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
               />
             </div>
             <div className="mt-5 sm:col-span-2">
@@ -461,12 +464,19 @@ const Information1 = () => {
               <label className="font-bold" htmlFor="">
                 Start Date
               </label>
-              <DatePicker
-                selected={startDate}
-                showYearDropdown
-                scrollableYearDropdown
-                yearDropdownItemNumber={100}
-                className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
+              <input
+                type="date"
+                placeholder="eg. Feb, 2024"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    experience: {
+                      ...prev.experience,
+                      startDate: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             {/* 
@@ -478,12 +488,19 @@ const Information1 = () => {
               <label className="font-bold" htmlFor="">
                 End Date
               </label>
-              <DatePicker
-                selected={startDate}
-                showYearDropdown
-                scrollableYearDropdown
-                yearDropdownItemNumber={100}
-                className="w-[285px] rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500 sm:w-[347px]"
+              <input
+                type="date"
+                placeholder="eg. Feb, 2024"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    experience: {
+                      ...prev.experience,
+                      endDate: e.target.value,
+                    },
+                  }));
+                }}
               />
             </div>
             <div className="mt-5 sm:col-span-2">
