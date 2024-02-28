@@ -27,6 +27,7 @@ const App = () => {
             />
             {/* <Route path="/templates/Banking" element={<div>Template Page</div>} /> */}
             {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
+            <Route path="*" element={<div>404 Page</div>} />
           </Routes>
         </div>
       </Router>
