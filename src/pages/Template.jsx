@@ -12,7 +12,7 @@ import SDESeniorLevel from "../assets/SDE/SDE-Senior-Level.png";
 
 const Template = () => {
   return (
-    <section className="h-full border border-rose-500">
+    <section className="h-full">
       {/* Old Resume Card styles  */}
       <div className="hidden">
         {/* Banking  */}
