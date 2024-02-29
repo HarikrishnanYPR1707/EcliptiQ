@@ -95,6 +95,7 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
         honk: ["Honk", "system-ui"],
         geologica: ["Geologica", "sans-serif"],
+        timesNewRoman: ["Times New Roman", "Times", "serif"],
       },
       height: {
         heightWithoutNavbar: "calc(100vh - 80px)",
