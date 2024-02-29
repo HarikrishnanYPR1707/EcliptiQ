@@ -83,11 +83,26 @@ const SdeSlr = () => {
             </div>
           </div>
           {/* Education Section */}
-          <div className="">
+          <div className="mb-5">
             <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
               Education
             </h1>
-            <div className=""></div>
+            <div className="">
+              {/* header section */}
+              <h1 className="font-timesNewRoman text-[18px]">
+                <span className="font-bold">University of Mumbai</span> {" - "}
+                <span className="">B.Tech in Computer Engineering</span>
+              </h1>
+              {/* Date and place section */}
+              <div className="flex items-center justify-between text-gray-500">
+                <p className="">
+                  <span className="">August 2004</span>
+                  {" - "}
+                  <span className="">May 2008</span>
+                </p>
+                <p className="">Seattle, WA</p>
+              </div>
+            </div>
           </div>
         </div>
         <button
