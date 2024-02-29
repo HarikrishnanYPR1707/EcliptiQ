@@ -28,14 +28,14 @@ const SdeSlr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="font-geologica aspect-[1/1.4142] w-full max-w-[800px] bg-white p-5 text-black"
+          className="aspect-[1/1.4142] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
         >
           {/* resume top part */}
-          <div className="border border-rose-500">
-            <h1 className="font-timesNewRoman flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black">
+          <div className="">
+            <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
               Harikrishnan Prasannakumar
             </h1>
-            <p className="flex items-center justify-center gap-20 border-b border-blue-500">
+            <p className="flex items-center justify-center gap-20">
               <span className="">sample@gmail.com</span>
               <span className="">7776861386</span>
               <a
@@ -48,8 +48,8 @@ const SdeSlr = () => {
             </p>
           </div>
           {/* resume work section */}
-          <div className="">
-            <h1 className="font-timesNewRoman border-b-[3px] border-black text-xl font-black">
+          <div className="my-5">
+            <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black">
               Work Experience
             </h1>
             <div className="border border-rose-500">
@@ -71,16 +71,23 @@ const SdeSlr = () => {
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {Array(5)
-                    .fill(true)
+                  {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams.---Communicate effectively with stakeholders to gather requirements, provide updates on project progress, and address any concerns or questions.---Adhere to software development methodologies, coding standards, and version control practices to maintain code quality and project consistency.---Contribute to the overall success of the engineering team by sharing knowledge, collaborating on projects, and supporting a positive and inclusive work environment."
+                    .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
-                        asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf
+                        {item}
                       </li>
                     ))}
                 </ul>
               </div>
             </div>
+          </div>
+          {/* Education Section */}
+          <div className="">
+            <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black">
+              Education
+            </h1>
+            <div className=""></div>
           </div>
         </div>
         <button
