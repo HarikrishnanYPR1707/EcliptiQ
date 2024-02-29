@@ -45,7 +45,7 @@ const Template = () => {
             {/* template-1 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/sde/elr">
                   <img src={SDEEntryLevel} alt="" />
                 </Link>
               </div>
@@ -63,7 +63,7 @@ const Template = () => {
             {/* template-2 */}
             <div className="flex w-[300px] flex-col items-center justify-center">
               <div className="w-[275px] overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/sde/jlr">
                   <img src={SDEMidLevel} alt="" />
                 </Link>
               </div>
