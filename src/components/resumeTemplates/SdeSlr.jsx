@@ -52,22 +52,22 @@ const SdeSlr = () => {
             <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
               Work Experience
             </h1>
-            <div className="border border-rose-500">
+            <div className="">
               {/* experience-1 */}
               <div className="">
                 {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
-                  <span className="font-bold">Company Name</span> {" - "}
-                  <span className="">Position in Company</span>
+                  <span className="font-bold">Coding Adda</span> {" - "}
+                  <span className="">Senior Software Developer</span>
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
-                    <span className="">October 2016</span>
+                    <span className="">June 2021</span>
                     {" - "}
                     <span className="">current</span>
                   </p>
-                  <p className="">Seattle, WA</p>
+                  <p className="">India</p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
@@ -96,11 +96,11 @@ const SdeSlr = () => {
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">August 2004</span>
+                  <span className="">January 2021</span>
                   {" - "}
-                  <span className="">May 2008</span>
+                  <span className="">May 2024</span>
                 </p>
-                <p className="">Seattle, WA</p>
+                <p className="">Vasia, Kaman</p>
               </div>
             </div>
           </div>
