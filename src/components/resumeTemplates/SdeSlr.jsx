@@ -84,7 +84,7 @@ const SdeSlr = () => {
           </div>
           {/* Education Section */}
           <div className="">
-            <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black">
+            <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
               Education
             </h1>
             <div className=""></div>
