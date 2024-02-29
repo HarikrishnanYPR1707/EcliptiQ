@@ -265,7 +265,7 @@ const Information1 = () => {
               </label>
               <input
                 type="text"
-                placeholder="e.g. John"
+                placeholder="e.g. B.Tech in Computer Engineering"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
