@@ -55,9 +55,9 @@ const Template = () => {
                   Entry level Resume
                 </div>
                 <p className="text-sm text-gray-500">
-                  Presenting a sleek and professional entry-level banking resume
-                  template, designed to catch the eye of employers with its
-                  modern layout and polished appearance.
+                  Introducing our sleek entry-level Software Development
+                  Engineer resume template, crafted to impress with its modern
+                  and polished design.
                 </p>
               </div>
             </div>
@@ -73,9 +73,9 @@ const Template = () => {
                   Junior level Resume
                 </div>
                 <p className="text-sm text-gray-500">
-                  Stand out with our visually striking junior-level banking
-                  resume template, designed to captivate recruiters with its
-                  polished and professional appearance.
+                  Unlock your potential with our junior-level Software
+                  Development Engineer resume template, designed to captivate
+                  with its professional and contemporary layout.
                 </p>
               </div>
             </div>
@@ -91,9 +91,9 @@ const Template = () => {
                   Senior level Resume
                 </div>
                 <p className="text-sm text-gray-500">
-                  Impress with our sophisticated senior-level banking resume
-                  template, exuding professionalism and elegance for seasoned
-                  professionals.
+                  Elevate your career with our sophisticated senior-level
+                  Software Development Engineer resume template, exuding
+                  professionalism and refinement in design.
                 </p>
               </div>
             </div>
