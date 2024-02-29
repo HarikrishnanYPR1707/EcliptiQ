@@ -6,6 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Times New Roman", Times, serif;
+  src: url("./assets/Fonts/TheTimesNewRoman.ttf") format("ttf");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
