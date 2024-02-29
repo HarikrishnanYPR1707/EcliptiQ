@@ -11,7 +11,7 @@ const SdeSlr = () => {
   });
 
   return (
-    <div className="flex h-[2000px] flex-col gap-10 border-[3px] border-rose-500">
+    <div className="flex flex-col gap-10 border-[3px] border-rose-500">
       {/* ------------------ header section ------------------ */}
       <div className="relative flex h-[200px] w-full items-center justify-center border border-amber-500 bg-banner bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -25,10 +25,10 @@ const SdeSlr = () => {
         </div>
       </div>
       {/* ------------------ template part with button ------------------ */}
-      <div className="">
+      <div className="flex flex-col items-center gap-5 border-[3px] border-rose-500">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white"
+          className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white text-black"
         >
           {/* {Array(2)
           .fill(true)
@@ -40,6 +40,12 @@ const SdeSlr = () => {
               labore hic!
             </div>
           ))} */}
+          <div className="border border-rose-500">
+            <h1 className="py-10 text-center text-3xl font-black">
+              Harikrishnan Prasannakumar
+            </h1>
+          </div>
+          <div className=""></div>
         </div>
         <button
           onClick={handlePrint}

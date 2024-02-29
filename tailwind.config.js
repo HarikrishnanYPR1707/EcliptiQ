@@ -94,6 +94,7 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         honk: ["Honk", "system-ui"],
+        geologica: ["Geologica", "sans-serif"],
       },
       height: {
         heightWithoutNavbar: "calc(100vh - 80px)",
