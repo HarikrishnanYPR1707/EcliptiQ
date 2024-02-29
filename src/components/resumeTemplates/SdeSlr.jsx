@@ -28,7 +28,7 @@ const SdeSlr = () => {
       <div className="flex flex-col items-center gap-5 border-[3px] border-rose-500">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white text-black"
+          className="font-geologica aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white text-black"
         >
           {/* {Array(2)
           .fill(true)
@@ -41,7 +41,7 @@ const SdeSlr = () => {
             </div>
           ))} */}
           <div className="border border-rose-500">
-            <h1 className="py-10 text-center text-3xl font-black">
+            <h1 className="font-timesNewRoman py-10 text-center text-3xl font-black">
               Harikrishnan Prasannakumar
             </h1>
           </div>
