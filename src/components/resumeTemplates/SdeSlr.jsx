@@ -55,10 +55,12 @@ const SdeSlr = () => {
             <div className="border border-rose-500">
               {/* experience-1 */}
               <div className="">
+                {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
                   <span className="font-bold">Company Name</span> {" - "}
                   <span className="">Position in Company</span>
                 </h1>
+                {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">October 2016</span>
@@ -67,11 +69,15 @@ const SdeSlr = () => {
                   </p>
                   <p className="">Seattle, WA</p>
                 </div>
+                {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  <li className="">asdfasdfasdf</li>
-                  <li className="">asdfasdfasdf</li>
-                  <li className="">asdfasdfasdf</li>
-                  <li className="">asdfasdfasdf</li>
+                  {Array(5)
+                    .fill(true)
+                    .map((item, i) => (
+                      <li key={i} className="">
+                        asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>
