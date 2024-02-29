@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import React, { useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   useLayoutEffect(() => {
@@ -43,6 +44,11 @@ const Home = () => {
         </div>
       </div>
       home page
+      <Link to="/informations">
+        <button className="rounded-xl bg-purple-500 px-3 py-2 font-black uppercase">
+          Create your resume
+        </button>
+      </Link>
     </div>
   );
 };
