@@ -1,4 +1,3 @@
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import BankingEntryLevel from "../assets/Banking/Banking-Entry-Level.jpeg";
 import BankingMidLevel from "../assets/Banking/Banking-Mid-Career.jpeg";
