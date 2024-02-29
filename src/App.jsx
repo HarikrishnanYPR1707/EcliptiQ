@@ -7,6 +7,7 @@ import Information from "./pages/Information";
 import Information1 from "./pages/Information1";
 import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
 import SdeJlr from "./components/resumeTemplates/sde/SdeJlr";
+import SdeElr from "./components/resumeTemplates/sde/SdeElr";
 
 const App = () => {
   return (
@@ -19,18 +20,10 @@ const App = () => {
             <Route path="/templates" element={<Template />} />
             {/* <Route path="/information" element={<Information />} /> */}
             <Route path="/information" element={<Information1 />} />
-            <Route path="/templates/sde/slr" element={<SdeSlr />} />
+            <Route path="/templates/sde/elr" element={<SdeElr />} />
             <Route path="/templates/sde/jlr" element={<SdeJlr />} />
+            <Route path="/templates/sde/slr" element={<SdeSlr />} />
             <Route path="*" element={<div>404 Page</div>} />
-            {/* <Route
-              path="/sampleTemplate"
-              element={
-                <div className="flex h-screen items-center justify-center text-5xl font-black">
-                  sampleTemplate
-                </div>
-              }
-            /> */}
-            {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
           </Routes>
         </div>
       </Router>
