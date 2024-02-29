@@ -164,7 +164,7 @@ const Template = () => {
           <h1 className="mb-2 text-4xl font-black lg:text-5xl">
             Resume Template
           </h1>
-          <p className="text-balance border text-center text-xs text-gray-400 lg:text-base">
+          <p className="text-balance text-center text-xs text-gray-400 lg:text-base">
             Discover our diverse resume templates tailored for every career
             stage, from sleek modern layouts to classic designs. Choose with
             confidence, whether you're starting your journey or a seasoned pro,
