@@ -28,7 +28,7 @@ const SdeSlr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="aspect-[1/1.4142] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
+          className="min-h-[1131px] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
         >
           {/* resume top part */}
           <div className="">
