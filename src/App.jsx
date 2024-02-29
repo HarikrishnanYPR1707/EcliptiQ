@@ -6,6 +6,7 @@ import Template from "./pages/Template";
 import Information from "./pages/Information";
 import Information1 from "./pages/Information1";
 import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
+import SdeJlr from "./components/resumeTemplates/sde/SdeJlr";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
             {/* <Route path="/information" element={<Information />} /> */}
             <Route path="/information" element={<Information1 />} />
             <Route path="/templates/sde/slr" element={<SdeSlr />} />
-            <Route path="/templates/sde/jlr" element={<SdeSlr />} />
+            <Route path="/templates/sde/jlr" element={<SdeJlr />} />
             <Route path="*" element={<div>404 Page</div>} />
             {/* <Route
               path="/sampleTemplate"

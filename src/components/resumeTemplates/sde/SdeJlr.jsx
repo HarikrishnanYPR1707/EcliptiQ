@@ -31,20 +31,12 @@ const SdeJlr = () => {
         >
           {/* resume top part */}
           <div className="">
-            <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
-              Harikrishnan Prasannakumar
-            </h1>
-            <p className="flex items-center justify-center gap-20">
-              <span className="">sample@gmail.com</span>
-              <span className="">7776861386</span>
-              <a
-                href="https://www.google.com"
-                target="_blank"
-                className="text-blue-500"
-              >
-                Linkedin
-              </a>
-            </p>
+            <div className="">
+              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
+                Harikrishnan Prasannakumar
+              </h1>
+              <h3 className="">Junior Software Developer</h3>
+            </div>
           </div>
           {/* resume work section */}
           <div className="my-5">
