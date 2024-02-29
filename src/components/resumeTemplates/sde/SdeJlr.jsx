@@ -27,12 +27,12 @@ const SdeJlr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="aspect-[1/1.4142] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
+          className="min-h-[1131px] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
         >
           {/* resume header section  */}
           <div className="flex items-start justify-between">
             <div className="">
-              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black text-yellow-600">
+              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black text-yellow-500">
                 Harikrishnan Prasannakumar
               </h1>
               <h3 className="text-2xl font-bold">Junior Software Developer</h3>
@@ -61,66 +61,23 @@ const SdeJlr = () => {
               </p>
             </div>
           </div>
-          {/* resume work section */}
-          <div className="my-5">
-            <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
-              Work Experience
+          {/* Summary section  */}
+          <div className="my-2">
+            <h1 className="mb-2 bg-[#edeae1] text-2xl font-black uppercase text-[#414d56]">
+              Summary
             </h1>
             <div className="">
-              {/* experience-1 */}
-              <div className="">
-                {/* header section */}
-                <h1 className="font-timesNewRoman text-[18px]">
-                  <span className="font-bold">Coding Adda</span> {" - "}
-                  <span className="">Senior Software Developer</span>
-                </h1>
-                {/* Date and place section */}
-                <div className="flex items-center justify-between text-gray-500">
-                  <p className="">
-                    <span className="">June 2021</span>
-                    {" - "}
-                    <span className="">current</span>
-                  </p>
-                  <p className="">India</p>
-                </div>
-                {/* description section - 1 */}
-                <ul className="ml-12 list-disc">
-                  {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams.---Communicate effectively with stakeholders to gather requirements, provide updates on project progress, and address any concerns or questions.---Adhere to software development methodologies, coding standards, and version control practices to maintain code quality and project consistency.---Contribute to the overall success of the engineering team by sharing knowledge, collaborating on projects, and supporting a positive and inclusive work environment."
-                    .split("---")
-                    .map((item, i) => (
-                      <li key={i} className="">
-                        {item}
-                      </li>
-                    ))}
-                </ul>
-              </div>
+              Dynamic and results-driven professional with [X years] of
+              experience in [industry/field], demonstrating a strong track
+              record of [specific achievements or skills]. Skilled in [relevant
+              skills or technologies], with a passion for [specific aspect of
+              the industry]. Proven ability to [mention any notable
+              accomplishments or contributions].
             </div>
           </div>
-          {/* Education Section */}
-          <div className="mb-5">
-            <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
-              Education
-            </h1>
-            <div className="">
-              {/* header section */}
-              <h1 className="font-timesNewRoman text-[18px]">
-                <span className="font-bold">University of Mumbai</span> {" - "}
-                <span className="">B.Tech in Computer Engineering</span>
-              </h1>
-              {/* Date and place section */}
-              <div className="flex items-center justify-between text-gray-500">
-                <p className="">
-                  <span className="">January 2021</span>
-                  {" - "}
-                  <span className="">May 2024</span>
-                </p>
-                <p className="">Vasia, Kaman</p>
-              </div>
-            </div>
-          </div>
-          {/* skills section  */}
+          {/* Skills section  */}
           <div className="">
-            <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
+            <h1 className="mb-2 bg-[#edeae1] text-2xl font-black uppercase text-[#414d56]">
               Skills
             </h1>
             <div className="">
@@ -150,6 +107,63 @@ const SdeJlr = () => {
                   {skill + " "},
                 </span>
               ))}
+            </div>
+          </div>
+          {/* Work section */}
+          <div className="my-5">
+            <h1 className="mb-2 bg-[#edeae1] text-2xl font-black uppercase text-[#414d56]">
+              Work Experience
+            </h1>
+            <div className="">
+              {/* experience-1 */}
+              <div className="">
+                {/* header section */}
+                <h1 className="text-[18px] font-bold text-yellow-900">
+                  Junior Software Developer
+                </h1>
+                {/* Date and place section */}
+                <div className="flex items-center justify-start text-gray-500">
+                  <p className="">
+                    <span className="">Coding Adda</span>
+                    {", "}
+                    <span className="">June 2021</span>
+                    {" - "}
+                    <span className="">current</span>
+                  </p>
+                </div>
+                {/* description section - 1 */}
+                <ul className="ml-12 list-disc">
+                  {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams."
+                    .split("---")
+                    .map((item, i) => (
+                      <li key={i} className="">
+                        {item}
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* Education Section */}
+          <div className="mb-5">
+            <h1 className="mb-2 bg-[#edeae1] text-2xl font-black uppercase text-[#414d56]">
+              Eduction
+            </h1>
+            <div className="">
+              {/* header section */}
+              <h1 className=" text-[18px]">
+                <span className="font-bold">University of Mumbai</span> {" - "}
+                <span className="">B.Tech in Computer Engineering</span>
+              </h1>
+              {/* Date and place section */}
+              <div className="flex items-center justify-between text-gray-500">
+                <p className="">
+                  <span className="">January 2021</span>
+                  {" - "}
+                  <span className="">May 2024</span>
+                </p>
+                <p className="">Vasia, Kaman</p>
+              </div>
             </div>
           </div>
         </div>
