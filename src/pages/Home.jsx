@@ -44,7 +44,7 @@ const Home = () => {
         </div>
       </div>
       home page
-      <Link to="/informations">
+      <Link to="/information">
         <button className="rounded-xl bg-purple-500 px-3 py-2 font-black uppercase">
           Create your resume
         </button>
