@@ -25,10 +25,7 @@ const App = () => {
                 </div>
               }
             />
-            <Route
-              path="/templates/sde/template1"
-              element={<div>Template-1</div>}
-            />
+            <Route path="/templates/sde/slr" element={<div>Template-1</div>} />
             {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
             <Route path="*" element={<div>404 Page</div>} />
           </Routes>
