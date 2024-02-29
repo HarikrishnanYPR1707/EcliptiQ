@@ -14,15 +14,18 @@ const SdeSlr = () => {
     <div className="h-[2000px] border-[3px] border-rose-500">
       <div
         ref={sdeSlrComponentDownloadRef}
-        className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500"
+        className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white"
       >
-        {Array(2)
+        {/* {Array(2)
           .fill(true)
           .map(() => (
-            <div className="w-full bg-red-200 py-2 font-bold uppercase text-black">
-              alsdjflkj
+            <div className="w-full text-wrap bg-red-200 py-2 font-bold uppercase text-black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est natus
+              quae quas quia harum, deserunt sed quisquam cupiditate praesentium
+              quo obcaecati, autem esse? Tempore magni quidem, dicta distinctio
+              labore hic!
             </div>
-          ))}
+          ))} */}
       </div>
       <button
         onClick={handlePrint}
