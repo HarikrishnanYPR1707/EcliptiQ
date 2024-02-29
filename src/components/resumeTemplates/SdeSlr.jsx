@@ -49,7 +49,7 @@ const SdeSlr = () => {
           </div>
           {/* resume work section */}
           <div className="my-5">
-            <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black">
+            <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
               Work Experience
             </h1>
             <div className="border border-rose-500">
