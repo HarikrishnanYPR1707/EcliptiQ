@@ -12,11 +12,15 @@ const SdeSlr = () => {
 
   return (
     <div className="h-[2000px] border-[3px] border-rose-500">
-      <div
-        ref={sdeSlrComponentDownloadRef}
-        className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white"
-      >
-        {/* {Array(2)
+      {/* ------------------ header section ------------------ */}
+      <div className="h-[200px] border border-amber-500"></div>
+      {/* ------------------ template part with button ------------------ */}
+      <div className="">
+        <div
+          ref={sdeSlrComponentDownloadRef}
+          className="aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white"
+        >
+          {/* {Array(2)
           .fill(true)
           .map(() => (
             <div className="w-full text-wrap bg-red-200 py-2 font-bold uppercase text-black">
@@ -26,13 +30,14 @@ const SdeSlr = () => {
               labore hic!
             </div>
           ))} */}
+        </div>
+        <button
+          onClick={handlePrint}
+          className="rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
+        >
+          Download Template
+        </button>
       </div>
-      <button
-        onClick={handlePrint}
-        className="rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
-      >
-        Download Template
-      </button>
     </div>
   );
 };
