@@ -30,12 +30,35 @@ const SdeJlr = () => {
           className="aspect-[1/1.4142] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
         >
           {/* resume top part */}
-          <div className="">
-            <div className="">
-              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
+          <div className="flex">
+            <div className="border border-rose-500">
+              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black text-yellow-600">
                 Harikrishnan Prasannakumar
               </h1>
-              <h3 className="">Junior Software Developer</h3>
+              <h3 className="text-2xl font-bold">Junior Software Developer</h3>
+            </div>
+            <div className="flex flex-col items-end border border-blue-500 pt-10">
+              <p className="w-fit border border-black text-sm">
+                <span className="font-bold">Phone :</span>
+                <span className="">1234567890</span>
+              </p>
+              <p className="w-fit border border-black text-sm">
+                <span className="font-bold">Email :</span>
+                <span className="">sample@gmail.com</span>
+              </p>
+              <p className="w-fit border border-black text-sm">
+                <span className="font-bold">Website :</span>
+                <a href="#" className="">
+                  www.sample.com
+                </a>
+              </p>
+              <p className="w-fit border border-black text-sm">
+                <span className="font-bold">Linkedin :</span>
+                <a href="" className="">
+                  <span>linkedin/</span>
+                  <span>authorName</span>
+                </a>
+              </p>
             </div>
           </div>
           {/* resume work section */}
