@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Template from "./pages/Template";
 import Information from "./pages/Information";
 import Information1 from "./pages/Information1";
+import SdeSlr from "./components/resumeTemplates/SdeSlr";
 
 const App = () => {
   return (
@@ -17,17 +18,17 @@ const App = () => {
             <Route path="/templates" element={<Template />} />
             {/* <Route path="/information" element={<Information />} /> */}
             <Route path="/information" element={<Information1 />} />
-            <Route
+            <Route path="/templates/sde/slr" element={<SdeSlr />} />
+            <Route path="*" element={<div>404 Page</div>} />
+            {/* <Route
               path="/sampleTemplate"
               element={
                 <div className="flex h-screen items-center justify-center text-5xl font-black">
                   sampleTemplate
                 </div>
               }
-            />
-            <Route path="/templates/sde/slr" element={<div>Template-1</div>} />
+            /> */}
             {/* <Route path="/templates/Banking/template1" element={<div>Template Page</div>} /> */}
-            <Route path="*" element={<div>404 Page</div>} />
           </Routes>
         </div>
       </Router>
