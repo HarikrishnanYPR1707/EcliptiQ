@@ -41,9 +41,20 @@ const SdeSlr = () => {
             </div>
           ))} */}
           <div className="border border-rose-500">
-            <h1 className="font-timesNewRoman py-10 text-center text-3xl font-black">
+            <h1 className="font-timesNewRoman flex flex-col items-center justify-center pb-1 pt-10 text-center text-3xl font-black">
               Harikrishnan Prasannakumar
             </h1>
+            <p className="flex items-center justify-center gap-20 border-b border-blue-500">
+              <span className="">sample@gmail.com</span>
+              <span className="">7776861386</span>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                className="text-blue-500"
+              >
+                Linkedin
+              </a>
+            </p>
           </div>
           <div className=""></div>
         </div>
