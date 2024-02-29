@@ -152,7 +152,10 @@ const SdeJlr = () => {
             <div className="">
               {/* header section */}
               <h1 className=" text-[18px]">
-                <span className="font-bold">University of Mumbai</span> {" - "}
+                <span className="font-bold text-yellow-900">
+                  University of Mumbai
+                </span>{" "}
+                {" - "}
                 <span className="">B.Tech in Computer Engineering</span>
               </h1>
               {/* Date and place section */}
