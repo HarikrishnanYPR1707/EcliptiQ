@@ -65,7 +65,7 @@ const Information1 = () => {
   // ---------------------------
 
   return (
-    <div className="flex flex-col items-center justify-center border-white">
+    <div className="flex flex-col items-center justify-center border-white pb-5">
       {/* image container */}
       <div className="relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-banner bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -899,7 +899,11 @@ const Information1 = () => {
           </div>
         </div>
       </div>
-      <Link to="/sampleTemplate">template</Link>
+      <Link to="/templates">
+        <button className="w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold">
+          Select Template
+        </button>
+      </Link>
     </div>
   );
 };
