@@ -25,23 +25,14 @@ const SdeSlr = () => {
         </div>
       </div>
       {/* ------------------ template part with button ------------------ */}
-      <div className="flex flex-col items-center gap-5 border-[3px] border-rose-500">
+      <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="font-geologica aspect-[1/1.4142] w-full max-w-[800px] border-[5px] border-purple-500 bg-white text-black"
+          className="font-geologica aspect-[1/1.4142] w-full max-w-[800px] bg-white p-5 text-black"
         >
-          {/* {Array(2)
-          .fill(true)
-          .map(() => (
-            <div className="w-full text-wrap bg-red-200 py-2 font-bold uppercase text-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est natus
-              quae quas quia harum, deserunt sed quisquam cupiditate praesentium
-              quo obcaecati, autem esse? Tempore magni quidem, dicta distinctio
-              labore hic!
-            </div>
-          ))} */}
+          {/* resume top part */}
           <div className="border border-rose-500">
-            <h1 className="font-timesNewRoman flex flex-col items-center justify-center pb-1 pt-10 text-center text-3xl font-black">
+            <h1 className="font-timesNewRoman flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black">
               Harikrishnan Prasannakumar
             </h1>
             <p className="flex items-center justify-center gap-20 border-b border-blue-500">
@@ -56,7 +47,35 @@ const SdeSlr = () => {
               </a>
             </p>
           </div>
-          <div className=""></div>
+          {/* resume work section */}
+          <div className="">
+            <h1 className="font-timesNewRoman border-b-[3px] border-black text-xl font-black">
+              Work Experience
+            </h1>
+            <div className="border border-rose-500">
+              {/* experience-1 */}
+              <div className="">
+                <h1 className="font-timesNewRoman text-[18px]">
+                  <span className="font-bold">Company Name</span> {" - "}
+                  <span className="">Position in Company</span>
+                </h1>
+                <div className="flex items-center justify-between text-gray-500">
+                  <p className="">
+                    <span className="">October 2016</span>
+                    {" - "}
+                    <span className="">current</span>
+                  </p>
+                  <p className="">Seattle, WA</p>
+                </div>
+                <ul className="ml-12 list-disc">
+                  <li className="">asdfasdfasdf</li>
+                  <li className="">asdfasdfasdf</li>
+                  <li className="">asdfasdfasdf</li>
+                  <li className="">asdfasdfasdf</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <button
           onClick={handlePrint}
