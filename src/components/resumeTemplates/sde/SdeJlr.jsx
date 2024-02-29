@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
-const SdeSlr = () => {
+const SdeJlr = () => {
   const sdeSlrComponentDownloadRef = useRef(null);
 
   const handlePrint = useReactToPrint({
@@ -9,11 +9,10 @@ const SdeSlr = () => {
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
   });
-
   return (
-    <div className="flex flex-col gap-10 border-[3px] border-rose-500">
+    <div className="flex flex-col gap-10">
       {/* ------------------ header section ------------------ */}
-      <div className="relative flex h-[200px] w-full items-center justify-center border border-amber-500 bg-banner bg-cover bg-center">
+      <div className="relative flex h-[200px] w-full items-center justify-center bg-banner bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
         <div className="relative flex flex-col items-center justify-center gap-4">
           <h1 className="text-5xl font-black  uppercase">
@@ -28,7 +27,7 @@ const SdeSlr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeSlrComponentDownloadRef}
-          className="aspect-[1/1.4142] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
+          className="aspect-[1/1.4142] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
         >
           {/* resume top part */}
           <div className="">
@@ -132,7 +131,9 @@ const SdeSlr = () => {
                 "Communication",
                 "Teamwork",
               ].map((skill, i) => (
-                <span className="">{skill + " "},</span>
+                <span key={i} className="">
+                  {skill + " "},
+                </span>
               ))}
             </div>
           </div>
@@ -148,4 +149,4 @@ const SdeSlr = () => {
   );
 };
 
-export default SdeSlr;
+export default SdeJlr;
