@@ -104,6 +104,38 @@ const SdeSlr = () => {
               </div>
             </div>
           </div>
+          {/* skills section  */}
+          <div className="">
+            <h1 className="border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
+              Skills
+            </h1>
+            <div className="">
+              {[
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "SQL",
+                "Git",
+                "Webpack",
+                "Babel",
+                "RESTful APIs",
+                "Responsive Web Design",
+                "Testing (Jest, Mocha, Chai)",
+                "Debugging",
+                "Agile Methodologies",
+                "Problem Solving",
+                "Critical Thinking",
+                "Communication",
+                "Teamwork",
+              ].map((skill, i) => (
+                <span className="">{skill + " "},</span>
+              ))}
+            </div>
+          </div>
         </div>
         <button
           onClick={handlePrint}
