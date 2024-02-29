@@ -82,7 +82,7 @@ const Template = () => {
             {/* template-3 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/sde/slr">
                   <img src={SDESeniorLevel} alt="" />
                 </Link>
               </div>
