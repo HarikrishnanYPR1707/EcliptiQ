@@ -96,6 +96,7 @@ module.exports = {
         honk: ["Honk", "system-ui"],
         geologica: ["Geologica", "sans-serif"],
         timesNewRoman: ["Times New Roman", "Times", "serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       height: {
         heightWithoutNavbar: "calc(100vh - 80px)",
