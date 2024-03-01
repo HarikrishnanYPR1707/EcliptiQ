@@ -112,7 +112,7 @@ const Template = () => {
             {/* template-1 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/da/elr">
                   <img src={DAEntryLevel} alt="" />
                 </Link>
               </div>
