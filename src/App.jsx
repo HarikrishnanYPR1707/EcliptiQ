@@ -23,6 +23,9 @@ const App = () => {
             <Route path="/templates/sde/elr" element={<SdeElr />} />
             <Route path="/templates/sde/jlr" element={<SdeJlr />} />
             <Route path="/templates/sde/slr" element={<SdeSlr />} />
+            <Route path="/templates/da/elr" element={<SdeElr />} />
+            {/* <Route path="/templates/da/jlr" element={<SdeJlr />} /> */}
+            {/* <Route path="/templates/da/slr" element={<SdeSlr />} /> */}
             <Route path="*" element={<div>404 Page</div>} />
           </Routes>
         </div>
