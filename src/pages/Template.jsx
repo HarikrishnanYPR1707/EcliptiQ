@@ -130,7 +130,7 @@ const Template = () => {
             {/* template-2 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/da/jlr">
                   <img src={DAMidLevel} alt="" />
                 </Link>
               </div>
@@ -148,7 +148,7 @@ const Template = () => {
             {/* template-3 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/da/slr">
                   <img src={DASeniorLevel} alt="" />
                 </Link>
               </div>
