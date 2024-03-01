@@ -31,14 +31,16 @@ const SdeElr = () => {
           className="min-h-[1131px] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
         >
           {/* resume header section  */}
-          <div className="flex items-start justify-between">
-            <div className="">
-              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black text-yellow-500">
+          <div className="border border-red-500">
+            <div className="border border-red-500">
+              <h1 className="pb-1 pt-6 text-3xl font-black">
                 Harikrishnan Prasannakumar
               </h1>
-              <h3 className="text-2xl font-bold">Junior Software Developer</h3>
+              <h3 className="text-2xl font-bold text-[#ff0505]">
+                Software Engineer
+              </h3>
             </div>
-            <div className="flex flex-col items-end pt-10">
+            <div className="    ">
               <p className="w-fit text-sm">
                 <span className="font-bold">Phone :</span>
                 <span className="">1234567890</span>
