@@ -175,7 +175,7 @@ const DaElr = () => {
             </div>
             {/* Work section */}
             <div className="">
-              <h1 className="mb-2 font-timesNewRoman text-2xl font-black uppercase">
+              <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                 Work Experience
               </h1>
               <div className="">
@@ -218,28 +218,29 @@ const DaElr = () => {
             </div>
             {/* Relevant Courses section  */}
             <div className="">
-              <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
-                Relevant Courses
+              <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
+                Projects
               </h1>
               <div className="">
-                {[
-                  "JavaScript Fundamentals",
-                  "Advanced JavaScript",
-                  "Front-End Web Development",
-                  "Back-End Web Development",
-                  "React.js Essentials",
-                  "Node.js Basics",
-                  "Express.js Fundamentals",
-                  "MongoDB for Beginners",
-                  "SQL Fundamentals",
-                  "Full-Stack Web Development",
-                  "Responsive Web Design",
-                  "Web Development Bootcamp",
-                ].map((skill, i) => (
-                  <span key={i} className="text-sm">
-                    {skill + " "},
-                  </span>
-                ))}
+                {Array(2)
+                  .fill(true)
+                  .map((_, i) => (
+                    <div key={i} className="mb-1">
+                      <h3 className="">
+                        RESTful API for a Social Networking Platform
+                      </h3>
+                      <ul className="text-gray-600">
+                        <li className="ml-5 list-disc">
+                          Design endpoints for user management, profile
+                          creation, and content sharing.
+                        </li>
+                        <li className="ml-5 list-disc">
+                          Implement authentication and authorization mechanisms
+                          to ensure data security and privacy.
+                        </li>
+                      </ul>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
