@@ -31,7 +31,7 @@ const DaElr = () => {
           className="mt-5 flex h-[1131px] w-full max-w-[800px] items-start justify-between bg-white font-geologica text-black"
         >
           {/* --------------------- left section --------------------- */}
-          <div className="flex h-full w-[40%] flex-col border border-purple-500">
+          <div className="flex h-full w-[40%] flex-col">
             {/* resume header section  */}
             <div className="bg-[#4287f5] p-5 text-white">
               <div className="">
