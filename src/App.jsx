@@ -1,13 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Template from "./pages/Template";
-import Information from "./pages/Information";
-import Information1 from "./pages/Information1";
-import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
-import SdeJlr from "./components/resumeTemplates/sde/SdeJlr";
+import DaElr from "./components/resumeTemplates/da/DaElr";
 import SdeElr from "./components/resumeTemplates/sde/SdeElr";
+import SdeJlr from "./components/resumeTemplates/sde/SdeJlr";
+import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
+import Home from "./pages/Home";
+import Information1 from "./pages/Information1";
+import Template from "./pages/Template";
 
 const App = () => {
   return (
@@ -18,12 +17,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
-            {/* <Route path="/information" element={<Information />} /> */}
             <Route path="/information" element={<Information1 />} />
             <Route path="/templates/sde/elr" element={<SdeElr />} />
             <Route path="/templates/sde/jlr" element={<SdeJlr />} />
             <Route path="/templates/sde/slr" element={<SdeSlr />} />
-            <Route path="/templates/da/elr" element={<SdeElr />} />
+            <Route path="/templates/da/elr" element={<DaElr />} />
             {/* <Route path="/templates/da/jlr" element={<SdeJlr />} /> */}
             {/* <Route path="/templates/da/slr" element={<SdeSlr />} /> */}
             <Route path="*" element={<div>404 Page</div>} />
