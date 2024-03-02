@@ -6,10 +6,10 @@ import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin } from "react-icons/fa";
 
 const SdeElr = () => {
-  const sdeSlrComponentDownloadRef = useRef(null);
+  const sdeElrComponentDownloadRef = useRef(null);
 
   const handlePrint = useReactToPrint({
-    content: () => sdeSlrComponentDownloadRef.current,
+    content: () => sdeElrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
   });
@@ -31,7 +31,7 @@ const SdeElr = () => {
       {/* ------------------ template part with button ------------------ */}
       <div className="flex flex-col items-center gap-5">
         <div
-          ref={sdeSlrComponentDownloadRef}
+          ref={sdeElrComponentDownloadRef}
           className="min-h-[1131px] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
         >
           {/* resume header section  */}
@@ -73,14 +73,14 @@ const SdeElr = () => {
             <div className="w-[60%]">
               {/* Work section */}
               <div className="">
-                <h1 className="font-roboto mb-2 border-b-[3px] border-black text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Work Experience
                 </h1>
                 <div className="">
                   {/* experience-1 */}
                   <div className="">
                     {/* header section */}
-                    <h1 className="font-roboto flex flex-col-reverse justify-start text-[18px]">
+                    <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                       <span className="-mt-1 font-bold text-[#ff0505]">
                         Coding Adda
                       </span>
@@ -115,7 +115,7 @@ const SdeElr = () => {
             <div className="flex w-[40%] flex-col items-start gap-5">
               {/* Career Objective section  */}
               <div className="">
-                <h1 className="font-roboto mb-2 border-b-[3px] border-black text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Career Objective
                 </h1>
                 <div className="text-sm">
@@ -129,7 +129,7 @@ const SdeElr = () => {
               </div>
               {/* Education Section */}
               <div className="mb-5">
-                <h1 className="font-roboto mb-2 border-b-[3px] border-black text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Education
                 </h1>
                 <div className="">
@@ -154,7 +154,7 @@ const SdeElr = () => {
               </div>
               {/* Relevant Courses section  */}
               <div className="">
-                <h1 className="font-roboto mb-2 border-b-[3px] border-black text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Relevant Courses
                 </h1>
                 <div className="">
@@ -180,7 +180,7 @@ const SdeElr = () => {
               </div>
               {/* Skills section  */}
               <div className="">
-                <h1 className="font-roboto mb-2 border-b-[3px] border-black text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Skills
                 </h1>
                 <div className="">
