@@ -28,108 +28,110 @@ const DaElr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={daElrComponentDownloadRef}
-          className="mt-5 flex min-h-[1131px] w-full max-w-[800px] items-start justify-between gap-5 bg-white p-5 font-geologica text-black"
+          className="mt-5 flex h-[1131px] w-full max-w-[800px] items-start justify-between bg-white font-geologica text-black"
         >
           {/* --------------------- left section --------------------- */}
-          <div className="w-[40%]">
+          <div className="flex h-full w-[40%] flex-col border border-purple-500">
             {/* resume header section  */}
-            <div className="">
+            <div className="bg-[#4287f5] p-5 text-white">
               <div className="">
-                <h1 className="pb-1 pt-6 text-3xl font-black">
+                <h1 className="pb-1 pt-6 font-timesNewRoman text-3xl font-black">
                   Harikrishnan Prasannakumar
                 </h1>
-                <h3 className="text-2xl font-bold text-[#ff0505]">
-                  Software Engineer
+                <h3 className="font-timesNewRoman text-2xl italic">
+                  Data Analyst
                 </h3>
               </div>
-              <div className="flex flex-col items-start">
-                <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
-                  <FaPhone className="text-gray-500" />
-                  <span className="">1234567890</span>
-                </p>
-                <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
-                  <MdEmail className="text-gray-500" />
+              <div className="mt-5 flex flex-col items-start text-[15px]">
+                <p className="flex w-fit items-center justify-center gap-2">
+                  <MdEmail className="text-gray-300" />
                   <span className="">sample@gmail.com</span>
                 </p>
-                <p className="flex w-fit items-center justify-center text-sm text-gray-500">
+                <p className="flex w-fit items-center justify-center gap-2">
+                  <FaPhone className="text-gray-300" />
+                  <span className="">1234567890</span>
+                </p>
+                <p className="flex w-fit items-center justify-center">
                   <a
                     href="#"
                     className="flex items-center justify-center gap-2"
                   >
-                    <CgWebsite className="text-gray-500" />
+                    <CgWebsite className="text-gray-300" />
                     www.sample.com
                   </a>
                 </p>
-                <p className="flex w-fit items-center justify-center text-sm text-gray-500">
+                <p className="flex w-fit items-center justify-center">
                   <a href="" className="flex items-center justify-center gap-2">
-                    <FaLinkedin className="" />
-                    <span className="text-blue-500">linkedin</span>
+                    <FaLinkedin className="text-gray-300" />
+                    <span className="underline">Linkedin</span>
                   </a>
                 </p>
               </div>
             </div>
-            {/* Education Section */}
-            <div className="mb-5">
-              <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
-                Education
-              </h1>
-              <div className="">
-                {/* header section */}
-                <h1 className=" text-[15px]">
-                  <span className="font-bold text-yellow-900">
-                    University of Mumbai
-                  </span>{" "}
-                  {" - "}
-                  <span className="">B.Tech in Computer Engineering</span>
+            <div className="h-full bg-[#f8f8f8]">
+              {/* Education Section */}
+              <div className="mb-5 p-5">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+                  Education
                 </h1>
-                {/* Date and place section */}
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <p className="">
-                    <span className="">January 2021</span>
+                <div className="">
+                  {/* header section */}
+                  <h1 className=" text-[15px]">
+                    <span className="font-bold text-yellow-900">
+                      University of Mumbai
+                    </span>{" "}
                     {" - "}
-                    <span className="">May 2024</span>
-                  </p>
-                  <p className="">Vasia, Kaman</p>
+                    <span className="">B.Tech in Computer Engineering</span>
+                  </h1>
+                  {/* Date and place section */}
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <p className="">
+                      <span className="">January 2021</span>
+                      {" - "}
+                      <span className="">May 2024</span>
+                    </p>
+                    <p className="">Vasia, Kaman</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Skills section  */}
-            <div className="">
-              <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
-                Skills
-              </h1>
-              <div className="">
-                {[
-                  "JavaScript",
-                  "HTML5",
-                  "CSS3",
-                  "React.js",
-                  "Node.js",
-                  "Express.js",
-                  "MongoDB",
-                  "SQL",
-                  "Git",
-                  "Webpack",
-                  "Babel",
-                  "RESTful APIs",
-                  "Responsive Web Design",
-                  "Testing (Jest, Mocha, Chai)",
-                  "Debugging",
-                  "Agile Methodologies",
-                  "Problem Solving",
-                  "Critical Thinking",
-                  "Communication",
-                  "Teamwork",
-                ].map((skill, i) => (
-                  <span key={i} className="text-sm">
-                    {skill + " "},
-                  </span>
-                ))}
+              {/* Skills section  */}
+              <div className="p-5">
+                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+                  Skills
+                </h1>
+                <div className="">
+                  {[
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "React.js",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "SQL",
+                    "Git",
+                    "Webpack",
+                    "Babel",
+                    "RESTful APIs",
+                    "Responsive Web Design",
+                    "Testing (Jest, Mocha, Chai)",
+                    "Debugging",
+                    "Agile Methodologies",
+                    "Problem Solving",
+                    "Critical Thinking",
+                    "Communication",
+                    "Teamwork",
+                  ].map((skill, i) => (
+                    <span key={i} className="text-sm">
+                      {skill + " "},
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
           {/* --------------------- right section --------------------- */}
-          <div className="flex w-[60%] flex-col items-start gap-5">
+          <div className="flex w-[60%] flex-col items-start gap-5 p-5">
             {/* Career Objective section  */}
             <div className="">
               <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
