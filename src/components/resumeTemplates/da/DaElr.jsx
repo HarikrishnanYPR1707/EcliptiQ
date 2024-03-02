@@ -3,6 +3,9 @@ import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useReactToPrint } from "react-to-print";
+import { SlCalender } from "react-icons/sl";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaGraduationCap } from "react-icons/fa";
 
 const DaElr = () => {
   const daElrComponentDownloadRef = useRef(null);
@@ -33,7 +36,7 @@ const DaElr = () => {
           {/* --------------------- left section --------------------- */}
           <div className="flex h-full w-[40%] flex-col">
             {/* resume header section  */}
-            <div className="bg-[#4287f5] p-5 text-white">
+            <div className="bg-[#4287f5] p-7 text-white">
               <div className="">
                 <h1 className="pb-1 pt-6 font-timesNewRoman text-3xl font-black">
                   Harikrishnan Prasannakumar
@@ -70,27 +73,34 @@ const DaElr = () => {
             </div>
             <div className="h-full bg-[#f8f8f8]">
               {/* Education Section */}
-              <div className="mb-5 p-5">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+              <div className="mb-5 p-7">
+                <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                   Education
                 </h1>
                 <div className="">
                   {/* header section */}
-                  <h1 className=" text-[15px]">
-                    <span className="font-bold text-yellow-900">
+                  <h1 className="flex flex-col-reverse text-base">
+                    <span className="text-xl text-[#4287f5]">
                       University of Mumbai
-                    </span>{" "}
-                    {" - "}
+                    </span>
                     <span className="">B.Tech in Computer Engineering</span>
                   </h1>
                   {/* Date and place section */}
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <p className="">
+                  <div className="flex flex-col items-start text-sm text-gray-500">
+                    <p className="flex items-center justify-center gap-2">
+                      <SlCalender />
                       <span className="">January 2021</span>
                       {" - "}
                       <span className="">May 2024</span>
                     </p>
-                    <p className="">Vasia, Kaman</p>
+                    <p className="flex items-center justify-center gap-2">
+                      <FaLocationDot />
+                      <span className="">Vasia, Kaman</span>
+                    </p>
+                    <p className="flex items-center justify-center gap-2">
+                      <FaGraduationCap />
+                      <span className="">GPA: 8.9</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -131,7 +141,7 @@ const DaElr = () => {
             </div>
           </div>
           {/* --------------------- right section --------------------- */}
-          <div className="flex w-[60%] flex-col items-start gap-5 p-5">
+          <div className="flex w-[60%] flex-col items-start gap-5 p-7">
             {/* Career Objective section  */}
             <div className="">
               <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
