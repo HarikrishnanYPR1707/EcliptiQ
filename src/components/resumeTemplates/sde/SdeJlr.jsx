@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
 const SdeJlr = () => {
-  const sdeSlrComponentDownloadRef = useRef(null);
+  const sdeJlrComponentDownloadRef = useRef(null);
 
   const handlePrint = useReactToPrint({
-    content: () => sdeSlrComponentDownloadRef.current,
+    content: () => sdeJlrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
   });
@@ -26,7 +26,7 @@ const SdeJlr = () => {
       {/* ------------------ template part with button ------------------ */}
       <div className="flex flex-col items-center gap-5">
         <div
-          ref={sdeSlrComponentDownloadRef}
+          ref={sdeJlrComponentDownloadRef}
           className="min-h-[1131px] w-full max-w-[800px] bg-white p-8 font-geologica text-black"
         >
           {/* resume header section  */}
