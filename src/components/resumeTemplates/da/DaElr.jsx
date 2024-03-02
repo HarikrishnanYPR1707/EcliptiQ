@@ -34,7 +34,7 @@ const DaElr = () => {
           className="mt-5 flex h-[1131px] w-full max-w-[800px] items-start justify-between bg-white font-geologica text-black"
         >
           {/* --------------------- left section --------------------- */}
-          <div className="flex h-full w-[40%] flex-col">
+          <div className="h-full w-[40%]">
             {/* resume header section  */}
             <div className="bg-[#4287f5] p-7 text-white">
               <div className="">
@@ -101,6 +101,23 @@ const DaElr = () => {
                       <FaGraduationCap />
                       <span className="">GPA: 8.9</span>
                     </p>
+                  </div>
+                  {/* relavent section */}
+                  <div className="flex flex-col items-start text-sm">
+                    <h3 className="font-bold">Relevant Courses</h3>
+                    <ul>
+                      {[
+                        "Introduction to data wrangling and analysis in JavaScript",
+                        "Free JavaScript Tutorial - Javascript Array Methods",
+                        "Data Visualization with D3.js",
+                        "Interactive Data Visualization for the Web",
+                        "JavaScript for Data Science",
+                      ].map((rlvtCourse, index) => (
+                        <li className="ml-5 list-disc text-gray-600">
+                          {rlvtCourse}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
