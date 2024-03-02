@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { FaInfoCircle } from "react-icons/fa";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Information1 = () => {
