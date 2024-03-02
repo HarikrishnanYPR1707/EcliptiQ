@@ -148,7 +148,7 @@ const DaElr = () => {
                   ].map((skill, i) => (
                     <li
                       key={i}
-                      className="ml-5 list-disc text-sm text-gray-500"
+                      className="ml-5 list-disc text-sm text-gray-600"
                     >
                       {skill},
                     </li>
@@ -191,13 +191,17 @@ const DaElr = () => {
                     </span>
                   </h1>
                   {/* Date and place section */}
-                  <div className="flex w-[300px] items-center justify-between text-gray-500">
-                    <p className="">
+                  <div className="flex w-[300px] items-center justify-between text-sm text-gray-500">
+                    <p className="flex items-center justify-center gap-2">
+                      <SlCalender />
                       <span className="">June 2021</span>
                       {" - "}
                       <span className="">current</span>
                     </p>
-                    <p className="">India</p>
+                    <p className="flex items-center justify-center gap-2">
+                      <FaLocationDot />
+                      <span className="">India</span>
+                    </p>
                   </div>
                   {/* description section - 1 */}
                   <ul className="ml-12 list-disc">
