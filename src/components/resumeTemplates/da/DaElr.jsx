@@ -5,10 +5,10 @@ import { MdEmail } from "react-icons/md";
 import { useReactToPrint } from "react-to-print";
 
 const DaElr = () => {
-  const sdeSlrComponentDownloadRef = useRef(null);
+  const daElrComponentDownloadRef = useRef(null);
 
   const handlePrint = useReactToPrint({
-    content: () => sdeSlrComponentDownloadRef.current,
+    content: () => daElrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
   });
@@ -27,7 +27,7 @@ const DaElr = () => {
       {/* ------------------ template part with button ------------------ */}
       <div className="flex flex-col items-center gap-5">
         <div
-          ref={sdeSlrComponentDownloadRef}
+          ref={daElrComponentDownloadRef}
           className="min-h-[1131px] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
         >
           {/* resume header section  */}
