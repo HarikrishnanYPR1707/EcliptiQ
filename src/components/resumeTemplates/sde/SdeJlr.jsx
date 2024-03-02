@@ -19,7 +19,7 @@ const SdeJlr = () => {
             Software Development Engineer
           </h1>
           <h3 className="rounded-xl bg-purple-500 bg-opacity-80 px-20 py-2 text-xl">
-            Senior Level Resume
+            Junior Level Resume
           </h3>
         </div>
       </div>
