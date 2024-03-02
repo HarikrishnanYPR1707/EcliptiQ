@@ -34,7 +34,7 @@ const DaElr = () => {
           className="mt-5 flex h-[1131px] w-full max-w-[800px] items-start justify-between bg-white font-geologica text-black"
         >
           {/* --------------------- left section --------------------- */}
-          <div className="h-full w-[40%]">
+          <div className="flex h-full w-[40%] flex-col">
             {/* resume header section  */}
             <div className="bg-[#4287f5] p-7 text-white">
               <div className="">
@@ -71,9 +71,9 @@ const DaElr = () => {
                 </p>
               </div>
             </div>
-            <div className="h-full bg-[#f8f8f8]">
+            <div className="h-full bg-[#f8f8f8] p-7">
               {/* Education Section */}
-              <div className="mb-5 p-7">
+              <div className="mb-5">
                 <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                   Education
                 </h1>
@@ -103,7 +103,7 @@ const DaElr = () => {
                     </p>
                   </div>
                   {/* relavent section */}
-                  <div className="flex flex-col items-start text-sm">
+                  <div className="mt-2 flex flex-col items-start text-sm">
                     <h3 className="font-bold">Relevant Courses</h3>
                     <ul>
                       {[
@@ -113,7 +113,10 @@ const DaElr = () => {
                         "Interactive Data Visualization for the Web",
                         "JavaScript for Data Science",
                       ].map((rlvtCourse, index) => (
-                        <li className="ml-5 list-disc text-gray-600">
+                        <li
+                          key={index}
+                          className="ml-5 list-disc text-gray-600"
+                        >
                           {rlvtCourse}
                         </li>
                       ))}
@@ -122,38 +125,35 @@ const DaElr = () => {
                 </div>
               </div>
               {/* Skills section  */}
-              <div className="p-5">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+              <div className="">
+                <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                   Skills
                 </h1>
-                <div className="">
+                <ul className="">
                   {[
-                    "JavaScript",
-                    "HTML5",
-                    "CSS3",
-                    "React.js",
-                    "Node.js",
-                    "Express.js",
-                    "MongoDB",
                     "SQL",
-                    "Git",
-                    "Webpack",
-                    "Babel",
-                    "RESTful APIs",
-                    "Responsive Web Design",
-                    "Testing (Jest, Mocha, Chai)",
-                    "Debugging",
-                    "Agile Methodologies",
-                    "Problem Solving",
-                    "Critical Thinking",
+                    "Python",
+                    "R",
+                    "JavaScript",
+                    "Excel",
+                    "Data Cleaning & Wrangling",
+                    "Data Visualization (e.g., Tableau, Power BI)",
+                    "Statistical Analysis",
+                    "Machine Learning Fundamentals",
                     "Communication",
-                    "Teamwork",
+                    "Critical Thinking & Problem-Solving",
+                    "Storytelling",
+                    "Data Curiosity & Attention to Detail",
+                    "Collaboration & Teamwork",
                   ].map((skill, i) => (
-                    <span key={i} className="text-sm">
-                      {skill + " "},
-                    </span>
+                    <li
+                      key={i}
+                      className="ml-5 list-disc text-sm text-gray-500"
+                    >
+                      {skill},
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>
