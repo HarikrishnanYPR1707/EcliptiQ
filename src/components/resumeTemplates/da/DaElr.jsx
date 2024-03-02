@@ -161,7 +161,7 @@ const DaElr = () => {
           <div className="flex w-[60%] flex-col items-start gap-5 p-7">
             {/* Career Objective section  */}
             <div className="">
-              <h1 className="mb-2 font-timesNewRoman text-2xl font-black uppercase">
+              <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                 Career Objective
               </h1>
               <div className="text-sm">
