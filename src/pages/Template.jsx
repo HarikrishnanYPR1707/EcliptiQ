@@ -179,7 +179,7 @@ const Template = () => {
             {/* template-1 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/bk/elr">
                   <img src={BankingEntryLevel} alt="" />
                 </Link>
               </div>
@@ -197,7 +197,7 @@ const Template = () => {
             {/* template-2 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/bk/jlr">
                   <img src={BankingMidLevel} alt="" />
                 </Link>
               </div>
@@ -215,7 +215,7 @@ const Template = () => {
             {/* template-3 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="">
+                <Link to="/templates/bk/slr">
                   <img src={BankingSeniorLevel} alt="" />
                 </Link>
               </div>
