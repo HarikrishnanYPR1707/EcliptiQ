@@ -170,7 +170,7 @@ const DaJlr = () => {
                 </div>
               </div>
               {/* Education Section */}
-              <div className="mb-5">
+              <div className="">
                 <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
                   Education
                 </h1>
@@ -194,65 +194,46 @@ const DaJlr = () => {
                   </div>
                 </div>
               </div>
-              {/* Relevant Courses section  */}
-              <div className="">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
-                  Relevant Courses
-                </h1>
-                <div className="">
-                  {[
-                    "JavaScript Fundamentals",
-                    "Advanced JavaScript",
-                    "Front-End Web Development",
-                    "Back-End Web Development",
-                    "React.js Essentials",
-                    "Node.js Basics",
-                    "Express.js Fundamentals",
-                    "MongoDB for Beginners",
-                    "SQL Fundamentals",
-                    "Full-Stack Web Development",
-                    "Responsive Web Design",
-                    "Web Development Bootcamp",
-                  ].map((skill, i) => (
-                    <span key={i} className="text-sm">
-                      {skill + " "},
-                    </span>
-                  ))}
-                </div>
-              </div>
               {/* Skills section  */}
               <div className="">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+                <h1 className="mb-1 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
                   Skills
                 </h1>
-                <div className="">
+                <ul className="">
                   {[
-                    "JavaScript",
-                    "HTML5",
-                    "CSS3",
-                    "React.js",
-                    "Node.js",
-                    "Express.js",
-                    "MongoDB",
                     "SQL",
-                    "Git",
-                    "Webpack",
-                    "Babel",
-                    "RESTful APIs",
-                    "Responsive Web Design",
-                    "Testing (Jest, Mocha, Chai)",
-                    "Debugging",
-                    "Agile Methodologies",
-                    "Problem Solving",
-                    "Critical Thinking",
-                    "Communication",
-                    "Teamwork",
+                    "Python",
+                    "R",
+                    "JavaScript",
+                    "Excel",
+                    "Data Cleaning & Wrangling",
+                    "Data Visualization (e.g., Tableau, Power BI)",
+                    "Statistical Analysis",
                   ].map((skill, i) => (
-                    <span key={i} className="text-sm">
-                      {skill + " "},
-                    </span>
+                    <li
+                      key={i}
+                      className="ml-5 list-disc text-sm text-gray-600"
+                    >
+                      {skill},
+                    </li>
                   ))}
-                </div>
+                </ul>
+              </div>
+              {/* Certification section  */}
+              <div className="">
+                <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
+                  Certification
+                </h1>
+                <ul className="">
+                  {[
+                    "Google Data Analytics Professional Certificate",
+                    "Microsoft Certified: Azure Data Analyst Associate",
+                  ].map((skill, i) => (
+                    <li key={i} className="ml-5 list-disc text-sm">
+                      {skill + " "},
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
