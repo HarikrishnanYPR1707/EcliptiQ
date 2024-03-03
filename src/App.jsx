@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import BkElr from "./components/resumeTemplates/banking/BkElr";
 import DaElr from "./components/resumeTemplates/da/DaElr";
 import DaJlr from "./components/resumeTemplates/da/DaJlr";
 import DaSlr from "./components/resumeTemplates/da/DaSlr";
@@ -26,7 +27,7 @@ const App = () => {
             <Route path="/templates/da/elr" element={<DaElr />} />
             <Route path="/templates/da/jlr" element={<DaJlr />} />
             <Route path="/templates/da/slr" element={<DaSlr />} />
-            <Route path="/templates/bk/elr" element={<DaElr />} />
+            <Route path="/templates/bk/elr" element={<BkElr />} />
             {/* <Route path="/templates/bk/jlr" element={<DaJlr />} /> */}
             {/* <Route path="/templates/bk/slr" element={<DaSlr />} /> */}
             <Route path="*" element={<div>404 Page</div>} />
