@@ -216,7 +216,7 @@ const DaElr = () => {
                 </div>
               </div>
             </div>
-            {/* Relevant Courses section  */}
+            {/* Projects section  */}
             <div className="">
               <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                 Projects
