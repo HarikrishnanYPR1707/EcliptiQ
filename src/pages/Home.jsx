@@ -27,7 +27,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="h-heightWithoutNavbar border">
+    <div className="flex h-heightWithoutNavbar items-center justify-center gap-20 border">
       <div
         id="intro-slider"
         className="absolute inset-0 top-0 z-30 flex flex-col items-center justify-center bg-[#030712] font-honk text-3xl font-black"
@@ -43,12 +43,14 @@ const Home = () => {
           <div id="progressBar" className="h-[2px] w-full bg-purple-500" />
         </div>
       </div>
-      home page
+
       <Link to="/information">
-        <button className="rounded-xl bg-purple-500 px-3 py-2 font-black uppercase">
+        <button className="h-[100px] w-[400px] rounded-xl bg-purple-500 px-3 py-2 font-black uppercase">
           Create your resume
         </button>
       </Link>
+
+      <div className="h-[100px] w-[400px] rounded-xl bg-purple-500"></div>
     </div>
   );
 };
