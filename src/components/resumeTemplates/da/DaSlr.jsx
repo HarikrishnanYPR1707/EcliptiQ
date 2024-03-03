@@ -45,9 +45,9 @@ const DaSlr = () => {
             </h2>
           </div>
           {/* bottom section */}
-          <div className="flex gap-5 border border-black p-7">
+          <div className="flex gap-5 p-7">
             {/* ----------- left section -----------*/}
-            <div className="w-[40%] border border-red-500">
+            <div className="w-[40%]">
               {/* contact section  */}
               <div className="mb-10">
                 <h1 className="mb-1 text-end text-xl font-bold uppercase">
@@ -138,9 +138,9 @@ const DaSlr = () => {
               </div>
             </div>
             {/* ----------- divider ----------- */}
-            <div className="min-h-[1131px] w-[3px] bg-[#ffaf1e]" />
+            <div className=" w-[3px] bg-[#ffaf1e]" />
             {/* ----------- right section ----------- */}
-            <div className="w-[60%] border border-blue-500">
+            <div className="w-[60%]">
               {/* work section  */}
               <div className="">
                 <h1 className="text-xl font-bold uppercase">Work Experience</h1>
