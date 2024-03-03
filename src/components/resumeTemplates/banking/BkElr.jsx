@@ -16,7 +16,7 @@ const BkElr = () => {
       <div className="relative flex h-[200px] w-full items-center justify-center bg-banner bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
         <div className="relative flex flex-col items-center justify-center gap-4">
-          <h1 className="text-5xl font-black  uppercase">Banking</h1>
+          <h1 className="text-5xl font-black uppercase">Banking</h1>
           <h3 className="rounded-xl bg-purple-500 bg-opacity-80 px-20 py-2 text-xl">
             Entry Level Resume
           </h3>
