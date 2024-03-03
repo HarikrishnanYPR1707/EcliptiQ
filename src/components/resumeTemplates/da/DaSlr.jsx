@@ -47,7 +47,96 @@ const DaSlr = () => {
           {/* bottom section */}
           <div className="flex gap-5 border border-black p-7">
             {/* ----------- left section -----------*/}
-            <div className="w-[40%] border border-red-500"></div>
+            <div className="w-[40%] border border-red-500">
+              {/* contact section  */}
+              <div className="mb-10">
+                <h1 className="mb-1 text-end text-xl font-bold uppercase">
+                  Contact
+                </h1>
+                <div className="flex flex-col items-end justify-between">
+                  <p className="flex w-fit flex-row-reverse items-center justify-center gap-2 text-sm text-gray-500">
+                    <FaPhone className="text-gray-400" />
+                    <span className="">1234567890</span>
+                  </p>
+                  <p className="flex w-fit flex-row-reverse items-center justify-center gap-2 text-sm text-gray-500">
+                    <MdEmail className="text-gray-400" />
+                    <span className="">sample@gmail.com</span>
+                  </p>
+                  <p className="flex w-fit flex-row-reverse items-center justify-center text-sm text-gray-500">
+                    <a
+                      href="#"
+                      className="flex flex-row-reverse items-center justify-center gap-2"
+                    >
+                      <CgWebsite className="text-gray-400" />
+                      www.sample.com
+                    </a>
+                  </p>
+                  <p className="flex w-fit flex-row-reverse items-center justify-center text-sm text-gray-500">
+                    <a
+                      href=""
+                      className="flex flex-row-reverse items-center  justify-center gap-2"
+                    >
+                      <FaLinkedin className="text-gray-400" />
+                      <span className="text-blue-500">linkedin</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              {/* education section  */}
+              <div className="mb-5 text-end">
+                <h1 className="mb-2 text-end text-xl font-bold uppercase">
+                  Education
+                </h1>
+                <div className="">
+                  {/* header section */}
+                  <h1 className="flex flex-col-reverse text-[15px]">
+                    <span className="">University of Mumbai</span>
+                    <span className="">B.Tech in Computer Engineering</span>
+                  </h1>
+                  {/* Date and place section */}
+                  <div className="flex flex-col items-end justify-between text-sm text-gray-500">
+                    <p className="">
+                      <span className="">January 2021</span>
+                      {" - "}
+                      <span className="">May 2024</span>
+                    </p>
+                    <p className="">Vasai, Kaman</p>
+                  </div>
+                </div>
+              </div>
+              {/* skills section  */}
+              <div className="">
+                <h1 className="text-end text-xl font-bold uppercase">Skills</h1>
+                <div className="flex flex-col items-end text-sm text-gray-900">
+                  {[
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "React.js",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "SQL",
+                    "Git",
+                    "Webpack",
+                    "Babel",
+                    "RESTful APIs",
+                    "Responsive Web Design",
+                    "Testing (Jest, Mocha, Chai)",
+                    "Debugging",
+                    "Agile Methodologies",
+                    "Problem Solving",
+                    "Critical Thinking",
+                    "Communication",
+                    "Teamwork",
+                  ].map((skill, i) => (
+                    <span key={i} className="">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
             {/* ----------- divider ----------- */}
             <div className="min-h-[1131px] w-[3px] bg-[#ffaf1e]" />
             {/* ----------- right section ----------- */}
