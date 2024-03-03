@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import DaElr from "./components/resumeTemplates/da/DaElr";
+import DaJlr from "./components/resumeTemplates/da/DaJlr";
 import SdeElr from "./components/resumeTemplates/sde/SdeElr";
 import SdeJlr from "./components/resumeTemplates/sde/SdeJlr";
 import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
@@ -22,7 +23,7 @@ const App = () => {
             <Route path="/templates/sde/jlr" element={<SdeJlr />} />
             <Route path="/templates/sde/slr" element={<SdeSlr />} />
             <Route path="/templates/da/elr" element={<DaElr />} />
-            <Route path="/templates/da/jlr" element={<SdeJlr />} />
+            <Route path="/templates/da/jlr" element={<DaJlr />} />
             {/* <Route path="/templates/da/slr" element={<SdeSlr />} /> */}
             <Route path="*" element={<div>404 Page</div>} />
           </Routes>
