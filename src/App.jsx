@@ -26,6 +26,9 @@ const App = () => {
             <Route path="/templates/da/elr" element={<DaElr />} />
             <Route path="/templates/da/jlr" element={<DaJlr />} />
             <Route path="/templates/da/slr" element={<DaSlr />} />
+            <Route path="/templates/bk/elr" element={<DaElr />} />
+            {/* <Route path="/templates/bk/jlr" element={<DaJlr />} /> */}
+            {/* <Route path="/templates/bk/slr" element={<DaSlr />} /> */}
             <Route path="*" element={<div>404 Page</div>} />
           </Routes>
         </div>
