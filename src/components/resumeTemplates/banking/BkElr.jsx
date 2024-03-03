@@ -151,6 +151,49 @@ const BkElr = () => {
                 strong understanding of best practices for UI/UX design and
                 development.
               </div>
+              {/* professional experience */}
+              <div className="mt-5">
+                <h1 className="mb-2 text-xl font-semibold uppercase text-[#a71b23]">
+                  Work Experience
+                </h1>
+                {Array(2)
+                  .fill(true)
+                  .map((item, i) => (
+                    <div className="mb-3">
+                      {/* -------------------- experiences -------------------- */}
+                      <div className="">
+                        {/* header section */}
+                        <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
+                          <span className="text-base font-bold text-[#a71b23]">
+                            Senior Software Developer
+                          </span>
+                        </h1>
+                        {/* Date and place section */}
+                        <div className="flex items-center justify-between text-gray-500">
+                          <p className="">
+                            <span className="">Coding Adda</span>
+                            {", "}
+                            <span className="">India</span>
+                            {" | "}
+                            <span className="">June 2021</span>
+                            {" - "}
+                            <span className="">current</span>
+                          </p>
+                        </div>
+                        {/* description section - 1 */}
+                        <ul className="ml-12 list-disc">
+                          {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement."
+                            .split("---")
+                            .map((item, i) => (
+                              <li key={i} className="text-sm">
+                                {item}
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
