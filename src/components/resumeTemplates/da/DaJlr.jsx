@@ -41,31 +41,31 @@ const DaJlr = () => {
                 Harikrishnan Prasannakumar
               </h1>
               <h3 className="font-timesNewRoman text-3xl font-bold text-[#7e7e05]">
-                Software Engineer
+                Junior Data Analyst
               </h3>
             </div>
-            <div className="flex w-[500px] flex-wrap gap-x-10 gap-y-2 border border-black">
-              <p className="flex w-fit items-center justify-center gap-2 border border-rose-500 text-sm text-gray-500">
+            <div className="mt-2 flex w-[500px] flex-wrap gap-x-10 gap-y-2">
+              <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <FaPhone className="text-gray-500" />
                 <span className="">1234567890</span>
               </p>
-              <p className="flex w-fit items-center justify-center gap-2 border border-rose-500 text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <MdEmail className="text-gray-500" />
                 <span className="">sample@gmail.com</span>
               </p>
-              <p className="flex w-fit items-center justify-center border border-rose-500 text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="#" className="flex items-center justify-center gap-2">
                   <CgWebsite className="text-gray-500" />
                   www.sample.com
                 </a>
               </p>
-              <p className="flex w-fit items-center justify-center border border-rose-500 text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="" className="flex items-center justify-center gap-2">
                   <FaLinkedin className="" />
                   <span className="text-blue-500">linkedin</span>
                 </a>
               </p>
-              <p className="flex w-fit items-center justify-center border border-rose-500 text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="" className="flex items-center justify-center gap-2">
                   <FaLinkedin className="" />
                   <span className="text-blue-500">twitter</span>
