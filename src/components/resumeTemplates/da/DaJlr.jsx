@@ -157,7 +157,7 @@ const DaJlr = () => {
             <div className="flex w-[40%] flex-col items-start gap-5">
               {/* Career Objective section  */}
               <div className="">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
                   Career Objective
                 </h1>
                 <div className="text-sm">
