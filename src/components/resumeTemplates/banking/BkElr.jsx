@@ -34,7 +34,7 @@ const BkElr = () => {
         >
           <div className="flex w-full">
             {/* --------------------- left section ---------------------*/}
-            <div className="min-h-[1131px] w-[35%] bg-[#f5f1ee] p-7">
+            <div className="min-h-[1131px] w-[35%] bg-[#f5f1ee] p-7 text-gray-500">
               {/* header section */}
               <div className="">
                 <h1 className="flex flex-col text-3xl text-[#a71b23]">
@@ -66,7 +66,30 @@ const BkElr = () => {
                   </p>
                 </div>
               </div>
-              {/* Education section */}
+              {/* education section  */}
+              <div className="mt-5">
+                <h1 className="mb-2 text-xl font-semibold uppercase text-[#a71b23]">
+                  Education
+                </h1>
+                <div className="">
+                  {/* header section */}
+                  <h1 className="flex flex-col-reverse text-[15px]">
+                    <span className="">University of Mumbai</span>
+                    <span className="font-bold text-[#a71b23]">
+                      B.Tech in Computer Engineering
+                    </span>
+                  </h1>
+                  {/* Date and place section */}
+                  <div className="flex flex-col items-start justify-between text-sm text-gray-500">
+                    <p className="">
+                      <span className="">January 2021</span>
+                      {" - "}
+                      <span className="">May 2024</span>
+                    </p>
+                    <p className="">Vasai, Kaman</p>
+                  </div>
+                </div>
+              </div>
             </div>
             {/* --------------------- right section ---------------------*/}
             <div className="min-h-[1131px] w-[75%] p-7"></div>
