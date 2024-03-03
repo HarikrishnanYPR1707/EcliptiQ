@@ -92,7 +92,7 @@ const BkElr = () => {
               </div>
               {/* Skills section  */}
               <div className="mt-5">
-                <h1 className="mb-1 text-xl font-bold uppercase text-[#a71b23]">
+                <h1 className="mb-1 text-xl font-semibold uppercase text-[#a71b23]">
                   key Skills
                 </h1>
                 <ul className="">
@@ -117,6 +117,22 @@ const BkElr = () => {
                       className="ml-5 list-disc text-sm text-gray-600"
                     >
                       {skill},
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {/* Certification section  */}
+              <div className="mt-5">
+                <h1 className="mb-1 text-xl font-semibold uppercase text-[#a71b23]">
+                  Certifications
+                </h1>
+                <ul className="">
+                  {[
+                    "Google Data Analytics Professional Certificate",
+                    "Microsoft Certified: Azure Data Analyst Associate",
+                  ].map((skill, i) => (
+                    <li key={i} className="ml-5 list-disc text-sm">
+                      {skill}
                     </li>
                   ))}
                 </ul>
