@@ -171,13 +171,13 @@ const DaJlr = () => {
               </div>
               {/* Education Section */}
               <div className="mb-5">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
                   Education
                 </h1>
                 <div className="">
                   {/* header section */}
                   <h1 className=" text-[15px]">
-                    <span className="font-bold text-yellow-900">
+                    <span className="font-bold text-[#7e7e05]">
                       University of Mumbai
                     </span>{" "}
                     {" - "}
