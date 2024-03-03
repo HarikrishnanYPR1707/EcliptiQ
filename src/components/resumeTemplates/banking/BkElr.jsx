@@ -1,9 +1,5 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
-import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
-import { CgWebsite } from "react-icons/cg";
-import { FaLinkedin } from "react-icons/fa";
 
 const BkElr = () => {
   const bkElrComponentDownloadRef = useRef(null);
