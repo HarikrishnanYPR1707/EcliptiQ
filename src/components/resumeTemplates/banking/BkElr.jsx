@@ -32,11 +32,44 @@ const BkElr = () => {
           ref={bkElrComponentDownloadRef}
           className="min-h-[1131px] w-full max-w-[800px] bg-white font-geologica text-black"
         >
-          <div className="flex w-full border border-purple-500">
-            {/* left section */}
-            <div className="min-h-[1131px] w-[35%] border border-blue-500 bg-[#f5f1ee]"></div>
-            {/* right section */}
-            <div className="min-h-[1131px] w-[75%] border border-red-500"></div>
+          <div className="flex w-full">
+            {/* --------------------- left section ---------------------*/}
+            <div className="min-h-[1131px] w-[35%] bg-[#f5f1ee] p-7">
+              {/* header section */}
+              <div className="">
+                <h1 className="flex flex-col text-3xl text-[#a71b23]">
+                  <span className="">Harikrishnan</span>
+                  <span className="">Prasannakumar</span>
+                </h1>
+                <div className="mt-4 flex flex-col items-start justify-between">
+                  <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
+                    <span className="">1234567890</span>
+                  </p>
+                  <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
+                    <span className="">sample@gmail.com</span>
+                  </p>
+                  <p className="flex w-fit items-center justify-center text-sm text-gray-500">
+                    <a
+                      href="#"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      www.sample.com
+                    </a>
+                  </p>
+                  <p className="flex w-fit items-center justify-center text-sm text-gray-500">
+                    <a
+                      href=""
+                      className="flex items-center justify-center gap-2"
+                    >
+                      <span className="text-[#a71b23]">linkedin</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              {/* Education section */}
+            </div>
+            {/* --------------------- right section ---------------------*/}
+            <div className="min-h-[1131px] w-[75%] p-7"></div>
           </div>
         </div>
         <button
