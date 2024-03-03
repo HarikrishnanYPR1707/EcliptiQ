@@ -90,6 +90,37 @@ const BkElr = () => {
                   </div>
                 </div>
               </div>
+              {/* Skills section  */}
+              <div className="mt-5">
+                <h1 className="mb-1 text-xl font-bold uppercase text-[#a71b23]">
+                  key Skills
+                </h1>
+                <ul className="">
+                  {[
+                    "SQL",
+                    "Python",
+                    "R",
+                    "JavaScript",
+                    "Excel",
+                    "Data Cleaning & Wrangling",
+                    "Data Visualization (e.g., Tableau, Power BI)",
+                    "Statistical Analysis",
+                    "Machine Learning Fundamentals",
+                    "Communication",
+                    "Critical Thinking & Problem-Solving",
+                    "Storytelling",
+                    "Data Curiosity & Attention to Detail",
+                    "Collaboration & Teamwork",
+                  ].map((skill, i) => (
+                    <li
+                      key={i}
+                      className="ml-5 list-disc text-sm text-gray-600"
+                    >
+                      {skill},
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             {/* --------------------- right section ---------------------*/}
             <div className="min-h-[1131px] w-[75%] p-7"></div>
