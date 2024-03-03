@@ -154,7 +154,7 @@ const BkElr = () => {
               {/* professional experience */}
               <div className="mt-5">
                 <h1 className="mb-2 text-xl font-semibold uppercase text-[#a71b23]">
-                  Work Experience
+                  Professional Experience
                 </h1>
                 {Array(2)
                   .fill(true)
