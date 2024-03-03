@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
+import { MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+import { FaLinkedin } from "react-icons/fa";
 
 const DaJlr = () => {
+  const sdeElrComponentDownloadRef = useRef(null);
+
   const handlePrint = useReactToPrint({
     content: () => sdeElrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
@@ -25,37 +32,43 @@ const DaJlr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeElrComponentDownloadRef}
-          className="min-h-[1131px] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
+          className="min-h-[1131px] w-full max-w-[800px] bg-white p-7 font-geologica text-black"
         >
           {/* resume header section  */}
           <div className="">
             <div className="">
-              <h1 className="pb-1 pt-6 text-3xl font-black">
+              <h1 className="pb-1 font-timesNewRoman text-5xl font-black">
                 Harikrishnan Prasannakumar
               </h1>
-              <h3 className="text-2xl font-bold text-[#ff0505]">
+              <h3 className="font-timesNewRoman text-3xl font-bold text-[#7e7e05]">
                 Software Engineer
               </h3>
             </div>
-            <div className="flex items-center justify-between">
-              <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
+            <div className="flex w-[500px] flex-wrap gap-x-10 gap-y-2 border border-black">
+              <p className="flex w-fit items-center justify-center gap-2 border border-rose-500 text-sm text-gray-500">
                 <FaPhone className="text-gray-500" />
                 <span className="">1234567890</span>
               </p>
-              <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center gap-2 border border-rose-500 text-sm text-gray-500">
                 <MdEmail className="text-gray-500" />
                 <span className="">sample@gmail.com</span>
               </p>
-              <p className="flex w-fit items-center justify-center text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center border border-rose-500 text-sm text-gray-500">
                 <a href="#" className="flex items-center justify-center gap-2">
                   <CgWebsite className="text-gray-500" />
                   www.sample.com
                 </a>
               </p>
-              <p className="flex w-fit items-center justify-center text-sm text-gray-500">
+              <p className="flex w-fit items-center justify-center border border-rose-500 text-sm text-gray-500">
                 <a href="" className="flex items-center justify-center gap-2">
                   <FaLinkedin className="" />
                   <span className="text-blue-500">linkedin</span>
+                </a>
+              </p>
+              <p className="flex w-fit items-center justify-center border border-rose-500 text-sm text-gray-500">
+                <a href="" className="flex items-center justify-center gap-2">
+                  <FaLinkedin className="" />
+                  <span className="text-blue-500">twitter</span>
                 </a>
               </p>
             </div>
