@@ -39,7 +39,7 @@ const DaElr = () => {
             <div className="bg-[#4287f5] p-7 text-white">
               <div className="">
                 <h1 className="pb-1 pt-6 font-timesNewRoman text-3xl font-black">
-                  Harikrishnan Prasannakumar
+                  Aakarsh Menon
                 </h1>
                 <h3 className="font-timesNewRoman text-2xl italic">
                   Data Analyst
