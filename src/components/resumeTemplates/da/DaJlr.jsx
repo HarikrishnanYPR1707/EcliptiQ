@@ -79,41 +79,77 @@ const DaJlr = () => {
             <div className="w-[60%]">
               {/* Work section */}
               <div className="">
-                <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
+                <h1 className="mb-2 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
                   Work Experience
                 </h1>
-                <div className="">
-                  {/* experience-1 */}
-                  <div className="">
-                    {/* header section */}
-                    <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
-                      <span className="-mt-1 font-bold text-[#ff0505]">
-                        Coding Adda
-                      </span>
-                      <span className="text-[22px]">
-                        Senior Software Developer
-                      </span>
-                    </h1>
-                    {/* Date and place section */}
-                    <div className="flex items-center justify-between text-gray-500">
-                      <p className="">
-                        <span className="">June 2021</span>
-                        {" - "}
-                        <span className="">current</span>
-                      </p>
-                      <p className="">India</p>
+                {Array(2)
+                  .fill(true)
+                  .map((item, i) => (
+                    <div className="">
+                      {/* -------------------- experiences -------------------- */}
+                      <div className="">
+                        {/* header section */}
+                        <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
+                          <span className="-mt-1 font-bold text-[#7e7e05]">
+                            Coding Adda
+                          </span>
+                          <span className="text-[22px]">
+                            Senior Software Developer
+                          </span>
+                        </h1>
+                        {/* Date and place section */}
+                        <div className="flex items-center justify-between text-gray-500">
+                          <p className="">
+                            <span className="">June 2021</span>
+                            {" - "}
+                            <span className="">current</span>
+                          </p>
+                          <p className="">India</p>
+                        </div>
+                        {/* description section - 1 */}
+                        <ul className="ml-12 list-disc">
+                          {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement."
+                            .split("---")
+                            .map((item, i) => (
+                              <li key={i} className="text-sm">
+                                {item}
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
                     </div>
-                    {/* description section - 1 */}
-                    <ul className="ml-12 list-disc">
-                      {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams.---Communicate effectively with stakeholders to gather requirements, provide updates on project progress, and address any concerns or questions.---Adhere to software development methodologies, coding standards, and version control practices to maintain code quality and project consistency.---Contribute to the overall success of the engineering team by sharing knowledge, collaborating on projects, and supporting a positive and inclusive work environment."
-                        .split("---")
-                        .map((item, i) => (
-                          <li key={i} className="text-sm">
-                            {item}
+                  ))}
+              </div>
+              {/* Projects section */}
+              <div className="mt-5">
+                <h1 className="mb-1 border-b-[3px] border-black font-timesNewRoman text-2xl font-black uppercase">
+                  Projects
+                </h1>
+                <div className="">
+                  {Array(1)
+                    .fill(true)
+                    .map((_, i) => (
+                      <div key={i} className="mb-1">
+                        <h3 className="flex flex-col items-start">
+                          <span className="">
+                            RESTful API for a Social Networking Platform
+                          </span>
+                          <span className="font-bold text-[#7e7e05]">
+                            Project Lead
+                          </span>
+                        </h3>
+                        <ul className="text-gray-600">
+                          <li className="ml-5 list-disc">
+                            Design endpoints for user management, profile
+                            creation, and content sharing.
                           </li>
-                        ))}
-                    </ul>
-                  </div>
+                          <li className="ml-5 list-disc">
+                            Implement authentication and authorization
+                            mechanisms to ensure data security and privacy.
+                          </li>
+                        </ul>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
