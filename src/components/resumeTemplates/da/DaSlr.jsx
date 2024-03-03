@@ -46,15 +46,19 @@ const DaSlr = () => {
           </div>
           {/* bottom section */}
           <div className="flex gap-5 border border-black p-7">
+            {/* ----------- left section -----------*/}
             <div className="w-[40%] border border-red-500"></div>
+            {/* ----------- divider ----------- */}
             <div className="min-h-[1131px] w-[3px] bg-[#ffaf1e]" />
+            {/* ----------- right section ----------- */}
             <div className="w-[60%] border border-blue-500">
+              {/* work section  */}
               <div className="">
                 <h1 className="text-xl font-semibold uppercase">
                   Work Experience
                 </h1>
                 <div className="">
-                  {/* experience-1 */}
+                  {/* experiences */}
                   {Array(3)
                     .fill(true)
                     .map((_, i) => (
