@@ -139,7 +139,19 @@ const BkElr = () => {
               </div>
             </div>
             {/* --------------------- right section ---------------------*/}
-            <div className="min-h-[1131px] w-[75%] p-7"></div>
+            <div className="min-h-[1131px] w-[75%] p-7 text-gray-500">
+              {/* objective section */}
+              <div className="text-sm">
+                Highly skilled and results-oriented Front-End Engineer with X
+                years of experience in designing, developing, and implementing
+                user-centric web applications. Proven ability to deliver
+                high-quality, responsive, and performant websites and
+                applications across various platforms. Expertise in HTML, CSS,
+                JavaScript frameworks (e.g., React, Angular, Vue.js), and a
+                strong understanding of best practices for UI/UX design and
+                development.
+              </div>
+            </div>
           </div>
         </div>
         <button
