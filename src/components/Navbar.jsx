@@ -1,4 +1,4 @@
-import { signInWithPopup, signOut } from "firebase/auth";
+import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
 import { auth, googleProvider } from "../config/Firebase";
 import { Button } from "./ui/button";
@@ -7,6 +7,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
+  // const [userData, setUserData] = useState(null);
+
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUserData(currentUser);
+  //   // setUser(true);
+  //   console.log(userData);
+  // });
 
   const handleSignIn = async () => {
     try {
@@ -26,7 +33,7 @@ const Navbar = () => {
     }
   };
 
-  // console.log(user);
+  console.log(user);
   // console.log(auth?.currentUser?.photoURL);
 
   return (
