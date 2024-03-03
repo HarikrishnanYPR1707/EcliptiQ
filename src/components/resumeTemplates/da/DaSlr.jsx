@@ -6,10 +6,10 @@ import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin } from "react-icons/fa";
 
 const DaSlr = () => {
-  const sdeElrComponentDownloadRef = useRef(null);
+  const daElrComponentDownloadRef = useRef(null);
 
   const handlePrint = useReactToPrint({
-    content: () => sdeElrComponentDownloadRef.current,
+    content: () => daElrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
   });
@@ -31,7 +31,7 @@ const DaSlr = () => {
       {/* ------------------ template part with button ------------------ */}
       <div className="flex flex-col items-center gap-5">
         <div
-          ref={sdeElrComponentDownloadRef}
+          ref={daElrComponentDownloadRef}
           className="min-h-[1131px] w-full max-w-[800px] bg-white p-7 font-geologica text-black"
         >
           {/* resume header section  */}

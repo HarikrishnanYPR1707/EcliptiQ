@@ -6,10 +6,10 @@ import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin } from "react-icons/fa";
 
 const DaJlr = () => {
-  const daElrComponentDownloadRef = useRef(null);
+  const daJlrComponentDownloadRef = useRef(null);
 
   const handlePrint = useReactToPrint({
-    content: () => daElrComponentDownloadRef.current,
+    content: () => daJlrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
   });
@@ -24,14 +24,14 @@ const DaJlr = () => {
             Software Development Engineer
           </h1>
           <h3 className="rounded-xl bg-purple-500 bg-opacity-80 px-20 py-2 text-xl">
-            Entry Level Resume
+            Junior Level Resume
           </h3>
         </div>
       </div>
       {/* ------------------ template part with button ------------------ */}
       <div className="flex flex-col items-center gap-5">
         <div
-          ref={daElrComponentDownloadRef}
+          ref={daJlrComponentDownloadRef}
           className="min-h-[1131px] w-full max-w-[800px] bg-white p-7 font-geologica text-black"
         >
           {/* resume header section  */}
