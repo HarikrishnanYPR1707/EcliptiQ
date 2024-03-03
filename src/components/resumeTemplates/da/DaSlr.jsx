@@ -35,14 +35,60 @@ const DaSlr = () => {
           className="min-h-[1131px] w-full max-w-[800px] bg-white font-geologica text-black"
         >
           {/* resume header section  */}
-          <div className="flex flex-col items-center justify-center border border-black">
-            <h1 className="relative flex w-fit gap-3 border border-[#ffaf1e] bg-white px-7 py-4 text-3xl font-black uppercase">
+          <div className="mt-10 flex flex-col items-center justify-center">
+            <h1 className="relative flex w-fit gap-3 border-2 border-[#ffaf1e] bg-white px-10 py-3 text-3xl font-medium uppercase">
               <span className="">Harikrishnan</span>
               <span className="text-[#ffaf1e]">Prasannakumar</span>
             </h1>
-            <h2 className="-mt-7 flex h-[80px] w-full items-end justify-center border border-green-500 bg-[#f2f2f2] pb-4 text-2xl font-light">
+            <h2 className="-mt-7 flex h-[80px] w-full items-end justify-center bg-[#f2f2f2] pb-2 text-2xl font-extralight">
               Senior Data Analyst
             </h2>
+          </div>
+          {/* bottom section */}
+          <div className="flex gap-5 border border-black p-7">
+            <div className="w-[40%] border border-red-500"></div>
+            <div className="min-h-[1131px] w-[3px] bg-[#ffaf1e]" />
+            <div className="w-[60%] border border-blue-500">
+              <div className="">
+                <h1 className="text-xl font-semibold uppercase">
+                  Work Experience
+                </h1>
+                <div className="">
+                  {/* experience-1 */}
+                  {Array(3)
+                    .fill(true)
+                    .map((_, i) => (
+                      <div key={i} className="mb-6">
+                        {/* header section */}
+                        <h1 className="text-lg font-normal">
+                          Junior Software Developer
+                        </h1>
+                        <p className="text-base text-gray-600">Coding Adda</p>
+                        {/* Date and place section */}
+                        <div className="flex items-center justify-start text-gray-500">
+                          <p className="">
+                            <span className="">June 2021</span>
+                            {" - "}
+                            <span className="">current</span>
+                            {" / "}
+                            <span className="">India</span>
+                          </p>
+                        </div>
+                        {/* description section - 1 */}
+                        <ul className="ml-12 list-disc text-sm">
+                          {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement."
+                            .split("---")
+                            .map((item, i) => (
+                              <li key={i} className="">
+                                {item}
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button
