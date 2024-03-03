@@ -75,8 +75,8 @@ const BkJlr = () => {
               </div>
               {/* Skills section  */}
               <div className="mt-5">
-                <h1 className="mb-1 text-xl font-normal uppercase text-[#58595b]">
-                  key Skills
+                <h1 className="mb-1 text-xl font-normal text-[#58595b]">
+                  Key Skills
                 </h1>
                 <ul className="">
                   {[
@@ -108,8 +108,8 @@ const BkJlr = () => {
             {/* --------------------- right section ---------------------*/}
             <div className="min-h-[1131px] w-[75%] p-7 text-gray-500">
               {/* professional experience */}
-              <div className="mt-5">
-                <h1 className="mb-2 text-xl font-normal uppercase text-[#58595b]">
+              <div className="">
+                <h1 className="mb-2 text-xl font-normal text-[#58595b]">
                   Professional Experience
                 </h1>
                 {Array(2)
@@ -152,14 +152,14 @@ const BkJlr = () => {
               </div>
               {/* education section  */}
               <div className="mt-5">
-                <h1 className="mb-2 text-xl font-normal uppercase text-[#58595b]">
+                <h1 className="mb-2 text-xl font-normal text-[#58595b]">
                   Education
                 </h1>
                 <div className="">
                   {/* header section */}
                   <h1 className="flex flex-col-reverse text-[15px]">
                     <span className="">University of Mumbai</span>
-                    <span className="font-bold text-[#58595b]">
+                    <span className="text-[#58595b]">
                       B.Tech in Computer Engineering
                     </span>
                   </h1>
