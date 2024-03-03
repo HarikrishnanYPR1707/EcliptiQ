@@ -54,9 +54,7 @@ const DaSlr = () => {
             <div className="w-[60%] border border-blue-500">
               {/* work section  */}
               <div className="">
-                <h1 className="text-xl font-semibold uppercase">
-                  Work Experience
-                </h1>
+                <h1 className="text-xl font-bold uppercase">Work Experience</h1>
                 <div className="">
                   {/* experiences */}
                   {Array(3)
@@ -67,7 +65,9 @@ const DaSlr = () => {
                         <h1 className="text-lg font-normal">
                           Junior Software Developer
                         </h1>
-                        <p className="text-base text-gray-600">Coding Adda</p>
+                        <p className="-my-1 text-base text-gray-600">
+                          Coding Adda
+                        </p>
                         {/* Date and place section */}
                         <div className="flex items-center justify-start text-gray-500">
                           <p className="">
