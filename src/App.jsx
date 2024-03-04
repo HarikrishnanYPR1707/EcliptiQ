@@ -12,6 +12,7 @@ import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
 import Home from "./pages/Home";
 import Information1 from "./pages/Information1";
 import Template from "./pages/Template";
+import Information from "./pages/Information";
 
 const App = () => {
   return (

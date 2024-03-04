@@ -7,13 +7,17 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
-  // const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState(null);
 
-  // onAuthStateChanged(auth, (currentUser) => {
-  //   setUserData(currentUser);
-  //   // setUser(true);
-  //   console.log(userData);
-  // });
+  onAuthStateChanged(auth, (currentUser) => {
+    setUserData(currentUser);
+    if (userData == null) {
+      setUser(false);
+    } else {
+      setUser(true);
+    }
+    console.log(currentUser);
+  });
 
   const handleSignIn = async () => {
     try {
