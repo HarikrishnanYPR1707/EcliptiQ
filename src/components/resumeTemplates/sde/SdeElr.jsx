@@ -1,12 +1,14 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin } from "react-icons/fa";
+import { InformationContext } from "@/Contexts/InformationContext";
 
 const SdeElr = () => {
   const sdeElrComponentDownloadRef = useRef(null);
+  const { userResumeData, setUserResumeData } = useContext(InformationContext);
 
   const handlePrint = useReactToPrint({
     content: () => sdeElrComponentDownloadRef.current,

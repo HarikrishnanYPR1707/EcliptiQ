@@ -5,66 +5,66 @@ import { Link } from "react-router-dom";
 import { InformationContext } from "@/Contexts/InformationContext";
 
 const Information1 = () => {
-  // const [userResumeData, setUserResumeData] = useState({
-  //   personalDetails: {
-  //     jobTitle: "",
-  //     firstName: "",
-  //     lastName: "",
-  //     email: "",
-  //     phone: "",
-  //   },
-  //   professionalSummary: "",
-  //   education: {
-  //     college: "",
-  //     degree: "",
-  //     startDate: "",
-  //     endDate: "",
-  //     description: "",
-  //   },
-  //   experience: {
-  //     jobTitle: "",
-  //     employer: "",
-  //     startDate: "",
-  //     endDate: "",
-  //     description: "",
-  //   },
-  //   socialLink: {
-  //     link1: {
-  //       label: "",
-  //       link: "",
-  //     },
-  //     link2: {
-  //       label: "",
-  //       link: "",
-  //     },
-  //     link3: {
-  //       label: "",
-  //       link: "",
-  //     },
-  //     link4: {
-  //       label: "",
-  //       link: "",
-  //     },
-  //   },
-  //   skills: {
-  //     skill1: "",
-  //     skill2: "",
-  //     skill3: "",
-  //     skill4: "",
-  //     skill5: "",
-  //     skill6: "",
-  //   },
-  //   language: {
-  //     lang1: "",
-  //     lang2: "",
-  //     lang3: "",
-  //   },
-  // });
+  const [userResumeData, setUserResumeData] = useState({
+    personalDetails: {
+      jobTitle: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+    },
+    professionalSummary: "",
+    education: {
+      college: "",
+      degree: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+    },
+    experience: {
+      jobTitle: "",
+      employer: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+    },
+    socialLink: {
+      link1: {
+        label: "",
+        link: "",
+      },
+      link2: {
+        label: "",
+        link: "",
+      },
+      link3: {
+        label: "",
+        link: "",
+      },
+      link4: {
+        label: "",
+        link: "",
+      },
+    },
+    skills: {
+      skill1: "",
+      skill2: "",
+      skill3: "",
+      skill4: "",
+      skill5: "",
+      skill6: "",
+    },
+    language: {
+      lang1: "",
+      lang2: "",
+      lang3: "",
+    },
+  });
   // printing userResumeData ---
-  // console.log(userResumeData);
+  console.log(userResumeData);
   // ---------------------------
 
-  const { userResumeData, setUserResumeData } = useContext(InformationContext);
+  // const { userResumeData, setUserResumeData } = useContext(InformationContext);
   localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
 
   return (

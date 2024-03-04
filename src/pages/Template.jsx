@@ -8,8 +8,14 @@ import DASeniorLevel from "../assets/DataAnalyst/Data-Analyst-Senior-Level.png";
 import SDEEntryLevel from "../assets/SDE/SDE-Entry-Level.png";
 import SDEMidLevel from "../assets/SDE/SDE-Junior-Level.jpg";
 import SDESeniorLevel from "../assets/SDE/SDE-Senior-Level.png";
+import { InformationContext } from "@/Contexts/InformationContext";
+import { useContext } from "react";
 
 const Template = () => {
+  const { userResumeData, setUserResumeData } = useContext(InformationContext);
+
+  console.log(userResumeData);
+
   return (
     <section className="h-full">
       {/* ---------------------------- NEW DESIGN ---------------------------- */}
