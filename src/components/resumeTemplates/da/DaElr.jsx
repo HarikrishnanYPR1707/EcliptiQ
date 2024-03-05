@@ -173,10 +173,10 @@ const DaElr = () => {
                   {/* header section */}
                   <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                     <span className="-mt-1 font-bold text-[#4287f5]">
-                      {resumeData.experience.employer}
+                      {resumeData.experience.experience1.employer}
                     </span>
                     <span className="text-[22px]">
-                      {resumeData.experience.jobTitle}
+                      {resumeData.experience.experience1.jobTitle}
                     </span>
                   </h1>
                   {/* Date and place section */}
@@ -184,19 +184,64 @@ const DaElr = () => {
                     <p className="flex items-center justify-center gap-2">
                       <SlCalender />
                       <span className="">
-                        {resumeData.experience.startDate}
+                        {resumeData.experience.experience1.startDate}
                       </span>
                       {" - "}
-                      <span className="">{resumeData.experience.endDate}</span>
+                      <span className="">
+                        {resumeData.experience.experience1.endDate}
+                      </span>
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <FaLocationDot />
-                      <span className="">{resumeData.experience.place}</span>
+                      <span className="">
+                        {resumeData.experience.experience1.place}
+                      </span>
                     </p>
                   </div>
                   {/* description section - 1 */}
                   <ul className="ml-12 list-disc">
-                    {resumeData.experience.description
+                    {resumeData.experience.experience1.description
+                      .split("---")
+                      .map((desc, i) => (
+                        <li key={i} className="text-sm">
+                          {desc}
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+                {/* experience-2 */}
+                <div className="">
+                  {/* header section */}
+                  <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
+                    <span className="-mt-1 font-bold text-[#4287f5]">
+                      {resumeData.experience.experience2.employer}
+                    </span>
+                    <span className="text-[22px]">
+                      {resumeData.experience.experience2.jobTitle}
+                    </span>
+                  </h1>
+                  {/* Date and place section */}
+                  <div className="flex w-[300px] items-center justify-between text-sm text-gray-500">
+                    <p className="flex items-center justify-center gap-2">
+                      <SlCalender />
+                      <span className="">
+                        {resumeData.experience.experience2.startDate}
+                      </span>
+                      {" - "}
+                      <span className="">
+                        {resumeData.experience.experience2.endDate}
+                      </span>
+                    </p>
+                    <p className="flex items-center justify-center gap-2">
+                      <FaLocationDot />
+                      <span className="">
+                        {resumeData.experience.experience2.place}
+                      </span>
+                    </p>
+                  </div>
+                  {/* description section - 1 */}
+                  <ul className="ml-12 list-disc">
+                    {resumeData.experience.experience2.description
                       .split("---")
                       .map((desc, i) => (
                         <li key={i} className="text-sm">
