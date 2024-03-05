@@ -133,40 +133,114 @@ const DaSlr = () => {
               <div className="">
                 <h1 className="text-xl font-bold uppercase">Work Experience</h1>
                 <div className="">
-                  {/* experiences */}
-                  {Array(3)
-                    .fill(true)
-                    .map((_, i) => (
-                      <div key={i} className="mb-6">
-                        {/* header section */}
-                        <h1 className="text-lg font-normal">
-                          Junior Software Developer
-                        </h1>
-                        <p className="-my-1 text-base text-gray-600">
-                          Coding Adda
-                        </p>
-                        {/* Date and place section */}
-                        <div className="flex items-center justify-start text-gray-500">
-                          <p className="">
-                            <span className="">June 2021</span>
-                            {" - "}
-                            <span className="">current</span>
-                            {" / "}
-                            <span className="">India</span>
-                          </p>
-                        </div>
-                        {/* description section - 1 */}
-                        <ul className="ml-12 list-disc text-sm">
-                          {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement."
-                            .split("---")
-                            .map((item, i) => (
-                              <li key={i} className="">
-                                {item}
-                              </li>
-                            ))}
-                        </ul>
-                      </div>
-                    ))}
+                  {/* experiences-1 */}
+                  <div className="mb-4">
+                    {/* header section */}
+                    <h1 className="text-lg font-normal">
+                      {resumeData.experience.experience1.jobTitle}
+                    </h1>
+                    <p className="-my-1 text-base text-gray-600">
+                      {resumeData.experience.experience1.employer}
+                    </p>
+                    {/* Date and place section */}
+                    <div className="flex items-center justify-start text-gray-500">
+                      <p className="">
+                        <span className="">
+                          {resumeData.experience.experience1.startDate}
+                        </span>
+                        {" - "}
+                        <span className="">
+                          {resumeData.experience.experience1.endDate}
+                        </span>
+                        {" / "}
+                        <span className="">
+                          {resumeData.experience.experience1.place}
+                        </span>
+                      </p>
+                    </div>
+                    {/* description section - 1 */}
+                    <ul className="ml-12 list-disc text-sm">
+                      {resumeData.experience.experience1.description
+                        .split("---")
+                        .map((item, i) => (
+                          <li key={i} className="">
+                            {item}
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                  {/* experiences-2 */}
+                  <div className="mb-4">
+                    {/* header section */}
+                    <h1 className="text-lg font-normal">
+                      {resumeData.experience.experience2.jobTitle}
+                    </h1>
+                    <p className="-my-1 text-base text-gray-600">
+                      {resumeData.experience.experience2.employer}
+                    </p>
+                    {/* Date and place section */}
+                    <div className="flex items-center justify-start text-gray-500">
+                      <p className="">
+                        <span className="">
+                          {resumeData.experience.experience2.startDate}
+                        </span>
+                        {" - "}
+                        <span className="">
+                          {resumeData.experience.experience2.endDate}
+                        </span>
+                        {" / "}
+                        <span className="">
+                          {resumeData.experience.experience2.place}
+                        </span>
+                      </p>
+                    </div>
+                    {/* description section - 1 */}
+                    <ul className="ml-12 list-disc text-sm">
+                      {resumeData.experience.experience2.description
+                        .split("---")
+                        .map((item, i) => (
+                          <li key={i} className="">
+                            {item}
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                  {/* experiences-3 */}
+                  <div className="">
+                    {/* header section */}
+                    <h1 className="text-lg font-normal">
+                      {resumeData.experience.experience3.jobTitle}
+                    </h1>
+                    <p className="-my-1 text-base text-gray-600">
+                      {resumeData.experience.experience3.employer}
+                    </p>
+                    {/* Date and place section */}
+                    <div className="flex items-center justify-start text-gray-500">
+                      <p className="">
+                        <span className="">
+                          {resumeData.experience.experience3.startDate}
+                        </span>
+                        {" - "}
+                        <span className="">
+                          {resumeData.experience.experience3.endDate}
+                        </span>
+                        {" / "}
+                        <span className="">
+                          {resumeData.experience.experience3.place}
+                        </span>
+                      </p>
+                    </div>
+                    {/* description section - 1 */}
+                    <ul className="ml-12 list-disc text-sm">
+                      {resumeData.experience.experience3.description
+                        .split("---")
+                        .map((item, i) => (
+                          <li key={i} className="">
+                            {item}
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
