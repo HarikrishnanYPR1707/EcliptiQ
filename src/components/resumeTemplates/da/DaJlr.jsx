@@ -4,9 +4,14 @@ import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin } from "react-icons/fa";
+import { userResumeData } from "@/Fetch/InformationFetch";
 
 const DaJlr = () => {
   const daJlrComponentDownloadRef = useRef(null);
+
+  const data = userResumeData();
+  const resumeData = JSON.parse(data);
+  // console.log(resumeData);
 
   const handlePrint = useReactToPrint({
     content: () => daJlrComponentDownloadRef.current,
@@ -37,38 +42,49 @@ const DaJlr = () => {
           {/* resume header section  */}
           <div className="">
             <div className="">
-              <h1 className="pb-1 font-timesNewRoman text-5xl font-black">
-                Harikrishnan Prasannakumar
+              <h1 className="flex gap-3 pb-1 font-timesNewRoman text-5xl font-black">
+                <span className="">{resumeData.personalDetails.firstName}</span>
+                <span className="">{resumeData.personalDetails.lastName}</span>
               </h1>
               <h3 className="font-timesNewRoman text-3xl font-bold text-[#7e7e05]">
-                Junior Data Analyst
+                {resumeData.personalDetails.jobTitle}
               </h3>
             </div>
             <div className="mt-2 flex w-[500px] flex-wrap gap-x-10 gap-y-2">
               <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <FaPhone className="text-gray-500" />
-                <span className="">1234567890</span>
+                <span className="">{resumeData.personalDetails.phone}</span>
               </p>
               <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <MdEmail className="text-gray-500" />
-                <span className="">sample@gmail.com</span>
+                <span className="">{resumeData.personalDetails.email}</span>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="#" className="flex items-center justify-center gap-2">
                   <CgWebsite className="text-gray-500" />
-                  www.sample.com
+                  {resumeData.personalDetails.website}
                 </a>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
-                <a href="" className="flex items-center justify-center gap-2">
+                <a
+                  href={resumeData.socialLink.link1.link}
+                  className="flex items-center justify-center gap-2"
+                >
                   <FaLinkedin className="" />
-                  <span className="text-blue-500">linkedin</span>
+                  <span className="text-blue-500">
+                    {resumeData.socialLink.link1.label}
+                  </span>
                 </a>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
-                <a href="" className="flex items-center justify-center gap-2">
+                <a
+                  href={resumeData.socialLink.link2.link}
+                  className="flex items-center justify-center gap-2"
+                >
                   <FaLinkedin className="" />
-                  <span className="text-blue-500">twitter</span>
+                  <span className="text-blue-500">
+                    {resumeData.socialLink.link2.label}
+                  </span>
                 </a>
               </p>
             </div>
