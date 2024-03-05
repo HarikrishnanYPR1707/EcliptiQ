@@ -63,7 +63,7 @@ const SdeElr = () => {
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="#" className="flex items-center justify-center gap-2">
                   <CgWebsite className="text-gray-500" />
-                  www.sample.com
+                  {resumeData.personalDetails.website}
                 </a>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
