@@ -10,7 +10,7 @@ export const userResumeData = () => {
 //     email: "hk17.dev@gmail.com",
 //     phone: "7776861386",
 //   },
-//   professionalSummary: "",
+//   professionalSummary: "Highly motivated and results-oriented Software Development Engineer (SDE-3) with X years of experience in designing, developing, and deploying complex software solutions. Proven ability to lead and contribute to cross-functional teams, tackle challenging software problems, and deliver high-quality, scalable, and maintainable code. Possesses a strong understanding of system design principles and experience in owning and operating services within a product-based organization.",
 //   education: {
 //     college: "Universal College of Enginereing",
 //     degree: "B.Tech in Computer Engineering",
