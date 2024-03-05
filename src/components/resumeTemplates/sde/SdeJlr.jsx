@@ -1,8 +1,13 @@
 import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
+import { userResumeData } from "@/Fetch/InformationFetch";
 
 const SdeJlr = () => {
   const sdeJlrComponentDownloadRef = useRef(null);
+
+  const data = userResumeData();
+  const resumeData = JSON.parse(data);
+  // console.log(resumeData);
 
   const handlePrint = useReactToPrint({
     content: () => sdeJlrComponentDownloadRef.current,
@@ -32,19 +37,22 @@ const SdeJlr = () => {
           {/* resume header section  */}
           <div className="flex items-start justify-between">
             <div className="">
-              <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center text-3xl font-black text-yellow-500">
-                Harikrishnan Prasannakumar
+              <h1 className="flex items-center justify-center gap-2 pb-1 pt-6 text-center text-3xl font-black text-yellow-500">
+                <span className="">{resumeData.personalDetails.firstName}</span>
+                <span className="">{resumeData.personalDetails.lastName}</span>
               </h1>
-              <h3 className="text-2xl font-bold">Junior Software Developer</h3>
+              <h3 className="text-2xl font-bold">
+                {resumeData.personalDetails.jobTitle}
+              </h3>
             </div>
             <div className="flex flex-col items-end pt-10">
               <p className="w-fit text-sm">
                 <span className="font-bold">Phone :</span>
-                <span className="">1234567890</span>
+                <span className="">{resumeData.personalDetails.phone}</span>
               </p>
               <p className="w-fit text-sm">
                 <span className="font-bold">Email :</span>
-                <span className="">sample@gmail.com</span>
+                <span className="">{resumeData.personalDetails.email}</span>
               </p>
               <p className="w-fit text-sm">
                 <span className="font-bold">Website :</span>

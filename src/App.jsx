@@ -10,7 +10,7 @@ import SdeElr from "./components/resumeTemplates/sde/SdeElr";
 import SdeJlr from "./components/resumeTemplates/sde/SdeJlr";
 import SdeSlr from "./components/resumeTemplates/sde/SdeSlr";
 import Home from "./pages/Home";
-import Information1 from "./pages/Information1";
+import Information1 from "./pages/Information";
 import Template from "./pages/Template";
 import Information from "./pages/Information";
 // import { useState } from "react";
@@ -84,7 +84,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
-            <Route path="/information" element={<Information1 />} />
+            <Route path="/information" element={<Information />} />
             <Route path="/templates/sde/elr" element={<SdeElr />} />
             <Route path="/templates/sde/jlr" element={<SdeJlr />} />
             <Route path="/templates/sde/slr" element={<SdeSlr />} />
