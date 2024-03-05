@@ -1,1 +1,1 @@
-export const userResumeData = localStorage.getItem("userResumeData")
+export const userResumeData = localStorage.getItem("userResumeData");
