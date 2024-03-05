@@ -47,11 +47,11 @@ const SdeJlr = () => {
             </div>
             <div className="flex flex-col items-end pt-10">
               <p className="w-fit text-sm">
-                <span className="font-bold">Phone :</span>
+                <span className="font-bold">Phone : </span>
                 <span className="">{resumeData.personalDetails.phone}</span>
               </p>
               <p className="w-fit text-sm">
-                <span className="font-bold">Email :</span>
+                <span className="font-bold">Email : </span>
                 <span className="">{resumeData.personalDetails.email}</span>
               </p>
               <p className="w-fit text-sm">
@@ -100,21 +100,60 @@ const SdeJlr = () => {
               <div className="">
                 {/* header section */}
                 <h1 className="text-[18px] font-bold text-yellow-900">
-                  {resumeData.experience.jobTitle}
+                  {resumeData.experience.experience1.jobTitle}
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-start text-gray-500">
                   <p className="">
-                    <span className="">{resumeData.experience.employer}</span>
+                    <span className="">
+                      {resumeData.experience.experience1.employer}
+                    </span>
                     {", "}
-                    <span className="">{resumeData.experience.startDate}</span>
+                    <span className="">
+                      {resumeData.experience.experience1.startDate}
+                    </span>
                     {" - "}
-                    <span className="">{resumeData.experience.endDate}</span>
+                    <span className="">
+                      {resumeData.experience.experience1.endDate}
+                    </span>
                   </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {resumeData.experience.description
+                  {resumeData.experience.experience1.description
+                    .split("---")
+                    .map((item, i) => (
+                      <li key={i} className="">
+                        {item}
+                      </li>
+                    ))}
+                </ul>
+              </div>
+              {/* experience-2 */}
+              <div className="">
+                {/* header section */}
+                <h1 className="text-[18px] font-bold text-yellow-900">
+                  {resumeData.experience.experience2.jobTitle}
+                </h1>
+                {/* Date and place section */}
+                <div className="flex items-center justify-start text-gray-500">
+                  <p className="">
+                    <span className="">
+                      {resumeData.experience.experience2.employer}
+                    </span>
+                    {", "}
+                    <span className="">
+                      {resumeData.experience.experience2.startDate}
+                    </span>
+                    {" - "}
+                    <span className="">
+                      {resumeData.experience.experience2.endDate}
+                    </span>
+                  </p>
+                </div>
+                {/* description section - 1 */}
+                <ul className="ml-12 list-disc">
+                  {resumeData.experience.experience2.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
