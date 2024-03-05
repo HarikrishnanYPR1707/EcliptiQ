@@ -29,6 +29,8 @@ const Information1 = () => {
       endDate: "",
       description: "",
     },
+    relevantCourses: "",
+    certification: "",
     socialLink: {
       link1: {
         label: "",
@@ -522,6 +524,306 @@ const Information1 = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Relevent Courses Section */}
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
+          {/* header */}
+          <div className="">
+            <div className="">
+              <h1 className="flex w-fit items-center justify-center gap-2 text-xl font-bold">
+                <FaInfoCircle className="text-purple-500" />
+                <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+                  Relevant Courses
+                </span>
+              </h1>
+              <p className="mt-2 text-[#9e9e9e]">
+                Only list relevant courses related to you domain
+              </p>
+              <p className="mt-2 text-xs text-red-600">
+                *seperate the courses with "---"
+              </p>
+            </div>
+          </div>
+          {/* input section */}
+          {/* <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-1
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill1: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-2
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill2: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-3
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill3: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-4
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill4: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-5
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill5: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-6
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill6: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+          </div> */}
+          <div className="mt-5 flex w-full flex-col items-start justify-center gap-1">
+            <textarea
+              placeholder="Enter your skills"
+              className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+              onChange={(e) => {
+                setUserResumeData((prev) => ({
+                  ...prev,
+                  relevantCourses: e.target.value,
+                }));
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Certification Section */}
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
+          {/* header */}
+          <div className="">
+            <div className="">
+              <h1 className="flex w-fit items-center justify-center gap-2 text-xl font-bold">
+                <FaInfoCircle className="text-purple-500" />
+                <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+                  Certification
+                </span>
+              </h1>
+              <p className="mt-2 text-[#9e9e9e]">
+                Only list certification related to you domain
+              </p>
+              <p className="mt-2 text-xs text-red-600">
+                *seperate the certification name with "---"
+              </p>
+            </div>
+          </div>
+          {/* input section */}
+          {/* <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-1
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill1: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-2
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill2: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-3
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill3: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-4
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill4: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-5
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill5: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Skill-6
+              </label>
+              <input
+                type="text"
+                placeholder="eg. React.js"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    skills: {
+                      ...prev.skills,
+                      skill6: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+          </div> */}
+          <div className="mt-5 flex w-full flex-col items-start justify-center gap-1">
+            <textarea
+              placeholder="Enter your skills"
+              className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+              onChange={(e) => {
+                setUserResumeData((prev) => ({
+                  ...prev,
+                  certification: e.target.value,
+                }));
+              }}
+            />
           </div>
         </div>
 
