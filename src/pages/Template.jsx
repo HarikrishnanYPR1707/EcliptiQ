@@ -17,6 +17,7 @@ const Template = () => {
       lastName: "Prasannakumar",
       email: "hk17.dev@gmail.com",
       phone: "7776861386",
+      website: "www.hk17.dev",
     },
     professionalSummary:
       "Highly motivated and results-oriented Software Development Engineer (SDE-3) with X years of experience in designing, developing, and deploying complex software solutions. Proven ability to lead and contribute to cross-functional teams, tackle challenging software problems, and deliver high-quality, scalable, and maintainable code. Possesses a strong understanding of system design principles and experience in owning and operating services within a product-based organization.",
@@ -38,7 +39,7 @@ const Template = () => {
       description:
         "SDE-2 is also commonly addressed as a Senior Software Engineer or Senior Member of Technical Staff in different organizations.---An SDE-2 by capacity is an individual contributor who works in a team.---When someone is hired as an SDE-2 or gets promoted to an SDE-2 role, it is expected that they have considerable experience and won't need much help in solving straightforward issues.---A Software Development Engineer-2 (or an E4 in the case of Meta) holds end-to-end service ownership in various product-based organizations. Owning a service means being fully aware of everything that goes into it, even if you don't physically do the coding.---They’re tasked with providing rational, tested, efficient, and maintainable solutions to challenging software issues.---They’re also in charge of training new team members on the clients, what the team's software does, how it is built, tested, used, and how it fits into the overall picture.",
     },
-    relevantcourses:
+    relevantCourses:
       "Frontend Web Development Mastery---SCSS Mastery---Web Design Mastery---Motion Graphics---Web Motions",
     certification:
       "Certified Web Professional - Web Developer---Certified Scrum Master (CSM)---Google Data Analytics Professional Certificate---Java Development Certified Professional---Certified Customer Service Specialist (CSS)---Certified Software Development Professional (CSDP)",
