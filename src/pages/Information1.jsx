@@ -1,8 +1,7 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { InformationContext } from "@/Contexts/InformationContext";
 
 const Information1 = () => {
   const [userResumeData, setUserResumeData] = useState({
@@ -64,7 +63,6 @@ const Information1 = () => {
   console.log(userResumeData);
   // ---------------------------
 
-  // const { userResumeData, setUserResumeData } = useContext(InformationContext);
   localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
 
   return (
