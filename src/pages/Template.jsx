@@ -31,7 +31,7 @@ const Template = () => {
         "University Name: Universal College of Engineering---Degree: B.Tech in Computer Engineering---Expected Graduation Date: July 2024---GPA (Optional): Include only if above 3.5 or within the honor roll range (e.g., July 2024 (Expected), GPA: 3.8)---Relevant Coursework (Optional): List a few key courses aligned with your target job. (e.g., Data Structures & Algorithms, Software Design Patterns, Computer Networks)---Honors & Awards (Optional): Mention any relevant academic achievements like scholarships, dean's list mentions, or competition awards.---Projects/Activities (Optional): Briefly describe any academic projects or extracurricular activities related to computer science that showcase your skills and interests. (e.g., Senior Capstone Project: Developed a recommendation system using machine learning)---Study Abroad (Optional): If applicable, mention any international study programs you participated in, highlighting the location and duration.",
     },
     experience: {
-      jobTitle: "Software Development Engineer - 3",
+      jobTitle: "Software Development Engineer - 2",
       employer: "Google",
       place: "Banglore",
       startDate: "2021-07-17",
