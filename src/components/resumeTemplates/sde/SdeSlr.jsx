@@ -72,15 +72,15 @@ const SdeSlr = () => {
                 {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
-                    <span className="">June 2021</span>
+                    <span className="">{resumeData.experience.startDate}</span>
                     {" - "}
-                    <span className="">current</span>
+                    <span className="">{resumeData.experience.endDate}</span>
                   </p>
-                  <p className="">India</p>
+                  <p className="">{resumeData.experience.place}</p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams.---Communicate effectively with stakeholders to gather requirements, provide updates on project progress, and address any concerns or questions.---Adhere to software development methodologies, coding standards, and version control practices to maintain code quality and project consistency.---Contribute to the overall success of the engineering team by sharing knowledge, collaborating on projects, and supporting a positive and inclusive work environment."
+                  {resumeData.experience.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -99,17 +99,20 @@ const SdeSlr = () => {
             <div className="">
               {/* header section */}
               <h1 className="font-timesNewRoman text-[18px]">
-                <span className="font-bold">University of Mumbai</span> {" - "}
-                <span className="">B.Tech in Computer Engineering</span>
+                <span className="font-bold">
+                  {resumeData.education.college}
+                </span>{" "}
+                {" - "}
+                <span className="">{resumeData.education.degree}</span>
               </h1>
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">January 2021</span>
+                  <span className="">{resumeData.education.startDate}</span>
                   {" - "}
-                  <span className="">May 2024</span>
+                  <span className="">{resumeData.education.endDate}</span>
                 </p>
-                <p className="">Vasia, Kaman</p>
+                <p className="">{resumeData.education.place}</p>
               </div>
             </div>
           </div>
@@ -119,30 +122,9 @@ const SdeSlr = () => {
               Skills
             </h1>
             <div className="">
-              {[
-                "JavaScript",
-                "HTML5",
-                "CSS3",
-                "React.js",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
-                "SQL",
-                "Git",
-                "Webpack",
-                "Babel",
-                "RESTful APIs",
-                "Responsive Web Design",
-                "Testing (Jest, Mocha, Chai)",
-                "Debugging",
-                "Agile Methodologies",
-                "Problem Solving",
-                "Critical Thinking",
-                "Communication",
-                "Teamwork",
-              ].map((skill, i) => (
+              {resumeData.skills.split("---").map((skill, i) => (
                 <span key={i} className="">
-                  {skill + " "},
+                  {skill},{" "}
                 </span>
               ))}
             </div>
