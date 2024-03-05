@@ -54,11 +54,12 @@ const Information1 = () => {
     //   skill6: "",
     // },
     skills: "",
-    language: {
-      lang1: "",
-      lang2: "",
-      lang3: "",
-    },
+    // language: {
+    //   lang1: "",
+    //   lang2: "",
+    //   lang3: "",
+    // },
+    language: "",
   });
   // printing userResumeData ---
   console.log(userResumeData);
@@ -826,7 +827,7 @@ const Information1 = () => {
           </div> */}
           <div className="mt-5 flex w-full flex-col items-start justify-center gap-1">
             <textarea
-              placeholder="Enter your summary"
+              placeholder="Enter your skills"
               className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
               onChange={(e) => {
                 setUserResumeData((prev) => ({
@@ -852,10 +853,13 @@ const Information1 = () => {
               <p className="mt-2 text-[#9e9e9e]">
                 List your most relevant language on top.
               </p>
+              <p className="mt-2 text-xs text-red-600">
+                *seperate the languages with "---"
+              </p>
             </div>
           </div>
           {/* input section */}
-          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {/* <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
                 Language-1
@@ -913,6 +917,18 @@ const Information1 = () => {
                 }}
               />
             </div>
+          </div> */}
+          <div className="gap-1la mt-5 flex w-full flex-col items-start justify-center">
+            <textarea
+              placeholder="Enter the languages"
+              className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+              onChange={(e) => {
+                setUserResumeData((prev) => ({
+                  ...prev,
+                  language: e.target.value,
+                }));
+              }}
+            />
           </div>
         </div>
       </div>
