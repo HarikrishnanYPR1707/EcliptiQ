@@ -145,10 +145,10 @@ const SdeElr = () => {
                   {/* header section */}
                   <h1 className=" text-[15px]">
                     <span className="font-bold text-yellow-900">
-                      University of Mumbai
+                      {resumeData.education.college}
                     </span>{" "}
                     {" - "}
-                    <span className="">B.Tech in Computer Engineering</span>
+                    <span className="">{resumeData.education.degree}</span>
                   </h1>
                   {/* Date and place section */}
                   <div className="flex items-center justify-between text-sm text-gray-500">

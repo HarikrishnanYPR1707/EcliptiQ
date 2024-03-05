@@ -16,6 +16,7 @@ const Information1 = () => {
     education: {
       college: "",
       degree: "",
+      place: "",
       startDate: "",
       endDate: "",
       description: "",
@@ -23,6 +24,7 @@ const Information1 = () => {
     experience: {
       jobTitle: "",
       employer: "",
+      place: "",
       startDate: "",
       endDate: "",
       description: "",
@@ -281,6 +283,25 @@ const Information1 = () => {
                 }}
               />
             </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Place
+              </label>
+              <input
+                type="text"
+                placeholder="eg. SDE-3"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    education: {
+                      ...prev.education,
+                      place: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
             {/* 
                 ------------------------------
                 DATE VALUE
@@ -406,6 +427,25 @@ const Information1 = () => {
                     experience: {
                       ...prev.experience,
                       employer: e.target.value,
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Place
+              </label>
+              <input
+                type="text"
+                placeholder="eg. SDE-3"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    experience: {
+                      ...prev.experience,
+                      place: e.target.value,
                     },
                   }));
                 }}

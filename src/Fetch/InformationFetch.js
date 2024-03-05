@@ -14,6 +14,7 @@ export const userResumeData = () => {
 //   education: {
 //     college: "Universal College of Enginereing",
 //     degree: "B.Tech in Computer Engineering",
+//     place: "Vasai, Kaman"
 //     startDate: "2021-07-17",
 //     endDate: "2024-07-17",
 //     description:
@@ -22,6 +23,7 @@ export const userResumeData = () => {
 //   experience: {
 //     jobTitle: "Software Development Engineer - 3",
 //     employer: "Google",
+//     place: "Banglore"
 //     startDate: "2021-07-17",
 //     endDate: "2024-07-17",
 //     description:
@@ -45,6 +47,6 @@ export const userResumeData = () => {
 //       link: "behance.com",
 //     },
 //   },
-//   skills: "ReactJs---NextJs---TailwindCSS---Framer Motion---GSAP-SCSS",
+//   skills: "ReactJs---NextJs---TailwindCSS---Framer Motion---GSAP---SCSS",
 //   language: "Malayalam---English---Hindi---Marathi",
 // }
