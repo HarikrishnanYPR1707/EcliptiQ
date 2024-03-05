@@ -1,8 +1,13 @@
 import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
+import { userResumeData } from "@/Fetch/InformationFetch";
 
 const SdeSlr = () => {
   const sdeSlrComponentDownloadRef = useRef(null);
+
+  const data = userResumeData();
+  const resumeData = JSON.parse(data);
+  console.log(resumeData);
 
   const handlePrint = useReactToPrint({
     content: () => sdeSlrComponentDownloadRef.current,
@@ -32,18 +37,19 @@ const SdeSlr = () => {
         >
           {/* resume top part */}
           <div className="">
-            <h1 className="flex flex-col items-center justify-center pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
-              Harikrishnan Prasannakumar
+            <h1 className="flex items-center justify-center gap-2 pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
+              <span className="">{resumeData.personalDetails.firstName}</span>
+              <span className="">{resumeData.personalDetails.lastName}</span>
             </h1>
             <p className="flex items-center justify-center gap-20">
-              <span className="">sample@gmail.com</span>
-              <span className="">7776861386</span>
+              <span className="">{resumeData.personalDetails.email}</span>
+              <span className="">{resumeData.personalDetails.phone}</span>
               <a
-                href="https://www.google.com"
+                href={resumeData.socialLink.link1.link}
                 target="_blank"
                 className="text-blue-500"
               >
-                Linkedin
+                {resumeData.socialLink.link1.label}
               </a>
             </p>
           </div>
@@ -57,8 +63,11 @@ const SdeSlr = () => {
               <div className="">
                 {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
-                  <span className="font-bold">Coding Adda</span> {" - "}
-                  <span className="">Senior Software Developer</span>
+                  <span className="font-bold">
+                    {resumeData.experience.employer}
+                  </span>{" "}
+                  {" - "}
+                  <span className="">{resumeData.experience.jobTitle}</span>
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
