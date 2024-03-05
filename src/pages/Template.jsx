@@ -49,6 +49,15 @@ const Template = () => {
         description:
           "Developing and maintaining complex web applications: This involves writing clean, efficient, and maintainable code using frameworks like React, Angular, or Vue.js, ensuring the application functions smoothly across different browsers and devices.---Collaborating with designers and back-end developers: Working closely with UI/UX designers to understand design goals and integrate them into the development process. Collaborating with back-end developers to ensure seamless integration between the front-end and back-end components.---Optimizing website performance and responsiveness: Implementing best practices for code optimization, performance tuning, and ensuring the website functions well on various devices and internet connection speeds.",
       },
+      experience3: {
+        jobTitle: "Research Intern",
+        employer: "OpenAI",
+        place: "Banglore",
+        startDate: "2021-07-17",
+        endDate: "2024-07-17",
+        description:
+          "Machine Learning Expertise: Trained various AI models, demonstrating an understanding of machine learning algorithms and techniques.---Database Management: Handled databases, showcasing proficiency in data storage, manipulation, and retrieval.---Data Analysis and Manipulation: Worked upon data, highlighting your ability to not only store and manage data, but also analyze and extract insights.---Problem-Solving and Adaptability: This overarching point summarizes the potential benefits of combining these skills. By mastering AI models, databases, and data analysis.",
+      },
     },
     relevantCourses:
       "Frontend Web Development Mastery---SCSS Mastery---Web Design Mastery---Motion Graphics---Web Motions",
