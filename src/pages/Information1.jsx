@@ -11,6 +11,7 @@ const Information1 = () => {
       lastName: "",
       email: "",
       phone: "",
+      website: "",
     },
     professionalSummary: "",
     education: {
@@ -69,7 +70,7 @@ const Information1 = () => {
   console.log(userResumeData);
   // ---------------------------
 
-  localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
+  // localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
 
   return (
     <div className="flex flex-col items-center justify-center border-white pb-5">
@@ -188,6 +189,25 @@ const Information1 = () => {
                     personalDetails: {
                       ...prev.personalDetails,
                       phone: e.target.value,
+                    },
+                  }))
+                }
+              />
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Website
+              </label>
+              <input
+                type="number"
+                placeholder="e.g. www.sample.com"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) =>
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    personalDetails: {
+                      ...prev.personalDetails,
+                      website: e.target.value,
                     },
                   }))
                 }
