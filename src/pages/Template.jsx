@@ -43,6 +43,18 @@ const Template = () => {
       "Frontend Web Development Mastery---SCSS Mastery---Web Design Mastery---Motion Graphics---Web Motions",
     certification:
       "Certified Web Professional - Web Developer---Certified Scrum Master (CSM)---Google Data Analytics Professional Certificate---Java Development Certified Professional---Certified Customer Service Specialist (CSS)---Certified Software Development Professional (CSDP)",
+    project: {
+      project1: {
+        title: "RESTful API for a Social Networking Platform",
+        description:
+          "Design endpoints for user management, profile creation, and content sharing.---Implement authentication and authorization mechanisms to ensure data security and privacy.",
+      },
+      project2: {
+        title: "Content Management System (CMS) Interface:",
+        description:
+          "Managing complex data structures: Content in a CMS can be diverse, requiring you to design user-friendly interfaces for creating, editing, and organizing various types of content, like text, images, and multimedia elements.---Ensuring user experience and efficiency: The interface needs to be intuitive and efficient for users to manage content, including features like drag-and-drop editing, clear navigation, and search functionalities.",
+      },
+    },
     socialLink: {
       link1: {
         label: "twitter",
