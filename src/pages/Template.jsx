@@ -38,7 +38,7 @@ const Template = () => {
         startDate: "2021-07-17",
         endDate: "2024-07-17",
         description:
-          "SDE-2 is also commonly addressed as a Senior Software Engineer or Senior Member of Technical Staff in different organizations.---An SDE-2 by capacity is an individual contributor who works in a team.---When someone is hired as an SDE-2 or gets promoted to an SDE-2 role, it is expected that they have considerable experience and won't need much help in solving straightforward issues.---A Software Development Engineer-2 (or an E4 in the case of Meta) holds end-to-end service ownership in various product-based organizations. Owning a service means being fully aware of everything that goes into it, even if you don't physically do the coding.---They’re tasked with providing rational, tested, efficient, and maintainable solutions to challenging software issues.---They’re also in charge of training new team members on the clients, what the team's software does, how it is built, tested, used, and how it fits into the overall picture.",
+          "SDE-2 is also commonly addressed as a Senior Software Engineer or Senior Member of Technical Staff in different organizations.---An SDE-2 by capacity is an individual contributor who works in a team.---When someone is hired as an SDE-2 or gets promoted to an SDE-2 role, it is expected that they have considerable experience and won't need much help in solving straightforward issues.---A Software Development Engineer-2 (or an E4 in the case of Meta) holds end-to-end service ownership in various product-based organizations.",
       },
       experience2: {
         jobTitle: "Senior FrontEnd Developer",
@@ -47,7 +47,7 @@ const Template = () => {
         startDate: "2021-07-17",
         endDate: "2024-07-17",
         description:
-          "Developing and maintaining complex web applications: This involves writing clean, efficient, and maintainable code using frameworks like React, Angular, or Vue.js, ensuring the application functions smoothly across different browsers and devices.---Collaborating with designers and back-end developers: Working closely with UI/UX designers to understand design goals and integrate them into the development process. Collaborating with back-end developers to ensure seamless integration between the front-end and back-end components.---Optimizing website performance and responsiveness: Implementing best practices for code optimization, performance tuning, and ensuring the website functions well on various devices and internet connection speeds.---Implementing web accessibility standards: Building websites that are accessible to users with disabilities, adhering to WCAG (Web Content Accessibility Guidelines) to create inclusive user experiences.---Staying up-to-date with the latest technologies: Continuously learning and exploring new front-end technologies, frameworks, and libraries to stay ahead of the curve and implement innovative solutions.---Mentoring junior developers: Sharing their knowledge and experience with junior developers, contributing to a collaborative and supportive team environment.",
+          "Developing and maintaining complex web applications: This involves writing clean, efficient, and maintainable code using frameworks like React, Angular, or Vue.js, ensuring the application functions smoothly across different browsers and devices.---Collaborating with designers and back-end developers: Working closely with UI/UX designers to understand design goals and integrate them into the development process. Collaborating with back-end developers to ensure seamless integration between the front-end and back-end components.---Optimizing website performance and responsiveness: Implementing best practices for code optimization, performance tuning, and ensuring the website functions well on various devices and internet connection speeds.",
       },
     },
     relevantCourses:
@@ -59,11 +59,13 @@ const Template = () => {
         title: "RESTful API for a Social Networking Platform",
         description:
           "Design endpoints for user management, profile creation, and content sharing.---Implement authentication and authorization mechanisms to ensure data security and privacy.",
+        position: "Project Lead",
       },
       project2: {
         title: "Content Management System (CMS) Interface:",
         description:
           "Managing complex data structures: Content in a CMS can be diverse, requiring you to design user-friendly interfaces for creating, editing, and organizing various types of content, like text, images, and multimedia elements.---Ensuring user experience and efficiency: The interface needs to be intuitive and efficient for users to manage content, including features like drag-and-drop editing, clear navigation, and search functionalities.",
+        position: "Project Lead",
       },
     },
     socialLink: {
