@@ -134,14 +134,7 @@ const SdeElr = () => {
                 <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Career Objective
                 </h1>
-                <div className="text-sm">
-                  Dynamic and results-driven professional with [X years] of
-                  experience in [industry/field], demonstrating a strong track
-                  record of [specific achievements or skills]. Skilled in
-                  [relevant skills or technologies], with a passion for
-                  [specific aspect of the industry]. Proven ability to [mention
-                  any notable accomplishments or contributions].
-                </div>
+                <div className="text-sm">{resumeData.professionalSummary}</div>
               </div>
               {/* Education Section */}
               <div className="mb-5">
