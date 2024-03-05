@@ -6,9 +6,14 @@ import { useReactToPrint } from "react-to-print";
 import { SlCalender } from "react-icons/sl";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaGraduationCap } from "react-icons/fa";
+import { userResumeData } from "@/Fetch/InformationFetch";
 
 const DaElr = () => {
   const daElrComponentDownloadRef = useRef(null);
+
+  const data = userResumeData();
+  const resumeData = JSON.parse(data);
+  // console.log(resumeData);
 
   const handlePrint = useReactToPrint({
     content: () => daElrComponentDownloadRef.current,
@@ -31,28 +36,33 @@ const DaElr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={daElrComponentDownloadRef}
-          className="mt-5 flex h-[1131px] w-full max-w-[800px] items-start justify-between bg-white font-geologica text-black"
+          className="mt-5 flex min-h-[1100px] w-full max-w-[800px] items-start justify-between bg-white font-geologica text-black"
         >
           {/* --------------------- left section --------------------- */}
-          <div className="flex h-full w-[40%] flex-col">
+          <div className="flex h-[2px] min-h-[1272px] w-[40%] flex-col">
             {/* resume header section  */}
             <div className="bg-[#4287f5] p-7 text-white">
               <div className="">
-                <h1 className="pb-1 pt-6 font-timesNewRoman text-3xl font-black">
-                  Aakarsh Menon
+                <h1 className="flex flex-col pb-1 pt-6  font-timesNewRoman text-3xl font-black">
+                  <span className="">
+                    {resumeData.personalDetails.firstName}
+                  </span>
+                  <span className="">
+                    {resumeData.personalDetails.lastName}
+                  </span>
                 </h1>
                 <h3 className="font-timesNewRoman text-2xl italic">
-                  Data Analyst
+                  {resumeData.personalDetails.jobTitle}
                 </h3>
               </div>
               <div className="mt-5 flex flex-col items-start text-[15px]">
                 <p className="flex w-fit items-center justify-center gap-2">
                   <MdEmail className="text-gray-300" />
-                  <span className="">sample@gmail.com</span>
+                  <span className="">{resumeData.personalDetails.email}</span>
                 </p>
                 <p className="flex w-fit items-center justify-center gap-2">
                   <FaPhone className="text-gray-300" />
-                  <span className="">1234567890</span>
+                  <span className="">{resumeData.personalDetails.phone}</span>
                 </p>
                 <p className="flex w-fit items-center justify-center">
                   <a
@@ -60,13 +70,18 @@ const DaElr = () => {
                     className="flex items-center justify-center gap-2"
                   >
                     <CgWebsite className="text-gray-300" />
-                    www.sample.com
+                    {resumeData.personalDetails.website}
                   </a>
                 </p>
                 <p className="flex w-fit items-center justify-center">
-                  <a href="" className="flex items-center justify-center gap-2">
+                  <a
+                    href={resumeData.socialLink.link1.link}
+                    className="flex items-center justify-center gap-2"
+                  >
                     <FaLinkedin className="text-gray-300" />
-                    <span className="underline">Linkedin</span>
+                    <span className="underline">
+                      {resumeData.socialLink.link1.link}
+                    </span>
                   </a>
                 </p>
               </div>
@@ -81,21 +96,21 @@ const DaElr = () => {
                   {/* header section */}
                   <h1 className="flex flex-col-reverse text-base">
                     <span className="text-xl text-[#4287f5]">
-                      University of Mumbai
+                      {resumeData.education.college}
                     </span>
-                    <span className="">B.Tech in Computer Engineering</span>
+                    <span className="">{resumeData.education.degree}</span>
                   </h1>
                   {/* Date and place section */}
                   <div className="flex flex-col items-start text-sm text-gray-500">
                     <p className="flex items-center justify-center gap-2">
                       <SlCalender />
-                      <span className="">January 2021</span>
+                      <span className="">{resumeData.education.startDate}</span>
                       {" - "}
-                      <span className="">May 2024</span>
+                      <span className="">{resumeData.education.endDate}</span>
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <FaLocationDot />
-                      <span className="">Vasia, Kaman</span>
+                      <span className="">{resumeData.education.place}</span>
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <FaGraduationCap />
@@ -106,20 +121,16 @@ const DaElr = () => {
                   <div className="mt-2 flex flex-col items-start text-sm">
                     <h3 className="font-bold">Relevant Courses</h3>
                     <ul>
-                      {[
-                        "Introduction to data wrangling and analysis in JavaScript",
-                        "Free JavaScript Tutorial - Javascript Array Methods",
-                        "Data Visualization with D3.js",
-                        "Interactive Data Visualization for the Web",
-                        "JavaScript for Data Science",
-                      ].map((rlvtCourse, index) => (
-                        <li
-                          key={index}
-                          className="ml-5 list-disc text-gray-600"
-                        >
-                          {rlvtCourse}
-                        </li>
-                      ))}
+                      {resumeData.relevantCourses
+                        .split("---")
+                        .map((rlvtCourse, index) => (
+                          <li
+                            key={index}
+                            className="ml-5 list-disc text-gray-600"
+                          >
+                            {rlvtCourse}
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>
@@ -130,27 +141,12 @@ const DaElr = () => {
                   Skills
                 </h1>
                 <ul className="">
-                  {[
-                    "SQL",
-                    "Python",
-                    "R",
-                    "JavaScript",
-                    "Excel",
-                    "Data Cleaning & Wrangling",
-                    "Data Visualization (e.g., Tableau, Power BI)",
-                    "Statistical Analysis",
-                    "Machine Learning Fundamentals",
-                    "Communication",
-                    "Critical Thinking & Problem-Solving",
-                    "Storytelling",
-                    "Data Curiosity & Attention to Detail",
-                    "Collaboration & Teamwork",
-                  ].map((skill, i) => (
+                  {resumeData.skills.split("---").map((skill, i) => (
                     <li
                       key={i}
                       className="ml-5 list-disc text-sm text-gray-600"
                     >
-                      {skill},
+                      {skill}
                     </li>
                   ))}
                 </ul>
@@ -164,14 +160,7 @@ const DaElr = () => {
               <h1 className="mb-1 font-timesNewRoman text-2xl font-black uppercase">
                 Career Objective
               </h1>
-              <div className="text-sm">
-                Dynamic and results-driven professional with [X years] of
-                experience in [industry/field], demonstrating a strong track
-                record of [specific achievements or skills]. Skilled in
-                [relevant skills or technologies], with a passion for [specific
-                aspect of the industry]. Proven ability to [mention any notable
-                accomplishments or contributions].
-              </div>
+              <div className="text-sm">{resumeData.professionalSummary}</div>
             </div>
             {/* Work section */}
             <div className="">
@@ -184,32 +173,34 @@ const DaElr = () => {
                   {/* header section */}
                   <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                     <span className="-mt-1 font-bold text-[#4287f5]">
-                      Coding Adda
+                      {resumeData.experience.employer}
                     </span>
                     <span className="text-[22px]">
-                      Senior Software Developer
+                      {resumeData.experience.jobTitle}
                     </span>
                   </h1>
                   {/* Date and place section */}
                   <div className="flex w-[300px] items-center justify-between text-sm text-gray-500">
                     <p className="flex items-center justify-center gap-2">
                       <SlCalender />
-                      <span className="">June 2021</span>
+                      <span className="">
+                        {resumeData.experience.startDate}
+                      </span>
                       {" - "}
-                      <span className="">current</span>
+                      <span className="">{resumeData.experience.endDate}</span>
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <FaLocationDot />
-                      <span className="">India</span>
+                      <span className="">{resumeData.experience.place}</span>
                     </p>
                   </div>
                   {/* description section - 1 */}
                   <ul className="ml-12 list-disc">
-                    {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams.---Communicate effectively with stakeholders to gather requirements, provide updates on project progress, and address any concerns or questions."
+                    {resumeData.experience.description
                       .split("---")
-                      .map((item, i) => (
+                      .map((desc, i) => (
                         <li key={i} className="text-sm">
-                          {item}
+                          {desc}
                         </li>
                       ))}
                   </ul>
@@ -222,25 +213,30 @@ const DaElr = () => {
                 Projects
               </h1>
               <div className="">
-                {Array(2)
-                  .fill(true)
-                  .map((_, i) => (
-                    <div key={i} className="mb-1">
-                      <h3 className="">
-                        RESTful API for a Social Networking Platform
-                      </h3>
-                      <ul className="text-gray-600">
-                        <li className="ml-5 list-disc">
-                          Design endpoints for user management, profile
-                          creation, and content sharing.
+                <div className="mb-1">
+                  <h3 className="">{resumeData.project.project1.title}</h3>
+                  <ul className="text-gray-600">
+                    {resumeData.project.project1.description
+                      .split("---")
+                      .map((desc, index) => (
+                        <li key={index} className="ml-5 list-disc">
+                          {desc}
                         </li>
-                        <li className="ml-5 list-disc">
-                          Implement authentication and authorization mechanisms
-                          to ensure data security and privacy.
+                      ))}
+                  </ul>
+                </div>
+                <div className="mb-1">
+                  <h3 className="">{resumeData.project.project2.title}</h3>
+                  <ul className="text-gray-600">
+                    {resumeData.project.project2.description
+                      .split("---")
+                      .map((desc, index) => (
+                        <li key={index} className="ml-5 list-disc">
+                          {desc}
                         </li>
-                      </ul>
-                    </div>
-                  ))}
+                      ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
