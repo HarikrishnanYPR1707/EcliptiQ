@@ -38,7 +38,7 @@ const SdeElr = () => {
       <div className="flex flex-col items-center gap-5">
         <div
           ref={sdeElrComponentDownloadRef}
-          className="min-h-[1131px] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
+          className="min-h-[1100px] w-full max-w-[800px] bg-white p-5 font-geologica text-black"
         >
           {/* resume header section  */}
           <div className="">
@@ -153,11 +153,11 @@ const SdeElr = () => {
                   {/* Date and place section */}
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <p className="">
-                      <span className="">January 2021</span>
+                      <span className="">{resumeData.education.startDate}</span>
                       {" - "}
-                      <span className="">May 2024</span>
+                      <span className="">{resumeData.education.endDate}</span>
                     </p>
-                    <p className="">Vasia, Kaman</p>
+                    <p className="">{resumeData.education.place}</p>
                   </div>
                 </div>
               </div>
@@ -167,20 +167,7 @@ const SdeElr = () => {
                   Relevant Courses
                 </h1>
                 <div className="">
-                  {[
-                    "JavaScript Fundamentals",
-                    "Advanced JavaScript",
-                    "Front-End Web Development",
-                    "Back-End Web Development",
-                    "React.js Essentials",
-                    "Node.js Basics",
-                    "Express.js Fundamentals",
-                    "MongoDB for Beginners",
-                    "SQL Fundamentals",
-                    "Full-Stack Web Development",
-                    "Responsive Web Design",
-                    "Web Development Bootcamp",
-                  ].map((skill, i) => (
+                  {resumeData.relevantCourses.split("---").map((skill, i) => (
                     <span key={i} className="text-sm">
                       {skill + " "},
                     </span>
