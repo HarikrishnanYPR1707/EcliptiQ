@@ -1,14 +1,17 @@
-import React, { useContext, useRef } from "react";
-import { useReactToPrint } from "react-to-print";
-import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
+import { useRef } from "react";
 import { CgWebsite } from "react-icons/cg";
-import { FaLinkedin } from "react-icons/fa";
-import { InformationContext } from "@/Contexts/InformationContext";
+import { FaLinkedin, FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { useReactToPrint } from "react-to-print";
+// import { InformationContext } from "@/Contexts/InformationContext";
+import { userResumeData } from "@/Fetch/InformationFetch";
 
 const SdeElr = () => {
   const sdeElrComponentDownloadRef = useRef(null);
-  const { userResumeData, setUserResumeData } = useContext(InformationContext);
+  // const { userResumeData, setUserResumeData } = useContext(InformationContext);
+
+  const resumeData = JSON.parse(userResumeData);
+  console.log(resumeData);
 
   const handlePrint = useReactToPrint({
     content: () => sdeElrComponentDownloadRef.current,
@@ -39,9 +42,7 @@ const SdeElr = () => {
           {/* resume header section  */}
           <div className="">
             <div className="">
-              <h1 className="pb-1 pt-6 text-3xl font-black">
-                Harikrishnan Prasannakumar
-              </h1>
+              <h1 className="pb-1 pt-6 text-3xl font-black">Krishi Devani</h1>
               <h3 className="text-2xl font-bold text-[#ff0505]">
                 Software Engineer
               </h3>
