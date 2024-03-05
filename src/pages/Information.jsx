@@ -46,10 +46,12 @@ const Information = () => {
       project1: {
         title: "",
         description: "",
+        position: "",
       },
       project2: {
         title: "",
         description: "",
+        position: "",
       },
     },
     socialLink: {
@@ -1042,10 +1044,11 @@ const Information = () => {
             </div>
           </div>
           {/* input section */}
+          <h1 className="mt-5 font-bold italic underline">Project - 1</h1>
           <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
-                Title - 1
+                Title
               </label>
               <input
                 type="text"
@@ -1065,10 +1068,32 @@ const Information = () => {
                 }}
               />
             </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Position
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Project Lead"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    project: {
+                      ...prev.project,
+                      project1: {
+                        ...prev.project.project1,
+                        position: e.target.value,
+                      },
+                    },
+                  }));
+                }}
+              />
+            </div>
             <div className="mt-5 sm:col-span-2">
               <div className="flex w-full flex-col items-start justify-center gap-1">
                 <label className="flex flex-col font-bold" htmlFor="">
-                  <span className="">Description - 1</span>
+                  <span className="">Description</span>
                   <span className="text-xs text-red-600">
                     *Seperate every point/sentence with "---"
                   </span>
@@ -1091,9 +1116,12 @@ const Information = () => {
                 />
               </div>
             </div>
+          </div>
+          <h1 className="mt-5 font-bold italic underline">Project - 2</h1>
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="flex w-full flex-col items-start justify-center gap-1">
               <label className="font-bold" htmlFor="">
-                Title - 2
+                Title
               </label>
               <input
                 type="text"
@@ -1113,10 +1141,32 @@ const Information = () => {
                 }}
               />
             </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Position
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Project Lead"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    project: {
+                      ...prev.project,
+                      project2: {
+                        ...prev.project.project2,
+                        position: e.target.value,
+                      },
+                    },
+                  }));
+                }}
+              />
+            </div>
             <div className="mt-5 sm:col-span-2">
               <div className="flex w-full flex-col items-start justify-center gap-1">
                 <label className="flex flex-col font-bold" htmlFor="">
-                  <span className="">Description - 2</span>
+                  <span className="">Description</span>
                   <span className="text-xs text-red-600">
                     *Seperate every point/sentence with "---"
                   </span>
