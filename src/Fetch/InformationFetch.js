@@ -29,6 +29,8 @@ export const userResumeData = () => {
 //     description:
 //       "SDE-2 is also commonly addressed as a Senior Software Engineer or Senior Member of Technical Staff in different organizations.---An SDE-2 by capacity is an individual contributor who works in a team.---When someone is hired as an SDE-2 or gets promoted to an SDE-2 role, it is expected that they have considerable experience and won't need much help in solving straightforward issues.---A Software Development Engineer-2 (or an E4 in the case of Meta) holds end-to-end service ownership in various product-based organizations. Owning a service means being fully aware of everything that goes into it, even if you don't physically do the coding.---They’re tasked with providing rational, tested, efficient, and maintainable solutions to challenging software issues.---They’re also in charge of training new team members on the clients, what the team's software does, how it is built, tested, used, and how it fits into the overall picture.",
 //   },
+//   relevantcourses: "Frontend Web Development Mastery---SCSS Mastery---Web Design Mastery---Motion Graphics---Web Motions",
+//   certification: "Certified Web Professional - Web Developer---Certified Scrum Master (CSM)---Google Data Analytics Professional Certificate---Java Development Certified Professional---Certified Customer Service Specialist (CSS)---Certified Software Development Professional (CSDP)",
 //   socialLink: {
 //     link1: {
 //       label: "twitter",
