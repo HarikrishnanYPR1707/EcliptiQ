@@ -96,7 +96,7 @@ const SdeSlr = () => {
                 </ul>
               </div>
               {/* experience-2 */}
-              <div className="">
+              <div className="mt-2">
                 {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
                   <span className="font-bold">
@@ -123,6 +123,42 @@ const SdeSlr = () => {
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
                   {resumeData.experience.experience2.description
+                    .split("---")
+                    .map((item, i) => (
+                      <li key={i} className="">
+                        {item}
+                      </li>
+                    ))}
+                </ul>
+              </div>
+              {/* experience-3 */}
+              <div className="mt-2">
+                {/* header section */}
+                <h1 className="font-timesNewRoman text-[18px]">
+                  <span className="font-bold">
+                    {resumeData.experience.experience3.employer}
+                  </span>{" "}
+                  {" - "}
+                  <span className="">
+                    {resumeData.experience.experience3.jobTitle}
+                  </span>
+                </h1>
+                {/* Date and place section */}
+                <div className="flex items-center justify-between text-gray-500">
+                  <p className="">
+                    <span className="">
+                      {resumeData.experience.experience3.startDate}
+                    </span>
+                    {" - "}
+                    <span className="">
+                      {resumeData.experience.experience3.endDate}
+                    </span>
+                  </p>
+                  <p className="">{resumeData.experience.experience3.place}</p>
+                </div>
+                {/* description section - 1 */}
+                <ul className="ml-12 list-disc">
+                  {resumeData.experience.experience3.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
