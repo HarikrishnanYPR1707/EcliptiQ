@@ -10,7 +10,8 @@ const SdeElr = () => {
   const sdeElrComponentDownloadRef = useRef(null);
   // const { userResumeData, setUserResumeData } = useContext(InformationContext);
 
-  const resumeData = JSON.parse(userResumeData);
+  const data = userResumeData();
+  const resumeData = JSON.parse(data);
   console.log(resumeData);
 
   const handlePrint = useReactToPrint({
@@ -42,19 +43,22 @@ const SdeElr = () => {
           {/* resume header section  */}
           <div className="">
             <div className="">
-              <h1 className="pb-1 pt-6 text-3xl font-black">Krishi Devani</h1>
+              <h1 className="flex gap-2 pb-1 pt-6 text-3xl font-black capitalize">
+                <span className="">{resumeData.personalDetails.firstName}</span>
+                <span className="">{resumeData.personalDetails.lastName}</span>
+              </h1>
               <h3 className="text-2xl font-bold text-[#ff0505]">
-                Software Engineer
+                {resumeData.personalDetails.jobTitle}
               </h3>
             </div>
             <div className="flex items-center justify-between">
               <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <FaPhone className="text-gray-500" />
-                <span className="">1234567890</span>
+                <span className="">{resumeData.personalDetails.phone}</span>
               </p>
               <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <MdEmail className="text-gray-500" />
-                <span className="">sample@gmail.com</span>
+                <span className="">{resumeData.personalDetails.email}</span>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="#" className="flex items-center justify-center gap-2">
@@ -63,9 +67,14 @@ const SdeElr = () => {
                 </a>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
-                <a href="" className="flex items-center justify-center gap-2">
+                <a
+                  href={resumeData.socialLink.link1.link}
+                  className="flex items-center justify-center gap-2"
+                >
                   <FaLinkedin className="" />
-                  <span className="text-blue-500">linkedin</span>
+                  <span className="text-blue-500">
+                    {resumeData.socialLink.link1.label}
+                  </span>
                 </a>
               </p>
             </div>
@@ -85,24 +94,28 @@ const SdeElr = () => {
                     {/* header section */}
                     <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                       <span className="-mt-1 font-bold text-[#ff0505]">
-                        Coding Adda
+                        {resumeData.experience.employer}
                       </span>
                       <span className="text-[22px]">
-                        Senior Software Developer
+                        {resumeData.experience.jobTitle}
                       </span>
                     </h1>
                     {/* Date and place section */}
                     <div className="flex items-center justify-between text-gray-500">
                       <p className="">
-                        <span className="">June 2021</span>
+                        <span className="">
+                          {resumeData.experience.startDate}
+                        </span>
                         {" - "}
-                        <span className="">current</span>
+                        <span className="">
+                          {resumeData.experience.endDate}
+                        </span>
                       </p>
                       <p className="">India</p>
                     </div>
                     {/* description section - 1 */}
                     <ul className="ml-12 list-disc">
-                      {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams.---Communicate effectively with stakeholders to gather requirements, provide updates on project progress, and address any concerns or questions.---Adhere to software development methodologies, coding standards, and version control practices to maintain code quality and project consistency.---Contribute to the overall success of the engineering team by sharing knowledge, collaborating on projects, and supporting a positive and inclusive work environment."
+                      {resumeData.experience.description
                         .split("---")
                         .map((item, i) => (
                           <li key={i} className="text-sm">
@@ -187,29 +200,8 @@ const SdeElr = () => {
                   Skills
                 </h1>
                 <div className="">
-                  {[
-                    "JavaScript",
-                    "HTML5",
-                    "CSS3",
-                    "React.js",
-                    "Node.js",
-                    "Express.js",
-                    "MongoDB",
-                    "SQL",
-                    "Git",
-                    "Webpack",
-                    "Babel",
-                    "RESTful APIs",
-                    "Responsive Web Design",
-                    "Testing (Jest, Mocha, Chai)",
-                    "Debugging",
-                    "Agile Methodologies",
-                    "Problem Solving",
-                    "Critical Thinking",
-                    "Communication",
-                    "Teamwork",
-                  ].map((skill, i) => (
-                    <span key={i} className="text-sm">
+                  {resumeData.skills.split("---").map((skill, i) => (
+                    <span key={i} className="text-sm capitalize">
                       {skill + " "},
                     </span>
                   ))}
