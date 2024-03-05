@@ -461,8 +461,11 @@ const Information1 = () => {
             </div>
             <div className="mt-5 sm:col-span-2">
               <div className="flex w-full flex-col items-start justify-center gap-1">
-                <label className="font-bold" htmlFor="">
-                  Description
+                <label className="flex flex-col font-bold" htmlFor="">
+                  <span className="">Description</span>
+                  <span className="text-xs text-red-600">
+                    *Seperate every point/sentence with "---"
+                  </span>
                 </label>
                 <textarea
                   placeholder="Enter your summary"
