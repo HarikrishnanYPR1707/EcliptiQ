@@ -55,16 +55,17 @@ const SdeJlr = () => {
                 <span className="">{resumeData.personalDetails.email}</span>
               </p>
               <p className="w-fit text-sm">
-                <span className="font-bold">Website :</span>
+                <span className="font-bold">Website : </span>
                 <a href="#" className="">
-                  www.sample.com
+                  {resumeData.personalDetails.website}
                 </a>
               </p>
               <p className="w-fit text-sm">
-                <span className="font-bold">Linkedin :</span>
-                <a href="" className="">
-                  <span>linkedin/</span>
-                  <span>authorName</span>
+                <span className="font-bold">
+                  {resumeData.socialLink.link1.label} :{" "}
+                </span>
+                <a href={resumeData.socialLink.link1.link} className="">
+                  <span>{resumeData.socialLink.link1.label}</span>
                 </a>
               </p>
             </div>
@@ -74,14 +75,7 @@ const SdeJlr = () => {
             <h1 className="mb-2 bg-[#edeae1] text-2xl font-black uppercase text-[#414d56]">
               Summary
             </h1>
-            <div className="">
-              Dynamic and results-driven professional with [X years] of
-              experience in [industry/field], demonstrating a strong track
-              record of [specific achievements or skills]. Skilled in [relevant
-              skills or technologies], with a passion for [specific aspect of
-              the industry]. Proven ability to [mention any notable
-              accomplishments or contributions].
-            </div>
+            <div className="">{resumeData.professionalSummary}</div>
           </div>
           {/* Skills section  */}
           <div className="">
@@ -89,30 +83,9 @@ const SdeJlr = () => {
               Skills
             </h1>
             <div className="">
-              {[
-                "JavaScript",
-                "HTML5",
-                "CSS3",
-                "React.js",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
-                "SQL",
-                "Git",
-                "Webpack",
-                "Babel",
-                "RESTful APIs",
-                "Responsive Web Design",
-                "Testing (Jest, Mocha, Chai)",
-                "Debugging",
-                "Agile Methodologies",
-                "Problem Solving",
-                "Critical Thinking",
-                "Communication",
-                "Teamwork",
-              ].map((skill, i) => (
+              {resumeData.skills.split("---").map((skill, i) => (
                 <span key={i} className="">
-                  {skill + " "},
+                  {skill},{" "}
                 </span>
               ))}
             </div>
@@ -127,21 +100,21 @@ const SdeJlr = () => {
               <div className="">
                 {/* header section */}
                 <h1 className="text-[18px] font-bold text-yellow-900">
-                  Junior Software Developer
+                  {resumeData.experience.jobTitle}
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-start text-gray-500">
                   <p className="">
-                    <span className="">Coding Adda</span>
+                    <span className="">{resumeData.experience.employer}</span>
                     {", "}
-                    <span className="">June 2021</span>
+                    <span className="">{resumeData.experience.startDate}</span>
                     {" - "}
-                    <span className="">current</span>
+                    <span className="">{resumeData.experience.endDate}</span>
                   </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {"Develop high-quality software solutions in a fast-paced environment, focusing on scalability, reliability, and performance.---Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs.---Write clean, efficient, and maintainable code using best practices and industry standards.---Conduct code reviews, provide constructive feedback, and mentor junior team members to foster a culture of continuous learning and improvement.---Troubleshoot and debug issues, identifying root causes and implementing timely resolutions to ensure smooth operation of software systems.---Stay up-to-date with emerging technologies, trends, and best practices in software development, and proactively contribute ideas for process improvements and innovation.---Participate in agile ceremonies such as sprint planning, daily stand-ups, and retrospectives to ensure alignment and transparency across teams."
+                  {resumeData.experience.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -161,19 +134,19 @@ const SdeJlr = () => {
               {/* header section */}
               <h1 className=" text-[18px]">
                 <span className="font-bold text-yellow-900">
-                  University of Mumbai
+                  {resumeData.education.college}
                 </span>{" "}
                 {" - "}
-                <span className="">B.Tech in Computer Engineering</span>
+                <span className="">{resumeData.education.degree}</span>
               </h1>
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">January 2021</span>
+                  <span className="">{resumeData.education.startDate}</span>
                   {" - "}
-                  <span className="">May 2024</span>
+                  <span className="">{resumeData.education.endDate}</span>
                 </p>
-                <p className="">Vasia, Kaman</p>
+                <p className="">{resumeData.education.place}</p>
               </div>
             </div>
           </div>
