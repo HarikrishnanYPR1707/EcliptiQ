@@ -39,6 +39,14 @@ const Information = () => {
         endDate: "",
         description: "",
       },
+      experience3: {
+        jobTitle: "",
+        employer: "",
+        place: "",
+        startDate: "",
+        endDate: "",
+        description: "",
+      },
     },
     relevantCourses: "",
     certification: "",
@@ -715,6 +723,155 @@ const Information = () => {
                           ...prev.experience,
                           experience2: {
                             ...prev.experience.experience2,
+                            description: e.target.value,
+                          },
+                        },
+                      }));
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+            <h1 className="mt-5 font-bold italic">Experience - 3</h1>
+            <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="font-bold" htmlFor="">
+                  Job Title
+                </label>
+                <input
+                  type="text"
+                  placeholder="eg. SDE-3"
+                  className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      experience: {
+                        ...prev.experience,
+                        experience3: {
+                          ...prev.experience.experience3,
+                          jobTitle: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="font-bold" htmlFor="">
+                  Employer
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Google"
+                  className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      experience: {
+                        ...prev.experience,
+                        experience3: {
+                          ...prev.experience.experience3,
+                          employer: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="font-bold" htmlFor="">
+                  Place
+                </label>
+                <input
+                  type="text"
+                  placeholder="eg. SDE-3"
+                  className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      experience: {
+                        ...prev.experience,
+                        experience3: {
+                          ...prev.experience.experience3,
+                          place: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+              {/* 
+                ------------------------------
+                DATE VALUE
+                ------------------------------
+            */}
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="font-bold" htmlFor="">
+                  Start Date
+                </label>
+                <input
+                  type="date"
+                  placeholder="eg. Feb, 2024"
+                  className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      experience: {
+                        ...prev.experience,
+                        experience3: {
+                          ...prev.experience.experience3,
+                          startDate: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+              {/* 
+                ------------------------------
+                DATE VALUE
+                ------------------------------
+            */}
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="font-bold" htmlFor="">
+                  End Date
+                </label>
+                <input
+                  type="date"
+                  placeholder="eg. Feb, 2024"
+                  className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      experience: {
+                        ...prev.experience,
+                        experience3: {
+                          ...prev.experience.experience3,
+                          endDate: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+              <div className="mt-5 sm:col-span-2">
+                <div className="flex w-full flex-col items-start justify-center gap-1">
+                  <label className="flex flex-col font-bold" htmlFor="">
+                    <span className="">Description</span>
+                    <span className="text-xs text-red-600">
+                      *Seperate every point/sentence with "---"
+                    </span>
+                  </label>
+                  <textarea
+                    placeholder="Enter your summary"
+                    className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                    onChange={(e) => {
+                      setUserResumeData((prev) => ({
+                        ...prev,
+                        experience: {
+                          ...prev.experience,
+                          experience3: {
+                            ...prev.experience.experience3,
                             description: e.target.value,
                           },
                         },
