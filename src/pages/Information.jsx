@@ -32,6 +32,16 @@ const Information = () => {
     },
     relevantCourses: "",
     certification: "",
+    project: {
+      project1: {
+        title: "",
+        description: "",
+      },
+      project2: {
+        title: "",
+        description: "",
+      },
+    },
     socialLink: {
       link1: {
         label: "",
@@ -67,6 +77,7 @@ const Information = () => {
     language: "",
   });
   // printing userResumeData ---
+  console.clear();
   console.log(userResumeData);
   // ---------------------------
 
@@ -844,6 +855,133 @@ const Information = () => {
                 }));
               }}
             />
+          </div>
+        </div>
+
+        {/* Project Section */}
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
+          {/* header */}
+          <div className="">
+            <div className="">
+              <h1 className="flex w-fit items-center justify-center gap-2 text-xl font-bold">
+                <FaInfoCircle className="text-purple-500" />
+                <span className="relative before:absolute before:left-0 before:top-full before:h-[2px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+                  Project
+                </span>
+              </h1>
+              <p className="mt-2 text-[#9e9e9e]">
+                Only list projects related to you domain
+              </p>
+            </div>
+          </div>
+          {/* input section */}
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              {/* project: {
+      project1: {
+        title: "",
+        description: "",
+      },
+      project2: {
+        title: "",
+        description: "",
+      },
+    }, */}
+              <label className="font-bold" htmlFor="">
+                Title - 1
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Google"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    project: {
+                      ...prev.project,
+                      project1: {
+                        ...prev.project.project1,
+                        title: e.target.value,
+                      },
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="mt-5 sm:col-span-2">
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="flex flex-col font-bold" htmlFor="">
+                  <span className="">Description - 1</span>
+                  <span className="text-xs text-red-600">
+                    *Seperate every point/sentence with "---"
+                  </span>
+                </label>
+                <textarea
+                  placeholder="Enter your summary"
+                  className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      project: {
+                        ...prev.project,
+                        project1: {
+                          ...prev.project.project1,
+                          description: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+            </div>
+            <div className="flex w-full flex-col items-start justify-center gap-1">
+              <label className="font-bold" htmlFor="">
+                Title - 2
+              </label>
+              <input
+                type="text"
+                placeholder="e.g. Google"
+                className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                onChange={(e) => {
+                  setUserResumeData((prev) => ({
+                    ...prev,
+                    project: {
+                      ...prev.project,
+                      project2: {
+                        ...prev.project.project2,
+                        title: e.target.value,
+                      },
+                    },
+                  }));
+                }}
+              />
+            </div>
+            <div className="mt-5 sm:col-span-2">
+              <div className="flex w-full flex-col items-start justify-center gap-1">
+                <label className="flex flex-col font-bold" htmlFor="">
+                  <span className="">Description - 2</span>
+                  <span className="text-xs text-red-600">
+                    *Seperate every point/sentence with "---"
+                  </span>
+                </label>
+                <textarea
+                  placeholder="Enter your summary"
+                  className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  onChange={(e) => {
+                    setUserResumeData((prev) => ({
+                      ...prev,
+                      project: {
+                        ...prev.project,
+                        project2: {
+                          ...prev.project.project2,
+                          description: e.target.value,
+                        },
+                      },
+                    }));
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
