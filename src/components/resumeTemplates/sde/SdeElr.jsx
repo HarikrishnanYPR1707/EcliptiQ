@@ -12,7 +12,7 @@ const SdeElr = () => {
 
   const data = userResumeData();
   const resumeData = JSON.parse(data);
-  console.log(resumeData);
+  // console.log(resumeData);
 
   const handlePrint = useReactToPrint({
     content: () => sdeElrComponentDownloadRef.current,
