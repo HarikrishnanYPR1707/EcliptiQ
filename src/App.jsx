@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Information1 from "./pages/Information";
 import Template from "./pages/Template";
 import Information from "./pages/Information";
+import KeyWords from "./pages/KeyWords";
 // import { useState } from "react";
 // import { InformationContext } from "./Contexts/InformationContext";
 
@@ -85,6 +86,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/templates" element={<Template />} />
             <Route path="/information" element={<Information />} />
+            <Route path="/keyword" element={<KeyWords />} />
             <Route path="/templates/sde/elr" element={<SdeElr />} />
             <Route path="/templates/sde/jlr" element={<SdeJlr />} />
             <Route path="/templates/sde/slr" element={<SdeSlr />} />
