@@ -11,21 +11,23 @@ db = client["eciliptiq"]
 peopleResumeData = db.peopleResumeData
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['http://localhost:5173'])
 
 @app.route("/")
 def homePage():
     return "This is Home page."
 
-@app.route("/api/add/userResume")
+@app.route("/api/add/userResume", methods=['POST'])
 def mongodbDataPusher():
-    peopleData.insert_one({
-        "firstName": request.args.get("fn"),
-        "lastName": request.args.get("ln"),
-        "rollNo": request.args.get("rn"),
-        "place": request.args.get("pl")
-    })
-    return "route /api/user"
+    data = request.get_json()
+    # peopleResumeData.insert_one({
+    #     "firstName": request.args.get("fn"),
+    #     "lastName": request.args.get("ln"),
+    #     "rollNo": request.args.get("rn"),
+    #     "place": request.args.get("pl")
+    # })
+    return 1
+    print(data)
     
 if __name__ == '__main__':
     app.run(debug=True)
