@@ -1,7 +1,7 @@
 import React from "react";
 
 const KeyWords = () => {
-  return <div>lkjasldkjflaskdj</div>;
+  return <div></div>;
 };
 
 export default KeyWords;
