@@ -1,0 +1,19 @@
+{
+  "name": "ecliptiq-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarikrishnanYPR1707/EcliptiQ.git"
+  },
+  "author": "Harikrishnan Prasannakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarikrishnanYPR1707/EcliptiQ/issues"
+  },
+  "homepage": "https://github.com/HarikrishnanYPR1707/EcliptiQ#readme"
+}
