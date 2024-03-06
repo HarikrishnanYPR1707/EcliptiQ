@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
@@ -87,6 +88,19 @@ const Information = () => {
   console.clear();
   console.log(userResumeData);
   // ---------------------------
+
+  const handleDataSubmission = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:5000/api/add/userResume",
+        userResumeData,
+      );
+      console.log("Post created:", response.data);
+    } catch (error) {
+      console.error("Error creating post:", error);
+    }
+  };
 
   // localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
 
@@ -1802,6 +1816,12 @@ const Information = () => {
           </div>
         </div>
       </div>
+      {/* <button
+        onClick={handleDataSubmission}
+        className="mb-5 w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold"
+      >
+        Save
+      </button> */}
       <Link to="/templates">
         <button className="w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold">
           Select Template

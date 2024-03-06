@@ -60,12 +60,20 @@ const Home = () => {
             <h2 className="pt-5 text-xl">
               Create your professional resume in 5 minutes.
             </h2>
-            <Link
-              className="mt-5 rounded-2xl bg-purple-500 px-32 py-5 font-bold text-white hover:bg-purple-600"
-              to="/information"
-            >
-              Create Your Resume
-            </Link>
+            <div className="flex items-center justify-center gap-10">
+              <Link
+                className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
+                to="/information"
+              >
+                Create Your Resume
+              </Link>
+              <Link
+                className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
+                to="/keyword"
+              >
+                Keyword
+              </Link>
+            </div>
           </div>
 
           {/* WHY CHOOSE US --> SECTION */}
