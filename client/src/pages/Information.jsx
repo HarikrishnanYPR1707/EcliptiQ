@@ -93,12 +93,13 @@ const Information = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/api/add/userResume",
+        "http://localhost:8000/api/add/userResume",
         userResumeData,
       );
       console.log("Post created:", response.data);
     } catch (error) {
-      console.error("Error creating post:", error);
+      // console.log(error.toJSON());
+      console.log(error);
     }
   };
 
@@ -231,7 +232,7 @@ const Information = () => {
                 Website
               </label>
               <input
-                type="number"
+                type="url"
                 placeholder="e.g. www.sample.com"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
                 onChange={(e) =>
@@ -1409,12 +1410,12 @@ const Information = () => {
           </div>
         </div>
       </div>
-      {/* <button
+      <button
         onClick={handleDataSubmission}
         className="mb-5 w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold"
       >
         Save
-      </button> */}
+      </button>
       <Link to="/templates">
         <button className="w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold">
           Select Template
