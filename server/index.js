@@ -13,6 +13,8 @@ app.post("/api/add/userResume", (req, res) => {
   try {
     const data = req.body;
 
+    console.clear();
+
     console.log(data);
 
     res.send("done");
