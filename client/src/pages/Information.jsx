@@ -93,7 +93,7 @@ const Information = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/add/userResume",
+        "http://localhost:8000/api/add/userResumeData",
         userResumeData,
       );
       console.log("Post created:", response.data);
