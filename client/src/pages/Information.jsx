@@ -3,6 +3,7 @@ import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { BASEURL } from "../assets/API/api.js";
 
 const Information = () => {
   const [userResumeData, setUserResumeData] = useState({
@@ -93,7 +94,7 @@ const Information = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/add/userResumeData",
+        `${BASEURL}/api/addData`,
         userResumeData,
       );
       console.log("Post created:", response.data);
