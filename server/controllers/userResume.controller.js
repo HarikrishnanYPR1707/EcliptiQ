@@ -1,4 +1,4 @@
-const userResumeDataController = async (req, res) => {
+const addUserData = async (req, res) => {
   try {
     const data = req.body;
 
@@ -11,4 +11,9 @@ const userResumeDataController = async (req, res) => {
   }
 };
 
-module.exports = { userResumeDataController };
+// export default getUserData = async () => {
+//   try {
+//   } catch (error) {}
+// };
+
+module.exports = { addUserData };
