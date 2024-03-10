@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import BankingEntryLevel from "../assets/Banking/Banking-Entry-Level.jpeg";
-import BankingMidLevel from "../assets/Banking/Banking-Mid-Career.jpeg";
-import BankingSeniorLevel from "../assets/Banking/Banking-Senior-Level.jpeg";
-import DAEntryLevel from "../assets/DataAnalyst/Data-Analyst-Entry-Level.png";
-import DAMidLevel from "../assets/DataAnalyst/Data-Analyst-Junior-Level.png";
-import DASeniorLevel from "../assets/DataAnalyst/Data-Analyst-Senior-Level.png";
-import SDEEntryLevel from "../assets/SDE/SDE-Entry-Level.png";
-import SDEMidLevel from "../assets/SDE/SDE-Junior-Level.jpg";
-import SDESeniorLevel from "../assets/SDE/SDE-Senior-Level.png";
+import BankingEntryLevel from "../assets/images/Banking/Banking-Entry-Level.jpeg";
+import BankingMidLevel from "../assets/images/Banking/Banking-Mid-Career.jpeg";
+import BankingSeniorLevel from "../assets/images/Banking/Banking-Senior-Level.jpeg";
+import DAEntryLevel from "../assets/images/DataAnalyst/Data-Analyst-Entry-Level.png";
+import DAMidLevel from "../assets/images/DataAnalyst/Data-Analyst-Junior-Level.png";
+import DASeniorLevel from "../assets/images/DataAnalyst/Data-Analyst-Senior-Level.png";
+import SDEEntryLevel from "../assets/images/SDE/SDE-Entry-Level.png";
+import SDEMidLevel from "../assets/images/SDE/SDE-Junior-Level.jpg";
+import SDESeniorLevel from "../assets/images/SDE/SDE-Senior-Level.png";
 
 const Template = () => {
   const userResumeData = {
