@@ -1,8 +1,8 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const cors = require("cors");
 const userResumeData = require("./routes/user.routes.js");
-
-const port = 8000;
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -14,4 +14,6 @@ app.use("/", (req, res) => {
   res.send("Server is Up and Running!!");
 });
 
-app.listen(port, () => console.log("SERVER STARTED!!"));
+// Listening to PORT
+PORT = process.env.PORT;
+app.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${PORT}`));
