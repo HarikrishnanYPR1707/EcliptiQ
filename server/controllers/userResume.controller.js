@@ -1,10 +1,11 @@
 const addUserData = async (req, res) => {
   try {
-    const data = req.body;
+    const resumeData = await userResumeData.create(req.body);
 
-    console.log(data);
-
-    res.send(data.personalDetails);
+    res.status(200).json({
+      success: true,
+      data: resumeData,
+    });
   } catch (error) {
     console.log(error);
     res.send(error);
