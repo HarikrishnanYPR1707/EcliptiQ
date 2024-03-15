@@ -1,10 +1,15 @@
 const express = require("express");
-const dotenv = require("dotenv");
 const cors = require("cors");
+const dotenv = require("dotenv");
 const userResumeData = require("./routes/user.routes.js");
+const connectDatabase = require("./config/database.js");
 dotenv.config();
 
 const app = express();
+
+// Connecting to Database
+connectDatabase();
+
 app.use(cors());
 app.use(express.json());
 
