@@ -5,7 +5,6 @@ const {
   // getUserData,
 } = require("../controllers/userResume.controller.js");
 
-// router.route("/api/add/userResumeData").post(userResumeDataController);
 router.post("/addData", addUserData);
 // router.get("/getData", getUserData);
 
