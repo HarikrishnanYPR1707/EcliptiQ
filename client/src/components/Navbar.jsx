@@ -12,7 +12,6 @@ const Navbar = () => {
   const [userData, setUserData] = useState(null);
   const data = useContext(userEmailContext);
 
-  console.log(data);
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
     if (userData == null) {
@@ -20,6 +19,7 @@ const Navbar = () => {
     } else {
       setUser(true);
     }
+    data.setUserEmail(currentUser.email);
     // console.log(currentUser);
   });
 
