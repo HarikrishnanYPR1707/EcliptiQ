@@ -4,11 +4,15 @@ import { auth, googleProvider } from "../config/Firebase";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 // import { ModeToggle } from "./ui/ModeToggle";
+import { useContext } from "react";
+import { userEmailContext } from "@/Contexts/userEmailContext";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
   const [userData, setUserData] = useState(null);
+  const data = useContext(userEmailContext);
 
+  console.log(data);
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
     if (userData == null) {
