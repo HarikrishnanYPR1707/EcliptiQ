@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
-import { Auth } from "firebase/auth";
+import { auth } from "@/config/Firebase.js";
 const Information = () => {
   const [userResumeData, setUserResumeData] = useState({
     personalDetails: {
@@ -85,9 +85,11 @@ const Information = () => {
     skills: "",
     language: "",
   });
+
   // printing userResumeData ---
   console.clear();
   console.log(userResumeData);
+  console.log(auth);
   // ---------------------------
 
   const handleDataSubmission = async (event) => {
