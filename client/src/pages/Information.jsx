@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
-
+import { Auth } from "firebase/auth";
 const Information = () => {
   const [userResumeData, setUserResumeData] = useState({
     personalDetails: {
