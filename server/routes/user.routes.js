@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {
-  addUserDataa,
+  addUserData,
   // getUserData,
 } = require("../controllers/userResume.controller.js");
 
