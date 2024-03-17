@@ -7,7 +7,7 @@ const addUserData = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Resume data added successfully",
+      message: "New Resume data added successfully",
       data: resumeData,
     });
   } catch (error) {
