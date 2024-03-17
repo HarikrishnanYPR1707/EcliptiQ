@@ -89,7 +89,7 @@ const Information = () => {
   // printing userResumeData ---
   console.clear();
   console.log(userResumeData);
-  console.log(auth);
+  console.log(auth?.currentUser?.email);
   // ---------------------------
 
   const handleDataSubmission = async (event) => {
