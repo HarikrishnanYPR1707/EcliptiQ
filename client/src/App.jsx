@@ -18,7 +18,7 @@ import { userEmailContext } from "./Contexts/userEmailContext";
 const App = () => {
   return (
     <>
-      <userEmailContext.Provider value={{ userResumeData, setUserResumeData }}>
+      <userEmailContext.Provider value={{ name: "harikrishnan", rollno: 700 }}>
         <Router>
           <Navbar />
           <div className="mx-auto w-full max-w-[1550px] stopper:px-0">
