@@ -1,8 +1,9 @@
+const userResumeData = require("../models/resumeData.model.js");
+
 const addUserData = async (req, res) => {
   try {
-    // const resumeData = await userResumeData.create(req.body);
-
-    const resumeData = req.body;
+    const Data = req.body;
+    const resumeData = await userResumeData.create(Data);
 
     res.status(200).json({
       success: true,
@@ -15,9 +16,20 @@ const addUserData = async (req, res) => {
   }
 };
 
-// export default getUserData = async () => {
-//   try {
-//   } catch (error) {}
-// };
+const getUserData = async () => {
+  try {
+    const { email } = req.body;
+    const resumeData = await userResumeData.find({ email });
 
-module.exports = { addUserData };
+    res.status(200).json({
+      success: true,
+      message: "Resume data added successfully",
+      data: resumeData,
+    });
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+};
+
+module.exports = { addUserData, getUserData };
