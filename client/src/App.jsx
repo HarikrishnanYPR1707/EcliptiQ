@@ -14,11 +14,13 @@ import Template from "./pages/Template";
 import Information from "./pages/Information";
 import KeyWords from "./pages/KeyWords";
 import { userEmailContext } from "./Contexts/userEmailContext";
+import { useState } from "react";
 
 const App = () => {
+  const [userEmail, setUserEmail] = useState("");
   return (
     <>
-      <userEmailContext.Provider value={{ name: "harikrishnan", rollno: 700 }}>
+      <userEmailContext.Provider value={{ userEmail, setUserEmail }}>
         <Router>
           <Navbar />
           <div className="mx-auto w-full max-w-[1550px] stopper:px-0">
