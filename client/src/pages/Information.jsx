@@ -1,10 +1,11 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
-import { auth } from "@/config/Firebase.js";
+import { userEmailContext } from "@/Contexts/userEmailContext.js";
+
 const Information = () => {
   const [userResumeData, setUserResumeData] = useState({
     personalDetails: {
@@ -85,20 +86,21 @@ const Information = () => {
     skills: "",
     language: "",
   });
+  const email = useContext(userEmailContext);
 
   // printing userResumeData ---
   console.clear();
   console.log(userResumeData);
-  console.log(auth?.currentUser?.email);
+  console.log(email.userEmail);
   // ---------------------------
 
   const handleDataSubmission = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        `${BASEURL}/api/addData`,
-        userResumeData,
-      );
+      const response = await axios.post(`${BASEURL}/api/addData`, {
+        userEmail: email.userEmail,
+        data: userResumeData,
+      });
       console.log("Post created:", response.data);
     } catch (error) {
       // console.log(error.toJSON());
