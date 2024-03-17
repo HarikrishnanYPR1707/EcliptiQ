@@ -16,7 +16,7 @@ const Navbar = () => {
     } else {
       setUser(true);
     }
-    console.log(currentUser);
+    // console.log(currentUser);
   });
 
   const handleSignIn = async () => {
