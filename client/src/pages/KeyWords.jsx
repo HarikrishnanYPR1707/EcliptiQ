@@ -29,7 +29,10 @@ const KeyWords = () => {
         </div>
         <div className="grid grid-cols-2 gap-5">
           {sdeKeywordData.map((item, index) => (
-            <div className="flex items-center justify-center rounded-xl border border-gray-700 px-5 py-2">
+            <div
+              key={index}
+              className="flex items-center justify-center rounded-xl border border-gray-700 px-5 py-2"
+            >
               {item}
             </div>
           ))}
