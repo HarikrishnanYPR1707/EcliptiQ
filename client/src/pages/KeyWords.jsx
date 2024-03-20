@@ -7,7 +7,7 @@ import {
 } from "@/Data/Keyword";
 
 const KeyWords = () => {
-  const [domain, setDomain] = useState();
+  const [domain, setDomain] = useState("");
 
   return (
     <div className="flex flex-col items-center justify-center border-white pb-5">
