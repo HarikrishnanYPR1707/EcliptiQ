@@ -21,17 +21,17 @@ const KeyWords = () => {
       </div>
       {/* keyword section */}
       <div className="w-[850px]">
-        <div className="flex items-center justify-center gap-5 border border-purple-500">
-          <button className="rounded-xl border border-rose-500 bg-purple-500 px-5 py-2 font-bold">
+        <div className="my-5 flex items-center justify-center gap-5 border border-purple-500">
+          <button className="rounded-lg bg-purple-500 px-5 py-2 font-bold">
             Software Engineer
           </button>
-          <button className="rounded-xl border border-rose-500 bg-purple-500 px-5 py-2 font-bold">
+          <button className="rounded-xl bg-purple-500 px-5 py-2 font-bold">
             Graphic Designer
           </button>
-          <button className="rounded-xl border border-rose-500 bg-purple-500 px-5 py-2 font-bold">
+          <button className="rounded-xl bg-purple-500 px-5 py-2 font-bold">
             Management
           </button>
-          <button className="rounded-xl border border-rose-500 bg-purple-500 px-5 py-2 font-bold">
+          <button className="rounded-xl bg-purple-500 px-5 py-2 font-bold">
             Data Analyst
           </button>
         </div>
