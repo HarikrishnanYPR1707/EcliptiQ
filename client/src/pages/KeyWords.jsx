@@ -24,7 +24,7 @@ const KeyWords = () => {
       <div className="w-[850px]">
         <div className="my-5 flex items-center justify-center gap-5">
           <button className="rounded-lg bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600">
-            Software Engineer
+            Software Development Engineer
           </button>
           <button className="rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600">
             Graphic Designer
@@ -37,6 +37,7 @@ const KeyWords = () => {
           </button>
         </div>
         {/* sde section */}
+        <Component />
       </div>
     </div>
   );
