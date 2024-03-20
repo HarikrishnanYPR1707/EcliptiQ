@@ -145,6 +145,7 @@ const Information = () => {
                 type="text"
                 placeholder="eg. FrontEnd Developer"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.personalDetails.jobTitle}
                 onChange={(e) =>
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -164,6 +165,7 @@ const Information = () => {
                 type="text"
                 placeholder="e.g. John"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.personalDetails.firstName}
                 onChange={(e) =>
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -183,6 +185,7 @@ const Information = () => {
                 type="text"
                 placeholder="e.g. Doe"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.personalDetails.lastName}
                 onChange={(e) =>
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -202,6 +205,7 @@ const Information = () => {
                 type="email"
                 placeholder="e.g. john.doe@example.com"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.personalDetails.email}
                 onChange={(e) =>
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -221,6 +225,7 @@ const Information = () => {
                 type="number"
                 placeholder="e.g. +123 1234567890"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.personalDetails.phone}
                 onChange={(e) =>
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -240,6 +245,7 @@ const Information = () => {
                 type="url"
                 placeholder="e.g. www.sample.com"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.personalDetails.website}
                 onChange={(e) =>
                   setUserResumeData((prev) => ({
                     ...prev,
