@@ -1,9 +1,9 @@
-const userResumeData = require("../models/resumeData.model.js");
+const ResumeData = require("../models/resumeData.model.js");
 
 const addUserData = async (req, res) => {
   try {
     const Data = req.body;
-    const resumeData = await userResumeData.create(Data);
+    const resumeData = await ResumeData.create(Data);
 
     res.status(200).json({
       success: true,
@@ -19,7 +19,7 @@ const addUserData = async (req, res) => {
 const getUserData = async () => {
   try {
     const { email } = req.body;
-    const resumeData = await userResumeData.find({ email });
+    const resumeData = await ResumeData.find({ email });
 
     res.status(200).json({
       success: true,
