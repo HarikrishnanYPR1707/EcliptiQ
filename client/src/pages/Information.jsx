@@ -109,8 +109,6 @@ const Information = () => {
     }
   };
 
-  // localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
-
   return (
     <div className="flex flex-col items-center justify-center border-white pb-5">
       {/* image container */}
