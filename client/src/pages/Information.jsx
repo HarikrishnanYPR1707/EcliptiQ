@@ -8,6 +8,7 @@ import { userEmailContext } from "@/Contexts/userEmailContext.js";
 
 const Information = () => {
   const [userResumeData, setUserResumeData] = useState({
+    fileName: "",
     personalDetails: {
       jobTitle: "",
       firstName: "",
@@ -123,6 +124,25 @@ const Information = () => {
       </div>
       {/* Main Input Container */}
       <div className="flex w-full max-w-[800px] flex-col items-center justify-center gap-5 px-5 py-10">
+        <div className="group w-full rounded-xl bg-[#040a1a] p-6">
+          <div className="flex w-full flex-col items-start justify-center gap-1">
+            <label className="font-bold" htmlFor="">
+              File Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter file name"
+              className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+              value={userResumeData.fileName}
+              onChange={(e) =>
+                setUserResumeData((prev) => ({
+                  ...prev,
+                  fileName: e.target.value,
+                }))
+              }
+            />
+          </div>
+        </div>
         {/* Personal Details Container */}
         {/* border border-[#07102d] */}
         <div className="group w-full rounded-xl bg-[#040a1a] p-6">
