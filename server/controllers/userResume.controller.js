@@ -18,8 +18,8 @@ const addUserData = async (req, res) => {
 
 const getUserData = async () => {
   try {
-    const { email } = req.body;
-    const resumeData = await ResumeData.find({ email });
+    const { userEmail } = req.body;
+    const resumeData = await ResumeData.find({ userEmail });
 
     res.status(200).json({
       success: true,
