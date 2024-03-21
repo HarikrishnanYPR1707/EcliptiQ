@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const {
   addUserData,
-  // getUserData,
+  getUserData,
 } = require("../controllers/userResume.controller.js");
 
 router.post("/addData", addUserData);
-// router.get("/getData", getUserData);
+router.get("/getData", getUserData);
 
 module.exports = router;
