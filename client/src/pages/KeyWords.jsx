@@ -56,20 +56,16 @@ const KeyWords = () => {
 };
 
 const Component = ({ domain }) => {
-  // console.log(domain);
-  domain.map((item) => {
-    console.log(item);
-  });
   return (
     <div className="border border-rose-500">
       <div className="relative my-5 flex h-[70px] items-center justify-center bg-banner bg-cover bg-center underline">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
         <h1 className="relative text-center text-2xl font-black sm:text-3xl lg:text-3xl">
-          {/* {props.domain} */}
+          {domain.title}
         </h1>
       </div>
       <div className="grid grid-cols-2 gap-5">
-        {domain.map((item, index) => (
+        {domain.keywords.map((item, index) => (
           <div
             key={index}
             className="flex items-center justify-center rounded-xl border border-gray-700 px-5 py-2"
