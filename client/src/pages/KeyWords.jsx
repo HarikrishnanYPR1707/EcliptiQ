@@ -57,7 +57,7 @@ const KeyWords = () => {
 
 const Component = ({ domain }) => {
   return (
-    <div className="border border-rose-500">
+    <div className="">
       <div className="relative my-5 flex h-[70px] items-center justify-center bg-banner bg-cover bg-center underline">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
         <h1 className="relative text-center text-2xl font-black sm:text-3xl lg:text-3xl">
