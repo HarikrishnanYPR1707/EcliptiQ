@@ -13,14 +13,14 @@ import Home from "./pages/Home";
 import Template from "./pages/Template";
 import Information from "./pages/Information";
 import KeyWords from "./pages/KeyWords";
-import { userEmailContext } from "./Contexts/userEmailContext";
+import { userDataContext } from "./Contexts/userDataContext";
 import { useState } from "react";
 
 const App = () => {
-  const [userEmail, setUserEmail] = useState("");
+  const [user, setUser] = useState("");
   return (
     <>
-      <userEmailContext.Provider value={{ userEmail, setUserEmail }}>
+      <userDataContext.Provider value={{ user, setUser }}>
         <Router>
           <Navbar />
           <div className="mx-auto w-full max-w-[1550px] stopper:px-0">
@@ -42,7 +42,7 @@ const App = () => {
             </Routes>
           </div>
         </Router>
-      </userEmailContext.Provider>
+      </userDataContext.Provider>
     </>
   );
 };
