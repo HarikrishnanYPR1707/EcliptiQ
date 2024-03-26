@@ -5,12 +5,12 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 // import { ModeToggle } from "./ui/ModeToggle";
 import { useContext } from "react";
-import { userEmailContext } from "@/Contexts/userEmailContext";
+import { userDataContext } from "@/Contexts/userDataContext";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
   const [userData, setUserData] = useState(null);
-  const data = useContext(userEmailContext);
+  const data = useContext(userDataContext);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
@@ -19,8 +19,8 @@ const Navbar = () => {
     } else {
       setUser(true);
     }
-    data.setUserEmail(currentUser.email);
-    // console.log(currentUser);
+    data.setUser(currentUser.email);
+    console.log(currentUser);
   });
 
   const handleSignIn = async () => {
@@ -51,7 +51,6 @@ const Navbar = () => {
           to="/"
           className="flex h-full items-center justify-center font-honk text-3xl font-black uppercase lg:text-5xl"
         >
-          {/* <img src="" alt="" /> */}
           EcliptiQ
         </Link>
         {user ? (
