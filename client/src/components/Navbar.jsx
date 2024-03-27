@@ -10,6 +10,7 @@ import { userDataContext } from "@/Contexts/userDataContext";
 const Navbar = () => {
   const [user, setUser] = useState(false);
   const [userData, setUserData] = useState(null);
+  // User Data context
   const data = useContext(userDataContext);
 
   onAuthStateChanged(auth, (currentUser) => {
