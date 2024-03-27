@@ -1559,6 +1559,7 @@ const Information = () => {
             <textarea
               placeholder="Enter the languages"
               className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+              value={userResumeData.language}
               onChange={(e) => {
                 setUserResumeData((prev) => ({
                   ...prev,
