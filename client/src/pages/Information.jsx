@@ -1311,6 +1311,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link1.label}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1333,6 +1334,7 @@ const Information = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link1.link}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1358,6 +1360,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link2.label}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1380,6 +1383,7 @@ const Information = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link2.link}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1405,6 +1409,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link3.label}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1427,6 +1432,7 @@ const Information = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link3.link}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1452,6 +1458,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. Twitter"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link4.label}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1474,6 +1481,7 @@ const Information = () => {
                   type="url"
                   placeholder="https://www.example.com"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.socialLink.link4.link}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -1516,6 +1524,7 @@ const Information = () => {
             <textarea
               placeholder="Enter your skills"
               className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+              value={userResumeData.skills}
               onChange={(e) => {
                 setUserResumeData((prev) => ({
                   ...prev,
