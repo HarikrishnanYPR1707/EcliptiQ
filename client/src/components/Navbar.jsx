@@ -5,23 +5,36 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 // import { ModeToggle } from "./ui/ModeToggle";
 import { useContext } from "react";
-import { userDataContext } from "@/Contexts/userDataContext";
+import {
+  userDataContext,
+  isUserLoginContext,
+} from "@/Contexts/userDataContext";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
   const [userData, setUserData] = useState(null);
+
   // User Data context
   const data = useContext(userDataContext);
+  const { isLogin, setIsLogin } = useContext(isUserLoginContext);
+
+  console.log(userData);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
+
     if (userData == null) {
       setUser(false);
+      setIsLogin(false);
     } else {
       setUser(true);
+      setIsLogin(true);
     }
-    data.setUser(currentUser.email);
-    console.log(currentUser);
+
+    data.setUser(currentUser?.email);
+    console.log({ isLogin, setIsLogin });
+    // console.log(auth);
+    // console.log(currentUser);
   });
 
   const handleSignIn = async () => {
