@@ -738,6 +738,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. SDE-3"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience2.jobTitle}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -760,6 +761,7 @@ const Information = () => {
                   type="text"
                   placeholder="e.g. Google"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience2.employer}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -782,6 +784,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. SDE-3"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience2.place}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -809,6 +812,7 @@ const Information = () => {
                   type="date"
                   placeholder="eg. Feb, 2024"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience2.startDate}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -836,6 +840,7 @@ const Information = () => {
                   type="date"
                   placeholder="eg. Feb, 2024"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience2.endDate}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -861,6 +866,7 @@ const Information = () => {
                   <textarea
                     placeholder="Enter your summary"
                     className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                    value={userResumeData.experience.experience2.description}
                     onChange={(e) => {
                       setUserResumeData((prev) => ({
                         ...prev,
