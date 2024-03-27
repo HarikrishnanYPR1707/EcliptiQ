@@ -4,33 +4,42 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { BsFillFileLock2Fill } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
 import { LuFileSpreadsheet } from "react-icons/lu";
-import { Link } from "react-router-dom";
-import { userDataContext } from "@/Contexts/userDataContext";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  userDataContext,
+  isUserLoginContext,
+} from "@/Contexts/userDataContext";
+import { auth } from "@/config/Firebase";
+
 const Home = () => {
-  const data = useContext(userDataContext);
-  console.log(data);
-  useLayoutEffect(() => {
-    const context = gsap.context(() => {
-      let timeline = gsap.timeline();
+  const { user, setUser } = useContext(userDataContext);
+  const { isLogin, setIsLogin } = useContext(isUserLoginContext);
+  // console.log({ user, setUser });
+  const navigate = useNavigate();
+  console.log({ isLogin: isLogin });
 
-      timeline
-        .from("#char", {
-          top: "100%",
-          duration: 0.8,
-          stagger: 0.2,
-        })
-        .from("#progressBar", {
-          width: 0,
-          duration: 1.5,
-        })
-        .to("#intro-slider", {
-          xPercent: "-100",
-          duration: 0.8,
-        });
-    });
+  // useLayoutEffect(() => {
+  //   const context = gsap.context(() => {
+  //     let timeline = gsap.timeline();
 
-    return () => context.revert();
-  }, []);
+  //     timeline
+  //       .from("#char", {
+  //         top: "100%",
+  //         duration: 0.8,
+  //         stagger: 0.2,
+  //       })
+  //       .from("#progressBar", {
+  //         width: 0,
+  //         duration: 1.5,
+  //       })
+  //       .to("#intro-slider", {
+  //         xPercent: "-100",
+  //         duration: 0.8,
+  //       });
+  //   });
+
+  //   return () => context.revert();
+  // }, []);
 
   return (
     <div className="gap-20">
@@ -63,18 +72,22 @@ const Home = () => {
               Create your professional resume in 5 minutes.
             </h2>
             <div className="flex items-center justify-center gap-10">
-              <Link
+              <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
-                to="/information"
+                onClick={() => {
+                  isLogin ? navigate("/information") : alert("Please Login");
+                }}
               >
                 Create Your Resume
-              </Link>
-              <Link
+              </button>
+              <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
-                to="/keyword"
+                onClick={() => {
+                  isLogin ? navigate("/keyword") : alert("Please Login");
+                }}
               >
                 Keyword
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -142,12 +155,14 @@ const Home = () => {
                 Building a h1 Resume is the First Step Toward a{" "}
                 <span className="text-purple-500">Successful Career.</span>
               </h1>
-              <Link
-                className="bg-Green my-4 inline-flex items-center justify-center rounded-md bg-purple-500 px-6 py-3 text-lg font-semibold text-white hover:bg-purple-600"
-                to="/information"
+              <button
+                className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
+                onClick={() => {
+                  isLogin ? navigate("/information") : alert("Please Login");
+                }}
               >
                 Create Your Resume
-              </Link>
+              </button>
               <p className="mb-4 text-lg font-medium">
                 Your resume is the initial document that reaches the HR
                 recruiter's desk before you have the opportunity to meet them in
@@ -180,12 +195,14 @@ const Home = () => {
                 Maximizing Your{" "}
                 <span className="text-purple-500">Initial Impact.</span>
               </h1>
-              <Link
-                className="bg-Green my-4 inline-flex items-center justify-center rounded-md bg-purple-500 px-6 py-3 text-lg font-semibold text-white hover:bg-purple-600"
-                to="/information"
+              <button
+                className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
+                onClick={() => {
+                  isLogin ? navigate("/information") : alert("Please Login");
+                }}
               >
                 Create Your Resume
-              </Link>
+              </button>
               <p className="mb-4 text-lg font-medium">
                 Recruiters typically dedicate just six seconds to review your
                 resume, a particularly critical factor in highly competitive job
@@ -274,11 +291,14 @@ const Home = () => {
               <span className="text-purple-500">Create your resume today.</span>
             </h2>
             <div className="mt-8 flex">
-              <Link to="/information">
-                <div className="bg-Green mr-3 inline-flex items-center justify-center rounded-md bg-purple-500 px-6 py-3 text-lg font-semibold text-white hover:bg-purple-600">
-                  Create my resume
-                </div>
-              </Link>
+              <button
+                className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
+                onClick={() => {
+                  isLogin ? navigate("/information") : alert("Please Login");
+                }}
+              >
+                Create Your Resume
+              </button>
             </div>
           </div>
         </div>
