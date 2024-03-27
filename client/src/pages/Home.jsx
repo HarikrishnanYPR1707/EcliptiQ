@@ -1,12 +1,14 @@
 import gsap from "gsap";
-import { useLayoutEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { BsFillFileLock2Fill } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
 import { LuFileSpreadsheet } from "react-icons/lu";
 import { Link } from "react-router-dom";
-
+import { userDataContext } from "@/Contexts/userDataContext";
 const Home = () => {
+  const data = useContext(userDataContext);
+  console.log(data);
   useLayoutEffect(() => {
     const context = gsap.context(() => {
       let timeline = gsap.timeline();
@@ -33,7 +35,7 @@ const Home = () => {
   return (
     <div className="gap-20">
       {/* preloader */}
-      <div
+      {/* <div
         id="intro-slider"
         className="absolute inset-0 top-0 z-30 flex flex-col items-center justify-center bg-[#030712] font-honk text-3xl font-black"
       >
@@ -47,7 +49,7 @@ const Home = () => {
           </p>
           <div id="progressBar" className="h-[2px] w-full bg-purple-500" />
         </div>
-      </div>
+      </div> */}
       <main className="relative flex flex-col items-center justify-center">
         <div className="mx-32 flex flex-col items-center justify-center text-center">
           {/* HERO SECTION  */}
