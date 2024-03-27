@@ -1214,6 +1214,7 @@ const Information = () => {
                 type="text"
                 placeholder="e.g. Google"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.project.project2.title}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -1236,6 +1237,7 @@ const Information = () => {
                 type="text"
                 placeholder="e.g. Project Lead"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.project.project2.position}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -1261,6 +1263,7 @@ const Information = () => {
                 <textarea
                   placeholder="Enter your summary"
                   className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.project.project2.description}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
