@@ -388,6 +388,7 @@ const Information = () => {
               <textarea
                 placeholder="Enter your summary"
                 className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.professionalSummary}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -425,6 +426,7 @@ const Information = () => {
                 type="text"
                 placeholder="eg. Universal College of Engineering"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.education.college}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -444,6 +446,7 @@ const Information = () => {
                 type="text"
                 placeholder="e.g. B.Tech in Computer Engineering"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.education.degree}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -463,6 +466,7 @@ const Information = () => {
                 type="text"
                 placeholder="eg. SDE-3"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.education.place}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -487,6 +491,7 @@ const Information = () => {
                 type="date"
                 placeholder="eg. Feb, 2024"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.education.startDate}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -511,6 +516,7 @@ const Information = () => {
                 type="date"
                 placeholder="eg. Feb, 2024"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                value={userResumeData.education.endDate}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -533,6 +539,7 @@ const Information = () => {
                 <textarea
                   placeholder="Enter your summary"
                   className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.education.description}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -576,6 +583,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. SDE-3"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience1.jobTitle}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -598,6 +606,7 @@ const Information = () => {
                   type="text"
                   placeholder="e.g. Google"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience1.employer}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -620,6 +629,7 @@ const Information = () => {
                   type="text"
                   placeholder="eg. SDE-3"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience1.place}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -647,6 +657,7 @@ const Information = () => {
                   type="date"
                   placeholder="eg. Feb, 2024"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience1.startDate}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -674,6 +685,7 @@ const Information = () => {
                   type="date"
                   placeholder="eg. Feb, 2024"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                  value={userResumeData.experience.experience1.endDate}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -699,6 +711,7 @@ const Information = () => {
                   <textarea
                     placeholder="Enter your summary"
                     className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
+                    value={userResumeData.experience.experience1.description}
                     onChange={(e) => {
                       setUserResumeData((prev) => ({
                         ...prev,
