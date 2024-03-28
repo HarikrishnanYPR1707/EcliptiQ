@@ -18,7 +18,7 @@ const Navbar = () => {
   const data = useContext(userEmailContext);
   const { isLogin, setIsLogin } = useContext(isUserLoginContext);
 
-  console.log(userData);
+  // console.log(userData);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
@@ -32,7 +32,7 @@ const Navbar = () => {
     }
 
     data.setUser(currentUser?.email);
-    console.log({ isLogin, setIsLogin });
+    // console.log({ isLogin, setIsLogin });
     // console.log(auth);
     // console.log(currentUser);
   });
