@@ -6,13 +6,13 @@ import { FaDownload } from "react-icons/fa";
 import { LuFileSpreadsheet } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  userDataContext,
+  userEmailContext,
   isUserLoginContext,
 } from "@/Contexts/userDataContext";
 import { auth } from "@/config/Firebase";
 
 const Home = () => {
-  const { user, setUser } = useContext(userDataContext);
+  const { user, setUser } = useContext(userEmailContext);
   const { isLogin, setIsLogin } = useContext(isUserLoginContext);
   // console.log({ user, setUser });
   const navigate = useNavigate();
