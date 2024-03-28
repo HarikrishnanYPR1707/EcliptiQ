@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
-import { userDataContext } from "@/Contexts/userDataContext.js";
+import { userEmailContext } from "@/Contexts/userDataContext.js";
 
 const Information = () => {
   // const [userResumeData, setUserResumeData] = useState({
@@ -176,7 +176,7 @@ const Information = () => {
     skills: "ReactJs---NextJs---TailwindCSS---Framer Motion---GSAP---SCSS",
     language: "Malayalam---English---Hindi---Marathi",
   });
-  const { user } = useContext(userDataContext);
+  const { user } = useContext(userEmailContext);
 
   // printing userResumeData ---
   console.clear();
