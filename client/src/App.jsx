@@ -14,7 +14,7 @@ import Template from "./pages/Template";
 import Information from "./pages/Information";
 import KeyWords from "./pages/KeyWords";
 import {
-  userDataContext,
+  userEmailContext,
   isUserLoginContext,
 } from "./Contexts/userDataContext";
 import { useState } from "react";
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <>
       <isUserLoginContext.Provider value={{ isLogin, setIsLogin }}>
-        <userDataContext.Provider value={{ user, setUser }}>
+        <userEmailContext.Provider value={{ user, setUser }}>
           <Router>
             <Navbar />
             <div className="mx-auto w-full max-w-[1550px] stopper:px-0">
@@ -47,7 +47,7 @@ const App = () => {
               </Routes>
             </div>
           </Router>
-        </userDataContext.Provider>
+        </userEmailContext.Provider>
       </isUserLoginContext.Provider>
     </>
   );
