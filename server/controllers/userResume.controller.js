@@ -16,14 +16,18 @@ const addUserData = async (req, res) => {
   }
 };
 
-const getUserData = async () => {
+const getUserData = async (req, res) => {
   try {
-    const { userEmail } = req.body;
+    const { userEmail } = req.query;
+    console.log("--------------------------------------");
+    console.log(userEmail);
+    console.log("--------------------------------------");
+
     const resumeData = await ResumeData.find({ userEmail });
 
     res.status(200).json({
       success: true,
-      message: "Resume data added successfully",
+      message: "Resume data fetched successfully",
       data: resumeData,
     });
   } catch (error) {
