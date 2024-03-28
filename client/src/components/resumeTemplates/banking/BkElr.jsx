@@ -1,6 +1,8 @@
 import { userResumeData } from "@/Fetch/InformationFetch";
+import axios from "axios";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
+import { isUserLoginContext } from "@/Contexts/userDataContext";
 
 const BkElr = () => {
   const bkElrComponentDownloadRef = useRef(null);
@@ -8,6 +10,19 @@ const BkElr = () => {
   const data = userResumeData();
   const resumeData = JSON.parse(data);
   // console.log(resumeData);
+
+  const fetchData = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.get(`${BASEURL}/api/getData`, {
+        userEmail: user,
+      });
+      console.log(response);
+    } catch (error) {
+      // console.log(error.toJSON());
+      console.log(error);
+    }
+  };
 
   const handlePrint = useReactToPrint({
     content: () => bkElrComponentDownloadRef.current,
