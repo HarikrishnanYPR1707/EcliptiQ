@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import { ModeToggle } from "./ui/ModeToggle";
 import { useContext } from "react";
 import {
-  userDataContext,
+  userEmailContext,
   isUserLoginContext,
 } from "@/Contexts/userDataContext";
 
@@ -15,7 +15,7 @@ const Navbar = () => {
   const [userData, setUserData] = useState(null);
 
   // User Data context
-  const data = useContext(userDataContext);
+  const data = useContext(userEmailContext);
   const { isLogin, setIsLogin } = useContext(isUserLoginContext);
 
   console.log(userData);
