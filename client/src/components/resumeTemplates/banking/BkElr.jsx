@@ -2,7 +2,7 @@ import { userResumeData } from "@/Fetch/InformationFetch";
 import axios from "axios";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
-import { isUserLoginContext } from "@/Contexts/userDataContext";
+import { userEmailContext } from "@/Contexts/userDataContext";
 
 const BkElr = () => {
   const bkElrComponentDownloadRef = useRef(null);
