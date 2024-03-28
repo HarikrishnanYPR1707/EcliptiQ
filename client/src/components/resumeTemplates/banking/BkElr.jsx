@@ -1,21 +1,23 @@
 import { userResumeData } from "@/Fetch/InformationFetch";
 import axios from "axios";
-import { useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import { userEmailContext } from "@/Contexts/userDataContext";
 
 const BkElr = () => {
+  // using context
+  const email = useContext(userEmailContext);
+
   const bkElrComponentDownloadRef = useRef(null);
 
   const data = userResumeData();
   const resumeData = JSON.parse(data);
   // console.log(resumeData);
 
-  const fetchData = async (event) => {
-    event.preventDefault();
+  const fetchData = () => {
     try {
-      const response = await axios.get(`${BASEURL}/api/getData`, {
-        userEmail: user,
+      const response = axios.get(`${BASEURL}/api/getData`, {
+        userEmail: userEmailContext,
       });
       console.log(response);
     } catch (error) {
@@ -28,6 +30,10 @@ const BkElr = () => {
     content: () => bkElrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
     // pageStyle: "print",
+  });
+
+  useEffect(() => {
+    fetchData();
   });
 
   return (
