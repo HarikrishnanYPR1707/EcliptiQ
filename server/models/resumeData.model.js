@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const resumeSchema = mongoose.Schema({
   userEmail: String,
   data: {
+    fileName: String,
     personalDetails: {
       jobTitle: String,
       firstName: String,
