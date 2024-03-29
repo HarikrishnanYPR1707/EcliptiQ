@@ -5,11 +5,14 @@ import { useReactToPrint } from "react-to-print";
 import { userEmailContext } from "@/Contexts/userDataContext";
 import { currentResumeContext } from "@/Contexts/ResumeContext";
 import { BASEURL } from "@/assets/API/api";
+import Cookies from "js-cookie";
 
 const BkElr = () => {
   // using context
   const { user } = useContext(userEmailContext);
-  const { currentResumeId } = useContext(currentResumeContext);
+  // const { currentResumeId } = useContext(currentResumeContext);
+
+  const currentResumeId = Cookies.get("currentResumeId");
 
   console.log(user, currentResumeId);
 
