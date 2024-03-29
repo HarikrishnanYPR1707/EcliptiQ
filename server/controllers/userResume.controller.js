@@ -16,6 +16,26 @@ const addUserData = async (req, res) => {
   }
 };
 
+const getUserSingleData = async (req, res) => {
+  try {
+    const { id } = req.query;
+    console.log("--------------------------------------");
+    console.log(id);
+    console.log("--------------------------------------");
+
+    const resumeData = await ResumeData.find({ _id: id });
+
+    res.status(200).json({
+      success: true,
+      message: "Resume data fetched successfully",
+      data: resumeData,
+    });
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+};
+
 const getUserData = async (req, res) => {
   try {
     const { userEmail } = req.query;
@@ -36,4 +56,4 @@ const getUserData = async (req, res) => {
   }
 };
 
-module.exports = { addUserData, getUserData };
+module.exports = { addUserData, getUserData, getUserSingleData };
