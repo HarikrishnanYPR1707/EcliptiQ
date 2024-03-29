@@ -75,7 +75,9 @@ const Home = () => {
               <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
                 onClick={() => {
-                  isLogin ? navigate("/information") : alert("Please Login");
+                  isLogin
+                    ? navigate("/information/newResume")
+                    : alert("Please Login");
                 }}
               >
                 Create Your Resume
@@ -158,7 +160,9 @@ const Home = () => {
               <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
                 onClick={() => {
-                  isLogin ? navigate("/information") : alert("Please Login");
+                  isLogin
+                    ? navigate("/information/newResume")
+                    : alert("Please Login");
                 }}
               >
                 Create Your Resume
@@ -198,7 +202,9 @@ const Home = () => {
               <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
                 onClick={() => {
-                  isLogin ? navigate("/information") : alert("Please Login");
+                  isLogin
+                    ? navigate("/information/newResume")
+                    : alert("Please Login");
                 }}
               >
                 Create Your Resume
@@ -294,7 +300,9 @@ const Home = () => {
               <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
                 onClick={() => {
-                  isLogin ? navigate("/information") : alert("Please Login");
+                  isLogin
+                    ? navigate("/information/newResume")
+                    : alert("Please Login");
                 }}
               >
                 Create Your Resume
