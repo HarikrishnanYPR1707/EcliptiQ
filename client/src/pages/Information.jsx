@@ -5,6 +5,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
 import { userEmailContext } from "@/Contexts/userDataContext.js";
+import { currentResumeContext } from "@/Contexts/ResumeContext.js";
 
 const Information = () => {
   // const [userResumeData, setUserResumeData] = useState({
@@ -177,6 +178,8 @@ const Information = () => {
     language: "Malayalam---English---Hindi---Marathi",
   });
   const { user } = useContext(userEmailContext);
+  const { currentResumeId, setCurrentResumeId } =
+    useContext(currentResumeContext);
 
   // printing userResumeData ---
   console.clear();
@@ -191,7 +194,11 @@ const Information = () => {
         userEmail: user,
         data: userResumeData,
       });
+
+      setCurrentResumeId(response.data.data._id);
+
       console.log("Post created:", response.data);
+      console.log(currentResumeId);
     } catch (error) {
       // console.log(error.toJSON());
       console.log(error);
