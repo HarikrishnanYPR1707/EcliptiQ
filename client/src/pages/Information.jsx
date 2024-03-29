@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
 import { userEmailContext } from "@/Contexts/userDataContext.js";
 import { currentResumeContext } from "@/Contexts/ResumeContext.js";
+import Cookies from "js-cookie";
 
 const Information = () => {
   // const [userResumeData, setUserResumeData] = useState({
@@ -195,7 +196,8 @@ const Information = () => {
         data: userResumeData,
       });
 
-      setCurrentResumeId(response.data.data._id);
+      // setCurrentResumeId(response.data.data._id);
+      Cookies.set("currentResumeId", response.data.data._id);
 
       console.log("Post created:", response.data);
       console.log(currentResumeId);
