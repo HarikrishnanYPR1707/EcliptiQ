@@ -3,9 +3,11 @@ const router = express.Router();
 const {
   addUserData,
   getUserData,
+  getUserSingleData,
 } = require("../controllers/userResume.controller.js");
 
 router.post("/addData", addUserData);
-router.get("/getData", getUserData);
+router.get("/getSingleData", getUserSingleData);
+router.get("/getAllData", getUserData);
 
 module.exports = router;
