@@ -210,6 +210,25 @@ const Information = () => {
     }
   };
 
+  // const updateResumeData = async () => {
+  //   try {
+  //     const response = await axios.post(`${BASEURL}/api/addData`, {
+  //       userEmail: user,
+  //       resumeTemplateRoute: "",
+  //       data: userResumeData,
+  //     });
+
+  //     // setCurrentResumeId(response.data.data._id);
+  //     Cookies.set("currentResumeId", response.data.data._id);
+
+  //     console.log("Post created:", response.data);
+  //     console.log(currentResumeId);
+  //   } catch (error) {
+  //     // console.log(error.toJSON());
+  //     console.log(error);
+  //   }
+  // }
+
   const handleDataSubmission = async (event) => {
     event.preventDefault();
     try {
