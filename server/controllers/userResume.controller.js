@@ -24,7 +24,6 @@ const getUserSingleData = async (req, res) => {
     console.log("--------------------------------------");
 
     const resumeData = await ResumeData.find({ _id: id });
-    console.log(resumeData);
     res.status(200).json({
       success: true,
       message: "Resume data fetched successfully",
