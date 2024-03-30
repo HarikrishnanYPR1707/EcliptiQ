@@ -1627,7 +1627,7 @@ const Information = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-[760px] items-center justify-between border border-rose-500">
+      <div className="flex w-[760px] items-center justify-between">
         <button
           onClick={handleDataSubmission}
           className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
