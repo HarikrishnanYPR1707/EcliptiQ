@@ -242,11 +242,17 @@ const BkElr = () => {
                         </span>
                         {" | "}
                         <span className="">
-                          {resumeData?.experience?.experience2?.startDate}
+                          {resumeData?.experience?.experience2?.startDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData?.experience?.experience2?.endDate}
+                          {resumeData?.experience?.experience2?.endDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                       </p>
                     </div>
