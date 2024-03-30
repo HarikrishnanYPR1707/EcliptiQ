@@ -188,6 +188,18 @@ const Information = () => {
   console.log(userResumeData);
   // ---------------------------
 
+  const fetchData = () => {
+    try {
+      const response = axios
+        .get(`${BASEURL}/api/getSingleData?id=${currentResumeId}`)
+        .then((res) => setResumeData(res.data.data[0].data));
+      // console.log(response);
+    } catch (error) {
+      // console.log(error.toJSON());
+      console.log(error);
+    }
+  };
+
   const handleDataSubmission = async (event) => {
     event.preventDefault();
     try {
