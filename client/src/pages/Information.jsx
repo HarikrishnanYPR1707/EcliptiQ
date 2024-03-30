@@ -215,6 +215,7 @@ const Information = () => {
     try {
       const response = await axios.post(`${BASEURL}/api/addData`, {
         userEmail: user,
+        resumeTemplateRoute: "",
         data: userResumeData,
       });
 
