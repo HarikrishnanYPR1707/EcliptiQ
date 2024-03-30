@@ -1612,7 +1612,7 @@ const Information = () => {
             </div>
           </div>
           {/* input section */}
-          <div className="gap-1la mt-5 flex w-full flex-col items-start justify-center">
+          <div className="mt-5 flex w-full flex-col items-start justify-center gap-1">
             <textarea
               placeholder="Enter the languages"
               className="h-[130px] w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
@@ -1627,17 +1627,26 @@ const Information = () => {
           </div>
         </div>
       </div>
-      <button
-        onClick={handleDataSubmission}
-        className="mb-5 w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold"
-      >
-        Save
-      </button>
-      <Link to="/templates">
-        <button className="w-[250px] rounded-lg bg-purple-500 py-2 text-sm font-bold">
-          Select Template
+      <div className="flex w-[760px] items-center justify-between border border-rose-500">
+        <button
+          onClick={handleDataSubmission}
+          className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+        >
+          Save
         </button>
-      </Link>
+        <button
+          // onClick={updateResumeData}
+          className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+        >
+          Update
+        </button>
+        <Link
+          to="/templates"
+          className="w-[200px] rounded-lg bg-purple-500 py-2 text-center text-sm font-semibold"
+        >
+          Select Template
+        </Link>
+      </div>
     </div>
   );
 };
