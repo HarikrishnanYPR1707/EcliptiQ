@@ -146,7 +146,7 @@ const BkElr = () => {
                       key={i}
                       className="ml-5 list-disc text-sm text-gray-600"
                     >
-                      {skill},
+                      {skill}
                     </li>
                   ))}
                 </ul>
