@@ -126,10 +126,12 @@ const BkElr = () => {
                   <div className="flex flex-col items-start justify-between text-sm text-gray-500">
                     <p className="">
                       <span className="">
-                        {resumeData?.education?.startDate}
+                        {resumeData?.education?.startDate.substr(0, 10)}
                       </span>
                       {" - "}
-                      <span className="">{resumeData?.education?.endDate}</span>
+                      <span className="">
+                        {resumeData?.education?.endDate.substr(0, 10)}
+                      </span>
                     </p>
                     <p className="">{resumeData?.education?.place}</p>
                   </div>
@@ -219,32 +221,32 @@ const BkElr = () => {
                     {/* header section */}
                     <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                       <span className="text-base font-bold text-[#a71b23]">
-                        {resumeData?.experience?.experience?.jobTitle}
+                        {resumeData?.experience?.experience2?.jobTitle}
                       </span>
                     </h1>
                     {/* Date and place section */}
                     <div className="flex items-center justify-between text-gray-500">
                       <p className="">
                         <span className="">
-                          {resumeData?.experience?.experience?.employer}
+                          {resumeData?.experience?.experience2?.employer}
                         </span>
                         {", "}
                         <span className="">
-                          {resumeData?.experience?.experience?.place}
+                          {resumeData?.experience?.experience2?.place}
                         </span>
                         {" | "}
                         <span className="">
-                          {resumeData?.experience?.experience?.startDate}
+                          {resumeData?.experience?.experience2?.startDate}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData?.experience?.experience?.endDate}
+                          {resumeData?.experience?.experience2?.endDate}
                         </span>
                       </p>
                     </div>
                     {/* description section - 1 */}
                     <ul className="ml-12 list-disc">
-                      {resumeData?.experience?.experience?.description
+                      {resumeData?.experience?.experience2?.description
                         .split("---")
                         .map((item, i) => (
                           <li key={i} className="text-sm">
