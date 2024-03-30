@@ -251,7 +251,6 @@ const Information = () => {
 
   useEffect(() => {
     fetchData();
-    console.log("alsdjflkajsdflkjalskjdflkajsdflkjalskdfjlksjdflkajklsdjfkl");
   }, []);
 
   return (
