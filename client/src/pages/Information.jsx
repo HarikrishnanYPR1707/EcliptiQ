@@ -1,12 +1,13 @@
+import { currentResumeContext } from "@/Contexts/ResumeContext.js";
+import { userEmailContext } from "@/Contexts/userDataContext.js";
 import axios from "axios";
+import Cookies from "js-cookie";
 import { useContext, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
-import { userEmailContext } from "@/Contexts/userDataContext.js";
-import { currentResumeContext } from "@/Contexts/ResumeContext.js";
-import Cookies from "js-cookie";
+import { useParams } from "react-router-dom";
 
 const Information = () => {
   // const [userResumeData, setUserResumeData] = useState({
@@ -89,6 +90,9 @@ const Information = () => {
   //   skills: "",
   //   language: "",
   // });
+
+  // const [userResumeData, setUserResumeData] = useState();
+
   const [userResumeData, setUserResumeData] = useState({
     fileName: "Harikrishnan-Resume-[23-01-2024]",
     personalDetails: {
