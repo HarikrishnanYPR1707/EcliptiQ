@@ -35,6 +35,8 @@ const BkElr = () => {
     }
   };
 
+  console.log(resumeData);
+
   const handlePrint = useReactToPrint({
     content: () => bkElrComponentDownloadRef.current,
     documentTitle: "SDE-SLR-Resume",
@@ -43,7 +45,7 @@ const BkElr = () => {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
   return (
     <div className="flex flex-col gap-10">
@@ -70,21 +72,21 @@ const BkElr = () => {
               <div className="">
                 <h1 className="flex flex-col text-3xl text-[#a71b23]">
                   <span className="">
-                    {resumeData?.PersonalDetails?.firstName}
+                    {resumeData?.personalDetails?.firstName}
                   </span>
                   <span className="">
-                    {resumeData?.PersonalDetails?.lastName}
+                    {resumeData?.personalDetails?.lastName}
                   </span>
                 </h1>
                 <div className="mt-4 flex flex-col items-start justify-between">
                   <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                     <span className="">
-                      {resumeData?.PersonalDetails?.phone}
+                      {resumeData?.personalDetails?.phone}
                     </span>
                   </p>
                   <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                     <span className="">
-                      {resumeData?.PersonalDetails?.email}
+                      {resumeData?.personalDetails?.email}
                     </span>
                   </p>
                   <p className="flex w-fit items-center justify-center text-sm text-gray-500">
@@ -92,7 +94,7 @@ const BkElr = () => {
                       href="#"
                       className="flex items-center justify-center gap-2"
                     >
-                      {resumeData?.PersonalDetails?.website}
+                      {resumeData?.personalDetails?.website}
                     </a>
                   </p>
                   <p className="flex w-fit items-center justify-center text-sm text-gray-500">
