@@ -50,7 +50,7 @@ const BkJlr = () => {
             <div className="flex items-start gap-10 px-5 pt-5">
               {/* career objective */}
               <div className="w-[70%] text-xs leading-6 text-gray-500">
-                {resumeData.professionalSummary}
+                {resumeData?.professionalSummary}
               </div>
               {/* basic information section */}
               <div className="mt-1 flex w-[30%] flex-col items-start justify-start gap-1 text-xs">
