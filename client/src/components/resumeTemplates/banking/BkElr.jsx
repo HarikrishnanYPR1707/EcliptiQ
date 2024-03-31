@@ -16,7 +16,7 @@ const BkElr = () => {
 
   const currentResumeId = Cookies.get("currentResumeId");
 
-  // console.log(user, currentResumeId);
+  console.log(currentResumeId);
 
   const bkElrComponentDownloadRef = useRef(null);
 
@@ -27,10 +27,11 @@ const BkElr = () => {
   const updateResumeTemplateRoute = async () => {
     try {
       const response = await axios.put(`${BASEURL}/api/updateSingleData`, {
-        resumeTemplateRoute: "/templates/bk/elr",
+        id: currentResumeId,
+        templateRoute: "/templates/bk/elr",
       });
 
-      console.log("Data Updated!!!", response);
+      console.log("Resume Template Route Updated!!!", response.data);
     } catch (error) {
       // console.log(error.toJSON());
       console.log(error);
@@ -286,7 +287,7 @@ const BkElr = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-[800px] items-center justify-around border">
+        <div className="flex w-[800px] items-center justify-around">
           <button
             onClick={handlePrint}
             className="w-[200px] rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
