@@ -1,13 +1,13 @@
 import axios from "axios";
 import { BASEURL } from "@/assets/API/api";
 
-const updateResumeTemplateRoute = async () => {
+export const updateResumeTemplateRoute = async (currentResumeId, route) => {
   try {
     const response = await axios.put(
       `${BASEURL}/api/updateResumeTemplateRoute`,
       {
         id: currentResumeId,
-        templateRoute: "/templates/bk/elr",
+        templateRoute: route,
       },
     );
 
@@ -18,9 +18,9 @@ const updateResumeTemplateRoute = async () => {
   }
 };
 
-const fetchData = (currentResumeId, setResumeData) => {
+export const fetchData = async (currentResumeId, setResumeData) => {
   try {
-    const response = axios
+    const response = await axios
       .get(`${BASEURL}/api/getSingleData?id=${currentResumeId}`)
       .then((res) => setResumeData(res.data.data[0].data));
     // console.log(response);
@@ -29,5 +29,3 @@ const fetchData = (currentResumeId, setResumeData) => {
     console.log(error);
   }
 };
-
-module.exports = { updateResumeTemplateRoute, fetchData };
