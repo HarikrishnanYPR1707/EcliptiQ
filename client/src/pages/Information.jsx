@@ -1550,7 +1550,7 @@ const Information = () => {
                       socialLink: {
                         ...prev.socialLink,
                         link4: {
-                          ...prev.socialLink.link2,
+                          ...prev.socialLink.link4,
                           label: e.target.value,
                         },
                       },
