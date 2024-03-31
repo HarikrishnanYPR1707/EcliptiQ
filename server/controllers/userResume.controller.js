@@ -78,9 +78,33 @@ const updateUserSingleData = async (req, res) => {
   }
 };
 
+const updateResumeTemplateRoute = async (req, res) => {
+  try {
+    const { id, templateRoute } = req.body;
+    console.log("--------------------------------------");
+    console.log(id);
+    console.log(templateRoute);
+    console.log("--------------------------------------");
+
+    const updateResponse = await ResumeData.updateOne(
+      { _id: id },
+      { $set: { resumeTemplateRoute: templateRoute } }
+    );
+    res.status(200).json({
+      success: true,
+      message: "Resume Template Route updated Successfully!!!!",
+      data: updateResponse,
+    });
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+};
+
 module.exports = {
   addUserData,
   getUserData,
   getUserSingleData,
   updateUserSingleData,
+  updateResumeTemplateRoute,
 };
