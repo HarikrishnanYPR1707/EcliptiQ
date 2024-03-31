@@ -212,11 +212,13 @@ const SdeElr = () => {
                   Relevant Courses
                 </h1>
                 <div className="">
-                  {resumeData.relevantCourses.split("---").map((skill, i) => (
-                    <span key={i} className="text-sm">
-                      {skill + " "},
-                    </span>
-                  ))}
+                  {resumeData?.relevantCourses
+                    ?.split("---")
+                    ?.map((skill, i) => (
+                      <span key={i} className="text-sm">
+                        {skill + " "},
+                      </span>
+                    ))}
                 </div>
               </div>
               {/* Skills section  */}
@@ -225,7 +227,7 @@ const SdeElr = () => {
                   Skills
                 </h1>
                 <div className="">
-                  {resumeData.skills.split("---").map((skill, i) => (
+                  {resumeData?.skills?.split("---")?.map((skill, i) => (
                     <span key={i} className="text-sm capitalize">
                       {skill + " "},
                     </span>
