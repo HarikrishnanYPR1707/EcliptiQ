@@ -26,10 +26,13 @@ const BkElr = () => {
 
   const updateResumeTemplateRoute = async () => {
     try {
-      const response = await axios.put(`${BASEURL}/api/updateSingleData`, {
-        id: currentResumeId,
-        templateRoute: "/templates/bk/elr",
-      });
+      const response = await axios.put(
+        `${BASEURL}/api/updateResumeTemplateRoute`,
+        {
+          id: currentResumeId,
+          templateRoute: "/templates/bk/elr",
+        },
+      );
 
       console.log("Resume Template Route Updated!!!", response.data);
     } catch (error) {
@@ -59,6 +62,7 @@ const BkElr = () => {
   });
 
   useEffect(() => {
+    updateResumeTemplateRoute();
     fetchData();
   }, []);
 
