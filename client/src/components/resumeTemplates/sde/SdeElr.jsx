@@ -1,18 +1,22 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CgWebsite } from "react-icons/cg";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useReactToPrint } from "react-to-print";
-// import { InformationContext } from "@/Contexts/InformationContext";
-import { userResumeData } from "@/Fetch/InformationFetch";
+import Cookies from "js-cookie";
+import { updateResumeTemplateRoute, fetchData } from "@/utils/DataFunctions";
 
 const SdeElr = () => {
   const sdeElrComponentDownloadRef = useRef(null);
-  // const { userResumeData, setUserResumeData } = useContext(InformationContext);
+  const [resumeData, setResumeData] = useState({});
 
-  const data = userResumeData();
-  const resumeData = JSON.parse(data);
-  // console.log(resumeData);
+  const currentResumeId = Cookies.get("currentResumeId");
+  console.log(currentResumeId);
+
+  useEffect(() => {
+    updateResumeTemplateRoute(currentResumeId, "/templates/bk/jlr");
+    fetchData(currentResumeId, setResumeData);
+  }, []);
 
   const handlePrint = useReactToPrint({
     content: () => sdeElrComponentDownloadRef.current,
@@ -44,8 +48,12 @@ const SdeElr = () => {
           <div className="">
             <div className="">
               <h1 className="flex gap-2 pb-1 pt-6 text-3xl font-black capitalize">
-                <span className="">{resumeData.personalDetails.firstName}</span>
-                <span className="">{resumeData.personalDetails.lastName}</span>
+                <span className="">
+                  {resumeData?.personalDetails?.firstName}
+                </span>
+                <span className="">
+                  {resumeData?.personalDetails?.lastName}
+                </span>
               </h1>
               <h3 className="text-2xl font-bold text-[#ff0505]">
                 {resumeData.personalDetails.jobTitle}
@@ -54,16 +62,16 @@ const SdeElr = () => {
             <div className="flex items-center justify-between">
               <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <FaPhone className="text-gray-500" />
-                <span className="">{resumeData.personalDetails.phone}</span>
+                <span className="">{resumeData?.personalDetails?.phone}</span>
               </p>
               <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                 <MdEmail className="text-gray-500" />
-                <span className="">{resumeData.personalDetails.email}</span>
+                <span className="">{resumeData?.personalDetails?.email}</span>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a href="#" className="flex items-center justify-center gap-2">
                   <CgWebsite className="text-gray-500" />
-                  {resumeData.personalDetails.website}
+                  {resumeData?.personalDetails?.website}
                 </a>
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
