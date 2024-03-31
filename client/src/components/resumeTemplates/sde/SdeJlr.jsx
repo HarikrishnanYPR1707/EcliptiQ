@@ -53,7 +53,7 @@ const SdeJlr = () => {
                 </span>
               </h1>
               <h3 className="text-2xl font-bold">
-                {resumeData.personalDetails.jobTitle}
+                {resumeData?.personalDetails?.jobTitle}
               </h3>
             </div>
             <div className="flex flex-col items-end pt-10">
@@ -121,11 +121,17 @@ const SdeJlr = () => {
                     </span>
                     {", "}
                     <span className="">
-                      {resumeData?.experience?.experience1?.startDate}
+                      {resumeData?.experience?.experience1?.startDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData?.experience?.experience1?.endDate}
+                      {resumeData?.experience?.experience1?.endDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                   </p>
                 </div>
@@ -154,11 +160,17 @@ const SdeJlr = () => {
                     </span>
                     {", "}
                     <span className="">
-                      {resumeData?.experience?.experience2?.startDate}
+                      {resumeData?.experience?.experience2?.startDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData?.experience?.experience2?.endDate}
+                      {resumeData?.experience?.experience2?.endDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                   </p>
                 </div>
