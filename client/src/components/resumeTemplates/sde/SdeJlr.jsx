@@ -73,10 +73,10 @@ const SdeJlr = () => {
               </p>
               <p className="w-fit text-sm">
                 <span className="font-bold">
-                  {resumeData.socialLink.link1.label} :{" "}
+                  {resumeData?.socialLink?.link1?.label} :{" "}
                 </span>
-                <a href={resumeData.socialLink.link1.link} className="">
-                  <span>{resumeData.socialLink.link1.label}</span>
+                <a href={resumeData?.socialLink?.link1?.link} className="">
+                  <span>{resumeData?.socialLink?.link1?.label}</span>
                 </a>
               </p>
             </div>
@@ -86,7 +86,7 @@ const SdeJlr = () => {
             <h1 className="mb-2 bg-[#edeae1] text-2xl font-black uppercase text-[#414d56]">
               Summary
             </h1>
-            <div className="">{resumeData.professionalSummary}</div>
+            <div className="">{resumeData?.professionalSummary}</div>
           </div>
           {/* Skills section  */}
           <div className="">
