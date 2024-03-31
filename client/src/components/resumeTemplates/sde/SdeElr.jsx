@@ -112,11 +112,17 @@ const SdeElr = () => {
                     <div className="flex items-center justify-between text-gray-500">
                       <p className="">
                         <span className="">
-                          {resumeData?.experience?.experience1?.startDate}
+                          {resumeData?.experience?.experience1?.startDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData?.experience?.experience1?.endDate}
+                          {resumeData?.experience?.experience1?.endDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                       </p>
                       <p className="">India</p>
@@ -147,11 +153,17 @@ const SdeElr = () => {
                     <div className="flex items-center justify-between text-gray-500">
                       <p className="">
                         <span className="">
-                          {resumeData?.experience?.experience2?.startDate}
+                          {resumeData?.experience?.experience2?.startDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData?.experience?.experience2?.endDate}
+                          {resumeData?.experience?.experience2?.endDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                       </p>
                       <p className="">India</p>
@@ -197,10 +209,12 @@ const SdeElr = () => {
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <p className="">
                       <span className="">
-                        {resumeData?.education?.startDate}
+                        {resumeData?.education?.startDate.substr(0, 10)}
                       </span>
                       {" - "}
-                      <span className="">{resumeData?.education?.endDate}</span>
+                      <span className="">
+                        {resumeData?.education?.endDate.substr(0, 10)}
+                      </span>
                     </p>
                     <p className="">{resumeData?.education?.place}</p>
                   </div>
