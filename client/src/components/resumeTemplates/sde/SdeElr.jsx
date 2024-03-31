@@ -76,12 +76,12 @@ const SdeElr = () => {
               </p>
               <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                 <a
-                  href={resumeData.socialLink.link1.link}
+                  href={resumeData?.socialLink?.link1?.link}
                   className="flex items-center justify-center gap-2"
                 >
                   <FaLinkedin className="" />
                   <span className="text-blue-500">
-                    {resumeData.socialLink.link1.label}
+                    {resumeData?.socialLink?.link1?.label}
                   </span>
                 </a>
               </p>
