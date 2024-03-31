@@ -1,13 +1,19 @@
 import { userResumeData } from "@/Fetch/InformationFetch";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
-
+import { updateResumeTemplateRoute, fetchData } from "@/utils/DataFunctions";
 const BkSlr = () => {
   const bkElrComponentDownloadRef = useRef(null);
 
-  const data = userResumeData();
-  const resumeData = JSON.parse(data);
-  // console.log(resumeData);
+  const [resumeData, setResumeData] = useState({});
+
+  const currentResumeId = Cookies.get("currentResumeId");
+  console.log(currentResumeId);
+
+  useEffect(() => {
+    updateResumeTemplateRoute(currentResumeId, "/templates/bk/jlr");
+    fetchData(currentResumeId, setResumeData);
+  });
 
   const handlePrint = useReactToPrint({
     content: () => bkElrComponentDownloadRef.current,
