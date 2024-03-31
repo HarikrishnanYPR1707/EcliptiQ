@@ -219,21 +219,21 @@ const Information = () => {
   };
 
   const updateResumeData = async () => {
-    try {
-      const response = await axios.post(`${BASEURL}/api/addData`, {
-        userEmail: user,
-        resumeTemplateRoute: "",
-        data: userResumeData,
-      });
+    if (resumeId === "newResume") {
+      return;
+    } else {
+      // console.log("update");
+      try {
+        const response = await axios.put(`${BASEURL}/api/updateSingleData`, {
+          id: resumeId,
+          data: userResumeData,
+        });
 
-      // setCurrentResumeId(response.data.data._id);
-      Cookies.set("currentResumeId", response.data.data._id);
-
-      console.log("Post created:", response.data);
-      console.log(currentResumeId);
-    } catch (error) {
-      // console.log(error.toJSON());
-      console.log(error);
+        console.log("Data Updated!!!", response);
+      } catch (error) {
+        // console.log(error.toJSON());
+        console.log(error);
+      }
     }
   };
 
@@ -1668,7 +1668,7 @@ const Information = () => {
           Save
         </button>
         <button
-          // onClick={updateResumeData}
+          onClick={updateResumeData}
           className={
             isUpdateButtonActive
               ? "w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
