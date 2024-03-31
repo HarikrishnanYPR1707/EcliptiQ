@@ -12,7 +12,7 @@ const SdeJlr = () => {
   console.log(currentResumeId);
 
   useEffect(() => {
-    updateResumeTemplateRoute(currentResumeId, "/templates/bk/jlr");
+    updateResumeTemplateRoute(currentResumeId, "/templates/sde/jlr");
     fetchData(currentResumeId, setResumeData);
   }, []);
 
