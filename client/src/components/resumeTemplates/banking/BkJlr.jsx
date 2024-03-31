@@ -12,7 +12,7 @@ const BkJlr = () => {
   console.log(currentResumeId);
 
   useEffect(() => {
-    updateResumeTemplateRoute(currentResumeId, "/templates/bk/elr");
+    updateResumeTemplateRoute(currentResumeId, "/templates/bk/jlr");
     fetchData(currentResumeId, setResumeData);
   });
 
@@ -55,17 +55,17 @@ const BkJlr = () => {
               {/* basic information section */}
               <div className="mt-1 flex w-[30%] flex-col items-start justify-start gap-1 text-xs">
                 <p className="flex w-fit items-center justify-center gap-2 text-gray-500">
-                  <span className="">{resumeData.personalDetails.phone}</span>
+                  <span className="">{resumeData?.personalDetails?.phone}</span>
                 </p>
                 <p className="flex w-fit items-center justify-center gap-2 text-gray-500">
-                  <span className="">{resumeData.personalDetails.email}</span>
+                  <span className="">{resumeData?.personalDetails?.email}</span>
                 </p>
                 <p className="flex w-fit items-center justify-center text-gray-500">
                   <a
                     href="#"
                     className="flex items-center justify-center gap-2"
                   >
-                    {resumeData.personalDetails.website}
+                    {resumeData?.personalDetails?.website}
                   </a>
                 </p>
                 <p className="flex w-fit items-center justify-center text-gray-500">
