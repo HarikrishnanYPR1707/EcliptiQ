@@ -24,6 +24,19 @@ const BkElr = () => {
   // const resumeData = JSON.parse(data);
   // console.log(resumeData);
 
+  const updateResumeTemplateRoute = async () => {
+    try {
+      const response = await axios.put(`${BASEURL}/api/updateSingleData`, {
+        resumeTemplateRoute: "/templates/bk/elr",
+      });
+
+      console.log("Data Updated!!!", response);
+    } catch (error) {
+      // console.log(error.toJSON());
+      console.log(error);
+    }
+  };
+
   const fetchData = () => {
     try {
       const response = axios
