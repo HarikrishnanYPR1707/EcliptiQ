@@ -1,57 +1,21 @@
 import { userResumeData } from "@/Fetch/InformationFetch";
-import axios from "axios";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
-import { userEmailContext } from "@/Contexts/userDataContext";
-import { currentResumeContext } from "@/Contexts/ResumeContext";
-import { BASEURL } from "@/assets/API/api";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
+import {
+  updateResumeTemplateRoute,
+  fetchData,
+} from "../../../utils/DataFunctions";
 
 const BkElr = () => {
   const [resumeData, setResumeData] = useState({});
-  // using context
-  // const { user } = useContext(userEmailContext);
-  // const { currentResumeId } = useContext(currentResumeContext);
 
   const currentResumeId = Cookies.get("currentResumeId");
 
   console.log(currentResumeId);
 
   const bkElrComponentDownloadRef = useRef(null);
-
-  const data = userResumeData();
-  // const resumeData = JSON.parse(data);
-  // console.log(resumeData);
-
-  const updateResumeTemplateRoute = async () => {
-    try {
-      const response = await axios.put(
-        `${BASEURL}/api/updateResumeTemplateRoute`,
-        {
-          id: currentResumeId,
-          templateRoute: "/templates/bk/elr",
-        },
-      );
-
-      console.log("Resume Template Route Updated!!!", response.data);
-    } catch (error) {
-      // console.log(error.toJSON());
-      console.log(error);
-    }
-  };
-
-  const fetchData = () => {
-    try {
-      const response = axios
-        .get(`${BASEURL}/api/getSingleData?id=${currentResumeId}`)
-        .then((res) => setResumeData(res.data.data[0].data));
-      // console.log(response);
-    } catch (error) {
-      // console.log(error.toJSON());
-      console.log(error);
-    }
-  };
 
   console.log(resumeData);
 
@@ -62,8 +26,8 @@ const BkElr = () => {
   });
 
   useEffect(() => {
-    updateResumeTemplateRoute();
-    fetchData();
+    updateResumeTemplateRoute(currentResumeId, "/templates/bk/elr");
+    fetchData(currentResumeId, setResumeData);
   }, []);
 
   return (
