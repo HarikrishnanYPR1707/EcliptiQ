@@ -878,7 +878,9 @@ const Information = () => {
                   type="date"
                   placeholder="eg. Feb, 2024"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                  value={userResumeData.experience.experience2.startDate}
+                  value={formatDate(
+                    userResumeData.experience.experience2.startDate,
+                  )}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
@@ -906,7 +908,9 @@ const Information = () => {
                   type="date"
                   placeholder="eg. Feb, 2024"
                   className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                  value={userResumeData.experience.experience2.endDate}
+                  value={formatDate(
+                    userResumeData.experience.experience2.endDate,
+                  )}
                   onChange={(e) => {
                     setUserResumeData((prev) => ({
                       ...prev,
