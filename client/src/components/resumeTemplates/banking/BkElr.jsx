@@ -291,7 +291,7 @@ const BkElr = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-[800px] items-center justify-around">
+        <div className="mb-5 flex w-[800px] items-center justify-around">
           <button
             onClick={handlePrint}
             className="w-[200px] rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
