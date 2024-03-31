@@ -10,6 +10,6 @@ const {
 router.post("/addData", addUserData);
 router.get("/getSingleData", getUserSingleData);
 router.get("/getAllData", getUserData);
-router.get("/updateSingleData", updateUserSingleData);
+router.put("/updateSingleData", updateUserSingleData);
 
 module.exports = router;
