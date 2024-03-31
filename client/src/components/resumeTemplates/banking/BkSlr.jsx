@@ -145,7 +145,7 @@ const BkSlr = () => {
                     </div>
                     {/* description section - 1 */}
                     <ul className="ml-10 list-disc">
-                      {resumeData.experience.experience1.description
+                      {resumeData?.experience?.experience1?.description
                         .split("---")
                         .map((item, i) => (
                           <li key={i} className="text-xs">
