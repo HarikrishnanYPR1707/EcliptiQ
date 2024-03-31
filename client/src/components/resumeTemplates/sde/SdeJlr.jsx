@@ -204,9 +204,13 @@ const SdeJlr = () => {
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">{resumeData?.education?.startDate}</span>
+                  <span className="">
+                    {resumeData?.education?.startDate.substr(0, 10)}
+                  </span>
                   {" - "}
-                  <span className="">{resumeData?.education?.endDate}</span>
+                  <span className="">
+                    {resumeData?.education?.endDate.substr(0, 10)}
+                  </span>
                 </p>
                 <p className="">{resumeData?.education?.place}</p>
               </div>
