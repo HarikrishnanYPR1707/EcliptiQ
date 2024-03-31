@@ -1,7 +1,8 @@
-import { userResumeData } from "@/Fetch/InformationFetch";
-import { useRef } from "react";
+import { fetchData, updateResumeTemplateRoute } from "@/utils/DataFunctions";
+import Cookies from "js-cookie";
+import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
-import { updateResumeTemplateRoute, fetchData } from "@/utils/DataFunctions";
+
 const BkSlr = () => {
   const bkElrComponentDownloadRef = useRef(null);
 
@@ -13,7 +14,7 @@ const BkSlr = () => {
   useEffect(() => {
     updateResumeTemplateRoute(currentResumeId, "/templates/bk/jlr");
     fetchData(currentResumeId, setResumeData);
-  });
+  }, []);
 
   const handlePrint = useReactToPrint({
     content: () => bkElrComponentDownloadRef.current,
@@ -135,11 +136,17 @@ const BkSlr = () => {
                         </span>
                         {" | "}
                         <span className="">
-                          {resumeData?.experience?.experience1?.startDate}
+                          {resumeData?.experience?.experience1?.startDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData?.experience?.experience1?.endDate}
+                          {resumeData?.experience?.experience1?.endDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                       </p>
                     </div>
@@ -174,11 +181,17 @@ const BkSlr = () => {
                         </span>
                         {" | "}
                         <span className="">
-                          {resumeData?.experience?.experience2?.startDate}
+                          {resumeData?.experience?.experience2?.startDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData?.experience?.experience2?.endDate}
+                          {resumeData?.experience?.experience2?.endDate.substr(
+                            0,
+                            10,
+                          )}
                         </span>
                       </p>
                     </div>
