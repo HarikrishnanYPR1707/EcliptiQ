@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const resumeSchema = mongoose.Schema({
   userEmail: String,
+  resumeTemplateRoute: String,
   data: {
     fileName: String,
     personalDetails: {
