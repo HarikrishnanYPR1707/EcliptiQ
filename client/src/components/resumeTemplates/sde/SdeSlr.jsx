@@ -1,13 +1,20 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
-import { userResumeData } from "@/Fetch/InformationFetch";
+import Cookies from "js-cookie";
+import { updateResumeTemplateRoute, fetchData } from "@/utils/DataFunctions";
 
 const SdeSlr = () => {
   const sdeSlrComponentDownloadRef = useRef(null);
 
-  const data = userResumeData();
-  const resumeData = JSON.parse(data);
-  console.log(resumeData);
+  const [resumeData, setResumeData] = useState({});
+
+  const currentResumeId = Cookies.get("currentResumeId");
+  console.log(currentResumeId);
+
+  useEffect(() => {
+    updateResumeTemplateRoute(currentResumeId, "/templates/sde/slr");
+    fetchData(currentResumeId, setResumeData);
+  }, []);
 
   const handlePrint = useReactToPrint({
     content: () => sdeSlrComponentDownloadRef.current,
@@ -38,18 +45,18 @@ const SdeSlr = () => {
           {/* resume top part */}
           <div className="">
             <h1 className="flex items-center justify-center gap-2 pb-1 pt-6 text-center font-timesNewRoman text-4xl font-black">
-              <span className="">{resumeData.personalDetails.firstName}</span>
-              <span className="">{resumeData.personalDetails.lastName}</span>
+              <span className="">{resumeData?.personalDetails?.firstName}</span>
+              <span className="">{resumeData?.personalDetails?.lastName}</span>
             </h1>
             <p className="flex items-center justify-center gap-20">
-              <span className="">{resumeData.personalDetails.email}</span>
-              <span className="">{resumeData.personalDetails.phone}</span>
+              <span className="">{resumeData?.personalDetails?.email}</span>
+              <span className="">{resumeData?.personalDetails?.phone}</span>
               <a
-                href={resumeData.socialLink.link1.link}
+                href={resumeData?.socialLink?.link1?.link}
                 target="_blank"
                 className="text-blue-500"
               >
-                {resumeData.socialLink.link1.label}
+                {resumeData?.socialLink?.link1?.label}
               </a>
             </p>
           </div>
@@ -64,29 +71,31 @@ const SdeSlr = () => {
                 {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
                   <span className="font-bold">
-                    {resumeData.experience.experience1.employer}
+                    {resumeData?.experience?.experience1?.employer}
                   </span>{" "}
                   {" - "}
                   <span className="">
-                    {resumeData.experience.experience1.jobTitle}
+                    {resumeData?.experience?.experience1?.jobTitle}
                   </span>
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData.experience.experience1.startDate}
+                      {resumeData?.experience?.experience1?.startDate}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData.experience.experience1.endDate}
+                      {resumeData?.experience?.experience1?.endDate}
                     </span>
                   </p>
-                  <p className="">{resumeData.experience.experience1.place}</p>
+                  <p className="">
+                    {resumeData?.experience?.experience1?.place}
+                  </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {resumeData.experience.experience1.description
+                  {resumeData?.experience?.experience1?.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -100,29 +109,31 @@ const SdeSlr = () => {
                 {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
                   <span className="font-bold">
-                    {resumeData.experience.experience2.employer}
+                    {resumeData?.experience?.experience2?.employer}
                   </span>{" "}
                   {" - "}
                   <span className="">
-                    {resumeData.experience.experience2.jobTitle}
+                    {resumeData?.experience?.experience2?.jobTitle}
                   </span>
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData.experience.experience2.startDate}
+                      {resumeData?.experience?.experience2?.startDate}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData.experience.experience2.endDate}
+                      {resumeData?.experience?.experience2?.endDate}
                     </span>
                   </p>
-                  <p className="">{resumeData.experience.experience2.place}</p>
+                  <p className="">
+                    {resumeData?.experience?.experience2?.place}
+                  </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {resumeData.experience.experience2.description
+                  {resumeData?.experience?.experience2?.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -136,29 +147,31 @@ const SdeSlr = () => {
                 {/* header section */}
                 <h1 className="font-timesNewRoman text-[18px]">
                   <span className="font-bold">
-                    {resumeData.experience.experience3.employer}
+                    {resumeData?.experience?.experience3?.employer}
                   </span>{" "}
                   {" - "}
                   <span className="">
-                    {resumeData.experience.experience3.jobTitle}
+                    {resumeData?.experience?.experience3?.jobTitle}
                   </span>
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData.experience.experience3.startDate}
+                      {resumeData?.experience?.experience3?.startDate}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData.experience.experience3.endDate}
+                      {resumeData?.experience?.experience3?.endDate}
                     </span>
                   </p>
-                  <p className="">{resumeData.experience.experience3.place}</p>
+                  <p className="">
+                    {resumeData?.experience?.experience3?.place}
+                  </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {resumeData.experience.experience3.description
+                  {resumeData?.experience?.experience3?.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -178,19 +191,19 @@ const SdeSlr = () => {
               {/* header section */}
               <h1 className="font-timesNewRoman text-[18px]">
                 <span className="font-bold">
-                  {resumeData.education.college}
+                  {resumeData?.education?.college}
                 </span>{" "}
                 {" - "}
-                <span className="">{resumeData.education.degree}</span>
+                <span className="">{resumeData?.education?.degree}</span>
               </h1>
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">{resumeData.education.startDate}</span>
+                  <span className="">{resumeData?.education?.startDate}</span>
                   {" - "}
-                  <span className="">{resumeData.education.endDate}</span>
+                  <span className="">{resumeData?.education?.endDate}</span>
                 </p>
-                <p className="">{resumeData.education.place}</p>
+                <p className="">{resumeData?.education?.place}</p>
               </div>
             </div>
           </div>
@@ -200,7 +213,7 @@ const SdeSlr = () => {
               Skills
             </h1>
             <div className="">
-              {resumeData.skills.split("---").map((skill, i) => (
+              {resumeData?.skills?.split("---")?.map((skill, i) => (
                 <span key={i} className="">
                   {skill},{" "}
                 </span>
