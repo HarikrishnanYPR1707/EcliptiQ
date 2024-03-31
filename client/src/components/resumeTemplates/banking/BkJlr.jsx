@@ -14,7 +14,7 @@ const BkJlr = () => {
   useEffect(() => {
     updateResumeTemplateRoute(currentResumeId, "/templates/bk/jlr");
     fetchData(currentResumeId, setResumeData);
-  });
+  }, []);
 
   const handlePrint = useReactToPrint({
     content: () => bkElrComponentDownloadRef.current,
