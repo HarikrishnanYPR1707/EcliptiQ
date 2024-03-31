@@ -177,7 +177,7 @@ const SdeElr = () => {
                 <h1 className="mb-2 border-b-[3px] border-black font-roboto text-2xl font-black uppercase">
                   Career Objective
                 </h1>
-                <div className="text-sm">{resumeData.professionalSummary}</div>
+                <div className="text-sm">{resumeData?.professionalSummary}</div>
               </div>
               {/* Education Section */}
               <div className="mb-5">
@@ -188,19 +188,21 @@ const SdeElr = () => {
                   {/* header section */}
                   <h1 className=" text-[15px]">
                     <span className="font-bold text-yellow-900">
-                      {resumeData.education.college}
+                      {resumeData?.education?.college}
                     </span>{" "}
                     {" - "}
-                    <span className="">{resumeData.education.degree}</span>
+                    <span className="">{resumeData?.education?.degree}</span>
                   </h1>
                   {/* Date and place section */}
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <p className="">
-                      <span className="">{resumeData.education.startDate}</span>
+                      <span className="">
+                        {resumeData?.education?.startDate}
+                      </span>
                       {" - "}
-                      <span className="">{resumeData.education.endDate}</span>
+                      <span className="">{resumeData?.education?.endDate}</span>
                     </p>
-                    <p className="">{resumeData.education.place}</p>
+                    <p className="">{resumeData?.education?.place}</p>
                   </div>
                 </div>
               </div>
