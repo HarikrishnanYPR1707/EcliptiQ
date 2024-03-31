@@ -108,11 +108,17 @@ const BkJlr = () => {
                       </span>
                       {" | "}
                       <span className="">
-                        {resumeData?.experience?.experience1?.startDate}
+                        {resumeData?.experience?.experience1?.startDate.substr(
+                          0,
+                          10,
+                        )}
                       </span>
                       {" - "}
                       <span className="">
-                        {resumeData?.experience?.experience1?.endDate}
+                        {resumeData?.experience?.experience1?.endDate.substr(
+                          0,
+                          10,
+                        )}
                       </span>
                     </p>
                   </div>
@@ -149,11 +155,17 @@ const BkJlr = () => {
                       </span>
                       {" | "}
                       <span className="">
-                        {resumeData?.experience?.experience2?.startDate}
+                        {resumeData?.experience?.experience2?.startDate.substr(
+                          0,
+                          10,
+                        )}
                       </span>
                       {" - "}
                       <span className="">
-                        {resumeData?.experience?.experience2?.endDate}
+                        {resumeData?.experience?.experience2?.endDate.substr(
+                          0,
+                          10,
+                        )}
                       </span>
                     </p>
                   </div>
@@ -189,9 +201,13 @@ const BkJlr = () => {
                 {/* Date and place section */}
                 <div className="flex flex-col items-start justify-between text-gray-500">
                   <p className="">
-                    <span className="">{resumeData?.education?.startDate}</span>
+                    <span className="">
+                      {resumeData?.education?.startDate.substr(0, 10)}
+                    </span>
                     {" - "}
-                    <span className="">{resumeData?.education?.endDate}</span>
+                    <span className="">
+                      {resumeData?.education?.endDate.substr(0, 10)}
+                    </span>
                   </p>
                   <p className="">{resumeData?.education?.place}</p>
                 </div>
