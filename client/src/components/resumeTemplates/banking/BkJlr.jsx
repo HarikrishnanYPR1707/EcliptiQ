@@ -70,11 +70,11 @@ const BkJlr = () => {
                 </p>
                 <p className="flex w-fit items-center justify-center text-gray-500">
                   <a
-                    href={resumeData.socialLink.link1.link}
+                    href={resumeData?.socialLink?.link1?.link}
                     className="flex items-center justify-center gap-2"
                   >
                     <span className="text-[#58595b]">
-                      {resumeData.socialLink.link1.label}
+                      {resumeData?.socialLink?.link1?.label}
                     </span>
                   </a>
                 </p>
@@ -93,7 +93,7 @@ const BkJlr = () => {
                   {/* header section */}
                   <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                     <span className="text-base font-black text-black">
-                      {resumeData.experience.experience1.jobTitle}
+                      {resumeData?.experience?.experience1?.jobTitle}
                     </span>
                   </h1>
                   {/* Date and place section */}
@@ -104,22 +104,22 @@ const BkJlr = () => {
                       </span>
                       {", "}
                       <span className="">
-                        {resumeData.experience.experience1.place}
+                        {resumeData?.experience?.experience1?.place}
                       </span>
                       {" | "}
                       <span className="">
-                        {resumeData.experience.experience1.startDate}
+                        {resumeData?.experience?.experience1?.startDate}
                       </span>
                       {" - "}
                       <span className="">
-                        {resumeData.experience.experience1.endDate}
+                        {resumeData?.experience?.experience1?.endDate}
                       </span>
                     </p>
                   </div>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-10 w-[70%] list-disc text-gray-500">
-                  {resumeData.experience.experience1.description
+                  {resumeData?.experience?.experience1?.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="text-xs">
