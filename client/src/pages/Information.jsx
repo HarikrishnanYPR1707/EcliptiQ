@@ -200,8 +200,12 @@ const Information = () => {
 
   const fetchData = () => {
     if (resumeId === "newResume") {
+      setIsSaveButtonActive(true);
+      setIsUpdateButtonActive(false);
       return;
     } else {
+      setIsSaveButtonActive(false);
+      setIsUpdateButtonActive(true);
       try {
         const response = axios
           .get(`${BASEURL}/api/getSingleData?id=${resumeId}`)
@@ -235,21 +239,25 @@ const Information = () => {
 
   const handleDataSubmission = async (event) => {
     event.preventDefault();
-    try {
-      const response = await axios.post(`${BASEURL}/api/addData`, {
-        userEmail: user,
-        resumeTemplateRoute: "",
-        data: userResumeData,
-      });
+    if (resumeId === "newResume") {
+      try {
+        const response = await axios.post(`${BASEURL}/api/addData`, {
+          userEmail: user,
+          resumeTemplateRoute: "",
+          data: userResumeData,
+        });
 
-      // setCurrentResumeId(response.data.data._id);
-      Cookies.set("currentResumeId", response.data.data._id);
+        // setCurrentResumeId(response.data.data._id);
+        Cookies.set("currentResumeId", response.data.data._id);
 
-      console.log("Post created:", response.data);
-      console.log(currentResumeId);
-    } catch (error) {
-      // console.log(error.toJSON());
-      console.log(error);
+        console.log("Post created:", response.data);
+        console.log(currentResumeId);
+      } catch (error) {
+        // console.log(error.toJSON());
+        console.log(error);
+      }
+    } else {
+      return;
     }
   };
 
@@ -1650,13 +1658,22 @@ const Information = () => {
       <div className="flex w-[760px] items-center justify-between">
         <button
           onClick={handleDataSubmission}
-          className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+          // className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+          className={
+            isSaveButtonActive
+              ? "w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+              : "w-[200px] cursor-not-allowed rounded-lg bg-purple-500 py-2 text-sm font-semibold opacity-80"
+          }
         >
           Save
         </button>
         <button
           // onClick={updateResumeData}
-          className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+          className={
+            isUpdateButtonActive
+              ? "w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
+              : "w-[200px] cursor-not-allowed rounded-lg bg-purple-500 py-2 text-sm font-semibold opacity-80"
+          }
         >
           Update
         </button>
