@@ -94,7 +94,7 @@ const SdeJlr = () => {
               Skills
             </h1>
             <div className="">
-              {resumeData.skills.split("---").map((skill, i) => (
+              {resumeData?.skills?.split("---")?.map((skill, i) => (
                 <span key={i} className="">
                   {skill},{" "}
                 </span>
@@ -111,27 +111,27 @@ const SdeJlr = () => {
               <div className="">
                 {/* header section */}
                 <h1 className="text-[18px] font-bold text-yellow-900">
-                  {resumeData.experience.experience1.jobTitle}
+                  {resumeData?.experience?.experience1?.jobTitle}
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-start text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData.experience.experience1.employer}
+                      {resumeData?.experience?.experience1?.employer}
                     </span>
                     {", "}
                     <span className="">
-                      {resumeData.experience.experience1.startDate}
+                      {resumeData?.experience?.experience1?.startDate}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData.experience.experience1.endDate}
+                      {resumeData?.experience?.experience1?.endDate}
                     </span>
                   </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {resumeData.experience.experience1.description
+                  {resumeData?.experience?.experience1?.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -144,27 +144,27 @@ const SdeJlr = () => {
               <div className="">
                 {/* header section */}
                 <h1 className="text-[18px] font-bold text-yellow-900">
-                  {resumeData.experience.experience2.jobTitle}
+                  {resumeData?.experience?.experience2?.jobTitle}
                 </h1>
                 {/* Date and place section */}
                 <div className="flex items-center justify-start text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData.experience.experience2.employer}
+                      {resumeData?.experience?.experience2?.employer}
                     </span>
                     {", "}
                     <span className="">
-                      {resumeData.experience.experience2.startDate}
+                      {resumeData?.experience?.experience2?.startDate}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData.experience.experience2.endDate}
+                      {resumeData?.experience?.experience2?.endDate}
                     </span>
                   </p>
                 </div>
                 {/* description section - 1 */}
                 <ul className="ml-12 list-disc">
-                  {resumeData.experience.experience2.description
+                  {resumeData?.experience?.experience2?.description
                     .split("---")
                     .map((item, i) => (
                       <li key={i} className="">
@@ -184,19 +184,19 @@ const SdeJlr = () => {
               {/* header section */}
               <h1 className=" text-[18px]">
                 <span className="font-bold text-yellow-900">
-                  {resumeData.education.college}
+                  {resumeData?.education?.college}
                 </span>{" "}
                 {" - "}
-                <span className="">{resumeData.education.degree}</span>
+                <span className="">{resumeData?.education?.degree}</span>
               </h1>
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">{resumeData.education.startDate}</span>
+                  <span className="">{resumeData?.education?.startDate}</span>
                   {" - "}
-                  <span className="">{resumeData.education.endDate}</span>
+                  <span className="">{resumeData?.education?.endDate}</span>
                 </p>
-                <p className="">{resumeData.education.place}</p>
+                <p className="">{resumeData?.education?.place}</p>
               </div>
             </div>
           </div>
