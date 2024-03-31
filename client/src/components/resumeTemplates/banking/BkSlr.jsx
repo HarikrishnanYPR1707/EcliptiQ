@@ -203,19 +203,21 @@ const BkSlr = () => {
                 <div className="">
                   {/* header section */}
                   <h1 className="flex flex-col-reverse text-[15px]">
-                    <span className="">{resumeData.education.college}</span>
+                    <span className="">{resumeData?.education?.college}</span>
                     <span className="text-[#58595b]">
-                      {resumeData.education.degree}
+                      {resumeData?.education?.degree}
                     </span>
                   </h1>
                   {/* Date and place section */}
                   <div className="flex flex-col items-start justify-between text-sm text-gray-500">
                     <p className="">
-                      <span className="">{resumeData.education.startDate}</span>
+                      <span className="">
+                        {resumeData?.education?.startDate}
+                      </span>
                       {" - "}
-                      <span className="">{resumeData.education.endDate}</span>
+                      <span className="">{resumeData?.education?.endDate}</span>
                     </p>
-                    <p className="">{resumeData.education.place}</p>
+                    <p className="">{resumeData?.education?.place}</p>
                   </div>
                 </div>
               </div>
