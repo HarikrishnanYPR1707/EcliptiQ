@@ -75,12 +75,12 @@ const BkSlr = () => {
                   </p>
                   <p className="flex w-fit items-center justify-center text-sm text-gray-500">
                     <a
-                      href={resumeData.socialLink.link1.link}
+                      href={resumeData?.socialLink?.link1?.link}
                       className="flex items-center justify-center gap-2"
                     >
                       <span className="text-[#58595b]">
                         {" "}
-                        {resumeData.socialLink.link1.label}
+                        {resumeData?.socialLink?.link1?.label}
                       </span>
                     </a>
                   </p>
@@ -88,7 +88,7 @@ const BkSlr = () => {
               </div>
               {/* objective section */}
               <div className="mt-5 text-xs">
-                {resumeData.professionalSummary}
+                {resumeData?.professionalSummary}
               </div>
               {/* Skills section  */}
               <div className="mt-5">
