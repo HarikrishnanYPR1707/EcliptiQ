@@ -46,23 +46,23 @@ const BkSlr = () => {
               <div className="">
                 <h1 className="flex flex-col text-3xl text-[#58595b]">
                   <span className="">
-                    {resumeData.personalDetails.firstName}
+                    {resumeData?.personalDetails?.firstName}
                   </span>
                   <span className="">
-                    {resumeData.personalDetails.lastName}
+                    {resumeData?.personalDetails?.lastName}
                   </span>
                 </h1>
                 <div className="mt-4 flex flex-col items-start justify-between">
                   <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                     <span className="">
                       {" "}
-                      {resumeData.personalDetails.phone}
+                      {resumeData?.personalDetails?.phone}
                     </span>
                   </p>
                   <p className="flex w-fit items-center justify-center gap-2 text-sm text-gray-500">
                     <span className="">
                       {" "}
-                      {resumeData.personalDetails.email}
+                      {resumeData?.personalDetails?.email}
                     </span>
                   </p>
                   <p className="flex w-fit items-center justify-center text-sm text-gray-500">
@@ -70,7 +70,7 @@ const BkSlr = () => {
                       href="#"
                       className="flex items-center justify-center gap-2"
                     >
-                      {resumeData.personalDetails.website}
+                      {resumeData?.personalDetails?.website}
                     </a>
                   </p>
                   <p className="flex w-fit items-center justify-center text-sm text-gray-500">
