@@ -1,4 +1,3 @@
-import { userResumeData } from "@/Fetch/InformationFetch";
 import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 import Cookies from "js-cookie";
