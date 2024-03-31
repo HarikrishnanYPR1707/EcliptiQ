@@ -181,19 +181,19 @@ const BkJlr = () => {
               <div className="mb-5 text-xs">
                 {/* header section */}
                 <h1 className="flex flex-col-reverse text-gray-500">
-                  <span className="">{resumeData.education.college}</span>
+                  <span className="">{resumeData?.education?.college}</span>
                   <span className="text-[#58595b]">
-                    {resumeData.education.degree}
+                    {resumeData?.education?.degree}
                   </span>
                 </h1>
                 {/* Date and place section */}
                 <div className="flex flex-col items-start justify-between text-gray-500">
                   <p className="">
-                    <span className="">{resumeData.education.startDate}</span>
+                    <span className="">{resumeData?.education?.startDate}</span>
                     {" - "}
-                    <span className="">{resumeData.education.endDate}</span>
+                    <span className="">{resumeData?.education?.endDate}</span>
                   </p>
-                  <p className="">{resumeData.education.place}</p>
+                  <p className="">{resumeData?.education?.place}</p>
                 </div>
               </div>
             </div>
@@ -203,7 +203,7 @@ const BkJlr = () => {
                 Key Skills
               </h1>
               <ul className="text-gray-500">
-                {resumeData.skills.split("---").map((skill, i) => (
+                {resumeData?.skills?.split("---")?.map((skill, i) => (
                   <li key={i} className="ml-5 list-disc text-xs text-gray-600">
                     {skill}
                   </li>
@@ -216,7 +216,7 @@ const BkJlr = () => {
                 Certification
               </h1>
               <ul className="">
-                {resumeData.certification.split("---").map((skill, i) => (
+                {resumeData?.certification?.split("---")?.map((skill, i) => (
                   <li key={i} className="ml-5 list-disc text-xs text-gray-500">
                     {skill + " "},
                   </li>
