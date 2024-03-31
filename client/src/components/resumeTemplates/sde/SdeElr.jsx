@@ -102,28 +102,28 @@ const SdeElr = () => {
                     {/* header section */}
                     <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                       <span className="-mt-1 font-bold text-[#ff0505]">
-                        {resumeData.experience.experience1.employer}
+                        {resumeData?.experience?.experience1?.employer}
                       </span>
                       <span className="text-[22px]">
-                        {resumeData.experience.experience1.jobTitle}
+                        {resumeData?.experience?.experience1?.jobTitle}
                       </span>
                     </h1>
                     {/* Date and place section */}
                     <div className="flex items-center justify-between text-gray-500">
                       <p className="">
                         <span className="">
-                          {resumeData.experience.experience1.startDate}
+                          {resumeData?.experience?.experience1?.startDate}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData.experience.experience1.endDate}
+                          {resumeData?.experience?.experience1?.endDate}
                         </span>
                       </p>
                       <p className="">India</p>
                     </div>
                     {/* description section - 1 */}
                     <ul className="ml-12 list-disc">
-                      {resumeData.experience.experience1.description
+                      {resumeData?.experience?.experience1?.description
                         .split("---")
                         .map((item, i) => (
                           <li key={i} className="text-sm">
@@ -137,28 +137,28 @@ const SdeElr = () => {
                     {/* header section */}
                     <h1 className="flex flex-col-reverse justify-start font-roboto text-[18px]">
                       <span className="-mt-1 font-bold text-[#ff0505]">
-                        {resumeData.experience.experience2.employer}
+                        {resumeData?.experience?.experience2?.employer}
                       </span>
                       <span className="text-[22px]">
-                        {resumeData.experience.experience2.jobTitle}
+                        {resumeData?.experience?.experience2?.jobTitle}
                       </span>
                     </h1>
                     {/* Date and place section */}
                     <div className="flex items-center justify-between text-gray-500">
                       <p className="">
                         <span className="">
-                          {resumeData.experience.experience2.startDate}
+                          {resumeData?.experience?.experience2?.startDate}
                         </span>
                         {" - "}
                         <span className="">
-                          {resumeData.experience.experience2.endDate}
+                          {resumeData?.experience?.experience2?.endDate}
                         </span>
                       </p>
                       <p className="">India</p>
                     </div>
                     {/* description section - 1 */}
                     <ul className="ml-12 list-disc">
-                      {resumeData.experience.experience2.description
+                      {resumeData?.experience?.experience2?.description
                         .split("---")
                         .map((item, i) => (
                           <li key={i} className="text-sm">
