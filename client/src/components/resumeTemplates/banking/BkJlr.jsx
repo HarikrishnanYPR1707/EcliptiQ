@@ -1,13 +1,20 @@
 import { userResumeData } from "@/Fetch/InformationFetch";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
+import { updateResumeTemplateRoute, fetchData } from "@/utils/DataFunctions";
+import Cookies from "js-cookie";
 
 const BkJlr = () => {
   const bkElrComponentDownloadRef = useRef(null);
+  const [resumeData, setResumeData] = useState({});
 
-  const data = userResumeData();
-  const resumeData = JSON.parse(data);
-  // console.log(resumeData);
+  const currentResumeId = Cookies.get("currentResumeId");
+  console.log(currentResumeId);
+
+  useEffect(() => {
+    updateResumeTemplateRoute(currentResumeId, "/templates/bk/elr");
+    fetchData(currentResumeId, setResumeData);
+  });
 
   const handlePrint = useReactToPrint({
     content: () => bkElrComponentDownloadRef.current,
@@ -36,8 +43,8 @@ const BkJlr = () => {
           {/* header section */}
           <div className="">
             <h1 className="flex h-[120px] items-center justify-center gap-3 bg-[#af416d] text-4xl uppercase text-white">
-              <span className="">{resumeData.personalDetails.firstName}</span>
-              <span className="">{resumeData.personalDetails.lastName}</span>
+              <span className="">{resumeData?.personalDetails?.firstName}</span>
+              <span className="">{resumeData?.personalDetails?.lastName}</span>
             </h1>
             {/* header bottom container */}
             <div className="flex items-start gap-10 px-5 pt-5">
