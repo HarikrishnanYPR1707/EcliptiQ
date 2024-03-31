@@ -8,6 +8,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
 import { useParams } from "react-router-dom";
+import moment from "moment";
 
 const Information = () => {
   const [userResumeData, setUserResumeData] = useState({
@@ -247,6 +248,11 @@ const Information = () => {
       // console.log(error.toJSON());
       console.log(error);
     }
+  };
+
+  const formatDate = (dateString) => {
+    const formattedDateString = moment(dateString).format("YYYY-MM-DD");
+    return formattedDateString;
   };
 
   useEffect(() => {
@@ -547,7 +553,7 @@ const Information = () => {
                 type="date"
                 placeholder="eg. Feb, 2024"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                value={userResumeData.education.startDate}
+                value={formatDate(userResumeData.education.startDate)}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
@@ -572,7 +578,7 @@ const Information = () => {
                 type="date"
                 placeholder="eg. Feb, 2024"
                 className="w-full rounded-xl border border-[#0a1846] bg-[#040a1a] py-3 pl-5 text-white placeholder:text-[#22283b] focus:border-none focus:outline focus:outline-purple-500"
-                value={userResumeData.education.endDate}
+                value={formatDate(userResumeData.education.startDate)}
                 onChange={(e) => {
                   setUserResumeData((prev) => ({
                     ...prev,
