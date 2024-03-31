@@ -57,20 +57,20 @@ const getUserData = async (req, res) => {
 
 const updateUserSingleData = async (req, res) => {
   try {
-    const { id } = req.query;
-    const { updatedResumeData } = req.body;
+    const { id, data } = req.body;
     console.log("--------------------------------------");
     console.log(id);
+    console.log(data);
     console.log("--------------------------------------");
 
-    const resumeData = await ResumeData.updateOne(
+    const updateResponse = await ResumeData.updateOne(
       { _id: id },
-      { $set: { data: updatedResumeData } }
+      { $set: { data: data } }
     );
     res.status(200).json({
       success: true,
-      message: "Resume data fetched successfully",
-      data: resumeData,
+      message: "Data updated successfully!!!!",
+      data: updateResponse,
     });
   } catch (error) {
     console.log(error);
