@@ -56,7 +56,7 @@ const SdeElr = () => {
                 </span>
               </h1>
               <h3 className="text-2xl font-bold text-[#ff0505]">
-                {resumeData.personalDetails.jobTitle}
+                {resumeData?.personalDetails?.jobTitle}
               </h3>
             </div>
             <div className="flex items-center justify-between">
