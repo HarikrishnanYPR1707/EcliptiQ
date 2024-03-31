@@ -100,7 +100,7 @@ const BkJlr = () => {
                   <div className="flex items-center justify-between text-xs text-gray-500">
                     <p className="">
                       <span className="">
-                        {resumeData.experience.experience1.employer}
+                        {resumeData?.experience?.experience1?.employer}
                       </span>
                       {", "}
                       <span className="">
