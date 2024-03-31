@@ -55,4 +55,32 @@ const getUserData = async (req, res) => {
   }
 };
 
-module.exports = { addUserData, getUserData, getUserSingleData };
+const updateUserSingleData = async (req, res) => {
+  try {
+    const { id } = req.query;
+    const { updatedResumeData } = req.body;
+    console.log("--------------------------------------");
+    console.log(id);
+    console.log("--------------------------------------");
+
+    const resumeData = await ResumeData.updateOne(
+      { _id: id },
+      { $set: { data: updatedResumeData } }
+    );
+    res.status(200).json({
+      success: true,
+      message: "Resume data fetched successfully",
+      data: resumeData,
+    });
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+};
+
+module.exports = {
+  addUserData,
+  getUserData,
+  getUserSingleData,
+  updateUserSingleData,
+};
