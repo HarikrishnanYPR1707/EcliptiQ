@@ -10,6 +10,7 @@ import {
   isUserLoginContext,
 } from "@/Contexts/userDataContext";
 import { auth } from "@/config/Firebase";
+import toast, { Toaster } from "react-hot-toast";
 
 const Home = () => {
   const { user, setUser } = useContext(userEmailContext);
@@ -59,6 +60,7 @@ const Home = () => {
           <div id="progressBar" className="h-[2px] w-full bg-purple-500" />
         </div>
       </div> */}
+      <Toaster position="bottom-right" reverseOrder={false} />
       <main className="relative flex flex-col items-center justify-center">
         <div className="mx-32 flex flex-col items-center justify-center text-center">
           {/* HERO SECTION  */}
@@ -77,7 +79,7 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : alert("Please Login");
+                    : toast.error("Please Login");
                 }}
               >
                 Create Your Resume
@@ -85,7 +87,7 @@ const Home = () => {
               <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
                 onClick={() => {
-                  isLogin ? navigate("/keyword") : alert("Please Login");
+                  isLogin ? navigate("/keyword") : toast.error("Please Login");
                 }}
               >
                 Keyword
@@ -162,7 +164,7 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : alert("Please Login");
+                    : toast.error("Please Login");
                 }}
               >
                 Create Your Resume
@@ -204,7 +206,7 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : alert("Please Login");
+                    : toast.error("Please Login");
                 }}
               >
                 Create Your Resume
@@ -302,7 +304,7 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : alert("Please Login");
+                    : toast.error("Please Login");
                 }}
               >
                 Create Your Resume
