@@ -23,7 +23,7 @@ const fetchData = async (currentResumeId, setResumeData) => {
     const response = await axios
       .get(`${BASEURL}/api/getSingleData?id=${currentResumeId}`)
       .then((res) => setResumeData(res.data.data[0].data));
-    // console.log(response);
+    console.log(response);
   } catch (error) {
     // console.log(error.toJSON());
     console.log(error);
