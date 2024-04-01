@@ -190,6 +190,7 @@ const Information = () => {
     useContext(currentResumeContext);
 
   const { resumeId } = useParams();
+  Cookies.set("currentResumeId", resumeId);
 
   // printing userResumeData ---
   console.clear();
@@ -211,6 +212,8 @@ const Information = () => {
           .get(`${BASEURL}/api/getSingleData?id=${resumeId}`)
           .then((res) => setUserResumeData(res.data.data[0].data));
         // console.log(response);
+
+        Cookies.set("currentResumeId", response.data.data._id);
       } catch (error) {
         // console.log(error.toJSON());
         console.log(error);
@@ -228,6 +231,8 @@ const Information = () => {
           id: resumeId,
           data: userResumeData,
         });
+
+        Cookies.set("currentResumeId", response.data.data._id);
 
         console.log("Data Updated!!!", response);
       } catch (error) {
@@ -247,10 +252,9 @@ const Information = () => {
           data: userResumeData,
         });
 
-        // setCurrentResumeId(response.data.data._id);
         Cookies.set("currentResumeId", response.data.data._id);
 
-        console.log("Post created:", response.data);
+        console.log("Post created:", response);
         console.log(currentResumeId);
       } catch (error) {
         // console.log(error.toJSON());
