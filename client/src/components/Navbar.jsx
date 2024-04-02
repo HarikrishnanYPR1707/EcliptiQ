@@ -13,12 +13,14 @@ import {
 const Navbar = () => {
   const [user, setUser] = useState(false);
   const [userData, setUserData] = useState(null);
+  const [userEmail, setUserEmail] = useState();
 
   // User Data context
   const data = useContext(userEmailContext);
   const { isLogin, setIsLogin } = useContext(isUserLoginContext);
 
   // console.log(userData);
+  console.log(userEmail);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
@@ -30,6 +32,8 @@ const Navbar = () => {
       setUser(true);
       setIsLogin(true);
     }
+
+    setUserEmail(currentUser.displayName);
 
     data.setUser(currentUser?.email);
     // console.log({ isLogin, setIsLogin });
@@ -69,9 +73,12 @@ const Navbar = () => {
         </Link>
         {user ? (
           <div className="absolute right-0 flex items-center justify-center gap-5">
-            <div className="w-[50px] overflow-hidden rounded-full border-2 border-purple-500">
+            <Link
+              to={`/profile/${userEmail}`}
+              className="w-[50px] overflow-hidden rounded-full border-2 border-purple-500"
+            >
               <img src={auth?.currentUser?.photoURL} alt="" />
-            </div>
+            </Link>
             <Button
               className=" bg-red-600 hover:bg-red-700"
               onClick={() => {
