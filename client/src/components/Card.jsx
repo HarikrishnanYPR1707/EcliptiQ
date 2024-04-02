@@ -6,10 +6,11 @@ const Card = ({ fileName, resumeRoute }) => {
 
   return (
     <div
-      onClick={() => navigate("/alsdkjf")}
+      onClick={() => navigate(resumeRoute)}
       className="w-[310px] cursor-pointer rounded-lg border border-purple-500 px-5 py-2 text-center font-bold"
     >
-      Harikrishnan-resume-[01-01-1001]
+      {/* Harikrishnan-resume-[01-01-1001] */}
+      {fileName}
     </div>
   );
 };
