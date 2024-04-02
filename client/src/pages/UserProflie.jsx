@@ -26,6 +26,7 @@ const UesrProflie = () => {
           />
           <p className="text-5xl font-black">{userName}</p>
         </div>
+
         {/* divider  */}
         <div className="my-5 h-[2px] w-full bg-purple-500" />
 
@@ -34,7 +35,10 @@ const UesrProflie = () => {
           <h1 className="relative w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
             My Stats
           </h1>
-          <h1 className="my-10">No. of Resumes Created: 10</h1>
+          <p className="my-5 flex w-fit items-center justify-center gap-2 text-xl">
+            <span className="font-bold">No. of Resumes Created:</span>
+            <span className="">10</span>
+          </p>
         </div>
       </div>
     </div>
