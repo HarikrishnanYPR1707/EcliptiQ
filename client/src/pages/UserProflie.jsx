@@ -28,7 +28,8 @@ const UesrProflie = () => {
         </div>
         {/* divider  */}
         <div className="my-5 h-[2px] w-full bg-purple-500" />
-        stats section
+
+        {/* stats section */}
         <div className="border border-blue-500">
           <h1 className=""></h1>
         </div>
