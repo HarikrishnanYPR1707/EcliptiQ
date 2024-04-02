@@ -170,9 +170,17 @@ const Template = () => {
             {/* template-2 */}
             <div className="flex w-[300px] flex-col items-center justify-center">
               <div className="w-[275px] overflow-hidden rounded-2xl">
-                <Link to="/templates/sde/jlr">
+                <button
+                  onClick={() => {
+                    currentResumeId === "newResume"
+                      ? toast.error(
+                          "Fill the required details in previous page to view your resume",
+                        )
+                      : navigate("/templates/sde/jlr");
+                  }}
+                >
                   <img src={SDEMidLevel} alt="" />
-                </Link>
+                </button>
               </div>
               <div className="w-[275px]">
                 <div className="my-2 w-fit rounded-md bg-purple-500 px-3 py-1 text-xs font-bold uppercase">
