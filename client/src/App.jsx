@@ -20,7 +20,7 @@ import {
 } from "./Contexts/userDataContext";
 import { currentResumeContext } from "./Contexts/ResumeContext";
 import { useState } from "react";
-import UserProfile from "./pages/UserProflie";
+import UserProfile from "./pages/UserProfile";
 
 const App = () => {
   const [user, setUser] = useState("");
