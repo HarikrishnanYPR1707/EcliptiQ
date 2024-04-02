@@ -49,7 +49,7 @@ const UesrProflie = () => {
   }, []);
 
   return (
-    <div className="h-screen border border-purple-500">
+    <div className="h-screen">
       <div className="mx-auto w-full max-w-[1050px]">
         {/* directory section  */}
         <div className="mt-10 flex w-fit items-center justify-center gap-3 ">
@@ -86,7 +86,7 @@ const UesrProflie = () => {
         <div className="my-5 h-[2px] w-full bg-purple-500" />
 
         {/* Resume Section  */}
-        <div className="group border border-blue-500">
+        <div className="group">
           <h1 className="relative mb-5 w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
             My Resumes
           </h1>
