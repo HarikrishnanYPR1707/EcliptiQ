@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BankingEntryLevel from "../assets/images/Banking/Banking-Entry-Level.jpeg";
 import BankingMidLevel from "../assets/images/Banking/Banking-Mid-Career.jpeg";
 import BankingSeniorLevel from "../assets/images/Banking/Banking-Senior-Level.jpeg";
@@ -103,6 +103,8 @@ const Template = () => {
 
   // localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
 
+  const navigate = useNavigate();
+
   const currentResumeId = Cookies.get("currentResumeId");
   console.log(currentResumeId);
 
@@ -142,9 +144,15 @@ const Template = () => {
             {/* template-1 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="/templates/sde/elr">
+                <button
+                  onClick={() => {
+                    currentResumeId === "newResume"
+                      ? toast.error("Please Login")
+                      : navigate("/templates/sde/elr");
+                  }}
+                >
                   <img src={SDEEntryLevel} alt="" />
-                </Link>
+                </button>
               </div>
               <div className="">
                 <div className="my-2 w-fit rounded-md bg-purple-500 px-3 py-1 text-xs font-bold uppercase">
