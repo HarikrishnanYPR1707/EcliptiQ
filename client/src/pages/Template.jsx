@@ -99,7 +99,7 @@ const Template = () => {
     language: "Malayalam---English---Hindi---Marathi",
   };
 
-  localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
+  // localStorage.setItem("userResumeData", JSON.stringify(userResumeData));
 
   return (
     <section className="h-full">
