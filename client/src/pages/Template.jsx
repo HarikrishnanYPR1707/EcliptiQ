@@ -352,9 +352,17 @@ const Template = () => {
             {/* template-2 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="/templates/bk/jlr">
+                <button
+                  onClick={() => {
+                    currentResumeId === "newResume"
+                      ? toast.error(
+                          "Fill the required details in previous page to view your resume",
+                        )
+                      : navigate("/templates/bk/jlr");
+                  }}
+                >
                   <img src={BankingMidLevel} alt="" />
-                </Link>
+                </button>
               </div>
               <div className="">
                 <div className="my-2 w-fit rounded-md bg-purple-500 px-3 py-1 text-xs font-bold uppercase">
