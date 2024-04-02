@@ -40,6 +40,12 @@ const UesrProflie = () => {
             <span className="">10</span>
           </p>
         </div>
+
+        {/* divider  */}
+        <div className="my-5 h-[2px] w-full bg-purple-500" />
+
+        {/* Resume Section  */}
+        <div className=""></div>
       </div>
     </div>
   );
