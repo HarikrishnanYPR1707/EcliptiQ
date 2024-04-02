@@ -26,8 +26,6 @@ const UesrProflie = () => {
         .get(`${BASEURL}/api/getAllData?userEmail=${user}`)
         .then((res) => setAllData(res.data.data));
       // console.log(response);
-
-      Cookies.set("profileData", allData);
     } catch (error) {
       // console.log(error.toJSON());
       console.log(error);
@@ -35,9 +33,16 @@ const UesrProflie = () => {
   };
 
   // fetchAllData();
+  console.log("------------------------------------------");
   console.log(allData);
 
-  const profileData = Cookies.get("profileData");
+  localStorage.setItem("profileData", JSON.stringify(allData));
+
+  const profileData = localStorage.getItem("profileData");
+
+  console.log(profileData);
+
+  console.log("------------------------------------------");
 
   useEffect(() => {
     fetchAllData();
@@ -91,8 +96,11 @@ const UesrProflie = () => {
               .map((card, index) => (
                 <Card key={index} />
               ))} */}
-            {allData.map((card, index) => (
-              <Card />
+            {profileData.map((card, index) => (
+              <Card
+                fileName={card.fileName}
+                resumeRoute={card.resumeTemplateRoute}
+              />
             ))}
             <div
               onClick={() => navigate("/information/newResume")}
