@@ -18,7 +18,7 @@ const UesrProflie = () => {
           <span className="h-[20px] w-[2px] rotate-[30deg] bg-purple-500" />
           <p className="font-medium">{userName}</p>
         </div>
-        <div className="mt-5 flex w-fit items-center justify-center">
+        <div className="mt-5 flex w-fit items-center justify-center gap-5">
           <img
             src={userProfileUrlLink}
             alt="Profile Image"
