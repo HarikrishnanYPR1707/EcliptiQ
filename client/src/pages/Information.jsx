@@ -232,8 +232,6 @@ const Information = () => {
           data: userResumeData,
         });
 
-        Cookies.set("currentResumeId", response.data.data._id);
-
         console.log("Data Updated!!!", response);
       } catch (error) {
         // console.log(error.toJSON());
@@ -255,6 +253,7 @@ const Information = () => {
         Cookies.set("currentResumeId", response.data.data._id);
 
         console.log("Post created:", response);
+
         console.log(currentResumeId);
       } catch (error) {
         // console.log(error.toJSON());
