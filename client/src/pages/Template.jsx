@@ -110,7 +110,7 @@ const Template = () => {
 
   return (
     <section className="h-full">
-      <Toaster />
+      <Toaster position="bottom-right" reverseOrder={false} />
       {/* ---------------------------- NEW DESIGN ---------------------------- */}
       {/* header section */}
       <div className="relative bg-banner bg-cover bg-center py-14">
