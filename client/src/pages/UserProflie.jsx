@@ -45,7 +45,11 @@ const UesrProflie = () => {
         <div className="my-5 h-[2px] w-full bg-purple-500" />
 
         {/* Resume Section  */}
-        <div className=""></div>
+        <div className="group border border-blue-500">
+          <h1 className="relative w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+            My Resumes
+          </h1>
+        </div>
       </div>
     </div>
   );
