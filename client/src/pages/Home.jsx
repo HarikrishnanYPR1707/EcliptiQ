@@ -79,7 +79,9 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : toast.error("Please Login");
+                    : toast.error(
+                        "Please Login to create and save your resume.",
+                      );
                 }}
               >
                 Create Your Resume
@@ -87,7 +89,11 @@ const Home = () => {
               <button
                 className="mt-5 w-[250px] rounded-2xl bg-purple-500 py-5 font-bold text-white hover:bg-purple-600"
                 onClick={() => {
-                  isLogin ? navigate("/keyword") : toast.error("Please Login");
+                  isLogin
+                    ? navigate("/keyword")
+                    : toast.error(
+                        "Please Login to create and save your resume.",
+                      );
                 }}
               >
                 Keyword
@@ -164,7 +170,9 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : toast.error("Please Login");
+                    : toast.error(
+                        "Please Login to create and save your resume.",
+                      );
                 }}
               >
                 Create Your Resume
@@ -206,7 +214,9 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : toast.error("Please Login");
+                    : toast.error(
+                        "Please Login to create and save your resume.",
+                      );
                 }}
               >
                 Create Your Resume
@@ -304,7 +314,9 @@ const Home = () => {
                 onClick={() => {
                   isLogin
                     ? navigate("/information/newResume")
-                    : toast.error("Please Login");
+                    : toast.error(
+                        "Please Login to create and save your resume.",
+                      );
                 }}
               >
                 Create Your Resume
