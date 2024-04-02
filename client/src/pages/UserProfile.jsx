@@ -78,7 +78,7 @@ const UesrProflie = () => {
           </h1>
           <p className="my-5 flex w-fit items-center justify-center gap-2 text-xl">
             <span className="font-bold">No. of Resumes Created:</span>
-            <span className="">10</span>
+            <span className="">{JSON.parse(profileData).length}</span>
           </p>
         </div>
 
@@ -96,10 +96,11 @@ const UesrProflie = () => {
               .map((card, index) => (
                 <Card key={index} />
               ))} */}
-            {profileData.map((card, index) => (
+            {JSON.parse(profileData).map((card, index) => (
               <Card
-                fileName={card.fileName}
+                fileName={card.data.fileName}
                 resumeRoute={card.resumeTemplateRoute}
+                key={index}
               />
             ))}
             <div
