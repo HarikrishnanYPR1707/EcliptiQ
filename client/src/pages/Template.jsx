@@ -147,7 +147,9 @@ const Template = () => {
                 <button
                   onClick={() => {
                     currentResumeId === "newResume"
-                      ? toast.error("Please Login")
+                      ? toast.error(
+                          "Fill the required details in previous page to view your resume",
+                        )
                       : navigate("/templates/sde/elr");
                   }}
                 >
