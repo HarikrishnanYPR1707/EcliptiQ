@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { userProfileUrlContext } from "@/Contexts/userDataContext";
 import { IoHome } from "react-icons/io5";
+import Card from "@/components/Card";
 
 const UesrProflie = () => {
   const { userProfileUrlLink } = useContext(userProfileUrlContext);
@@ -46,9 +47,16 @@ const UesrProflie = () => {
 
         {/* Resume Section  */}
         <div className="group border border-blue-500">
-          <h1 className="relative w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+          <h1 className="relative mb-5 w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
             My Resumes
           </h1>
+          <div className="">
+            {Array(10)
+              .fill(true)
+              .map((card, index) => (
+                <Card />
+              ))}
+          </div>
         </div>
       </div>
     </div>
