@@ -14,13 +14,24 @@ const UesrProflie = () => {
         <div className="mt-10 flex w-fit items-center justify-center gap-3 ">
           <IoHome className="text-[17px]" />
           <span className="h-[20px] w-[2px] rotate-[30deg] bg-purple-500" />
-          <p className="font-bold">Profile</p>
+          <p className="font-medium">Profile</p>
           <span className="h-[20px] w-[2px] rotate-[30deg] bg-purple-500" />
-          <p className="font-bold">{userName}</p>
+          <p className="font-medium">{userName}</p>
         </div>
-
+        <div className="mt-5 flex w-fit items-center justify-center">
+          <img
+            src={userProfileUrlLink}
+            alt="Profile Image"
+            className="aspect-square w-[150px] rounded-full"
+          />
+          <p className="text-5xl font-black">{userName}</p>
+        </div>
         {/* divider  */}
-        <span className="h-[10px] w-full bg-red-500" />
+        <div className="my-5 h-[2px] w-full bg-purple-500" />
+        stats section
+        <div className="border border-blue-500">
+          <h1 className=""></h1>
+        </div>
       </div>
     </div>
   );
