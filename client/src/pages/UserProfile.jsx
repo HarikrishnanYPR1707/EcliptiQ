@@ -3,8 +3,10 @@ import { useParams } from "react-router-dom";
 import { userProfileUrlContext } from "@/Contexts/userDataContext";
 import { IoHome } from "react-icons/io5";
 import Card from "@/components/Card";
+import { useNavigate } from "react-router-dom";
 
 const UesrProflie = () => {
+  const navigate = useNavigate();
   const { userProfileUrlLink } = useContext(userProfileUrlContext);
   const { userName } = useParams();
 
@@ -50,12 +52,18 @@ const UesrProflie = () => {
           <h1 className="relative mb-5 w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
             My Resumes
           </h1>
-          <div className="">
+          <div className="grid grid-cols-3 gap-5">
             {Array(10)
               .fill(true)
               .map((card, index) => (
                 <Card />
               ))}
+            <div
+              onClick={() => navigate("/information/newResume")}
+              className="w-[310px] cursor-pointer rounded-lg border border-dashed border-purple-500 px-5 py-2 text-center font-bold uppercase"
+            >
+              Create New Resume
+            </div>
           </div>
         </div>
       </div>
