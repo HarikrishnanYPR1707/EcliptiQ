@@ -19,6 +19,7 @@ import {
 } from "./Contexts/userDataContext";
 import { currentResumeContext } from "./Contexts/ResumeContext";
 import { useState } from "react";
+import UserProfile from "./pages/UesrProflie";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -42,6 +43,7 @@ const App = () => {
                     element={<Information />}
                   />
                   <Route path="/keyword" element={<KeyWords />} />
+                  <Route path="/profile/:userName" element={<UserProfile />} />
                   <Route path="/templates/sde/elr" element={<SdeElr />} />
                   <Route path="/templates/sde/jlr" element={<SdeJlr />} />
                   <Route path="/templates/sde/slr" element={<SdeSlr />} />
