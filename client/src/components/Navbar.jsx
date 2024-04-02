@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // import { ModeToggle } from "./ui/ModeToggle";
 import { useContext } from "react";
 import {
+  userProfileUrlContext,
   userEmailContext,
   isUserLoginContext,
 } from "@/Contexts/userDataContext";
@@ -18,9 +19,13 @@ const Navbar = () => {
   // User Data context
   const data = useContext(userEmailContext);
   const { isLogin, setIsLogin } = useContext(isUserLoginContext);
+  const { userProfileUrlLink, setUserProfileUrlLink } = useContext(
+    userProfileUrlContext,
+  );
 
   // console.log(userData);
   console.log(userEmail);
+  console.log(userProfileUrlLink);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
@@ -34,6 +39,7 @@ const Navbar = () => {
     }
 
     setUserEmail(currentUser.displayName);
+    setUserProfileUrlLink(currentUser.photoURL);
 
     data.setUser(currentUser?.email);
     // console.log({ isLogin, setIsLogin });
