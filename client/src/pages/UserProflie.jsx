@@ -9,7 +9,7 @@ const UesrProflie = () => {
 
   return (
     <div className="h-screen border border-purple-500">
-      <div className="mx-auto w-full max-w-[1050px] border border-purple-500">
+      <div className="mx-auto w-full max-w-[1050px]">
         {/* directory section  */}
         <div className="mt-10 flex w-fit items-center justify-center gap-3 ">
           <IoHome className="text-[17px]" />
@@ -30,8 +30,11 @@ const UesrProflie = () => {
         <div className="my-5 h-[2px] w-full bg-purple-500" />
 
         {/* stats section */}
-        <div className="border border-blue-500">
-          <h1 className=""></h1>
+        <div className="group">
+          <h1 className="relative w-fit text-3xl font-black before:absolute before:left-0 before:top-full before:h-[3px] before:w-[65%] before:bg-purple-500 before:duration-700 before:ease-inOutQuint group-hover:before:w-full">
+            My Stats
+          </h1>
+          <h1 className="my-10">No. of Resumes Created: 10</h1>
         </div>
       </div>
     </div>
