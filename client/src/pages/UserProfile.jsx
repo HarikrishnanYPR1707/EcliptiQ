@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import {
-  userProfileUrlContext,
   userEmailContext,
+  userProfileUrlContext,
 } from "@/Contexts/userDataContext";
-import { IoHome } from "react-icons/io5";
-import Card from "@/components/Card";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { BASEURL } from "@/assets/API/api";
+import Card from "@/components/Card";
+import axios from "axios";
+import Cookies from "js-cookie";
+import { useContext, useEffect, useState } from "react";
+import { IoHome } from "react-icons/io5";
+import { useNavigate, useParams } from "react-router-dom";
 
 const UesrProflie = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const UesrProflie = () => {
   const { user } = useContext(userEmailContext);
   const { userName } = useParams();
 
-  const [allData, setAllData] = useState();
+  const [allData, setAllData] = useState([]);
 
   console.log(user);
 
@@ -25,16 +25,20 @@ const UesrProflie = () => {
       const response = await axios
         .get(`${BASEURL}/api/getAllData?userEmail=${user}`)
         .then((res) => setAllData(res.data.data));
-      console.log(response);
+      // console.log(response);
+
+      Cookies.set("profileData", allData);
     } catch (error) {
       // console.log(error.toJSON());
       console.log(error);
     }
   };
 
+  // fetchAllData();
   console.log(allData);
 
-  // fetchAllData();
+  const profileData = Cookies.get("profileData");
+
   useEffect(() => {
     fetchAllData();
   }, []);
@@ -82,11 +86,14 @@ const UesrProflie = () => {
             My Resumes
           </h1>
           <div className="grid grid-cols-3 gap-5">
-            {Array(10)
+            {/* {Array(10)
               .fill(true)
               .map((card, index) => (
                 <Card key={index} />
-              ))}
+              ))} */}
+            {allData.map((card, index) => (
+              <Card />
+            ))}
             <div
               onClick={() => navigate("/information/newResume")}
               className="w-[310px] cursor-pointer rounded-lg border border-dashed border-purple-500 px-5 py-2 text-center font-bold uppercase"
