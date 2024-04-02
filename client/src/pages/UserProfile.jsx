@@ -1,14 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { userProfileUrlContext } from "@/Contexts/userDataContext";
+import {
+  userProfileUrlContext,
+  userEmailContext,
+} from "@/Contexts/userDataContext";
 import { IoHome } from "react-icons/io5";
 import Card from "@/components/Card";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { BASEURL } from "@/assets/API/api";
 
 const UesrProflie = () => {
   const navigate = useNavigate();
   const { userProfileUrlLink } = useContext(userProfileUrlContext);
+  const { user } = useContext(userEmailContext);
   const { userName } = useParams();
+
+  const [allData, setAllData] = useState();
+
+  console.log(user);
+
+  const fetchAllData = async () => {
+    try {
+      const response = await axios
+        .get(`${BASEURL}/api/getAllData?userEmail=${user}`)
+        .then((res) => setAllData(res.data.data));
+      console.log(response);
+    } catch (error) {
+      // console.log(error.toJSON());
+      console.log(error);
+    }
+  };
+
+  console.log(allData);
+
+  // fetchAllData();
+  useEffect(() => {
+    fetchAllData();
+  }, []);
 
   return (
     <div className="h-screen border border-purple-500">
@@ -56,7 +85,7 @@ const UesrProflie = () => {
             {Array(10)
               .fill(true)
               .map((card, index) => (
-                <Card />
+                <Card key={index} />
               ))}
             <div
               onClick={() => navigate("/information/newResume")}
