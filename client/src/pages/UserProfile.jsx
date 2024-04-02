@@ -5,7 +5,6 @@ import {
 import { BASEURL } from "@/assets/API/api";
 import Card from "@/components/Card";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { useContext, useEffect, useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { useNavigate, useParams } from "react-router-dom";
@@ -100,6 +99,7 @@ const UesrProflie = () => {
               <Card
                 fileName={card.data.fileName}
                 resumeRoute={card.resumeTemplateRoute}
+                id={card._id}
                 key={index}
               />
             ))}
