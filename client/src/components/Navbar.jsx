@@ -24,8 +24,8 @@ const Navbar = () => {
   );
 
   // console.log(userData);
-  console.log(userEmail);
-  console.log(userProfileUrlLink);
+  // console.log(userEmail);
+  // console.log(userProfileUrlLink);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUserData(currentUser);
