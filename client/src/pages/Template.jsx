@@ -196,9 +196,17 @@ const Template = () => {
             {/* template-3 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="/templates/sde/slr">
+                <button
+                  onClick={() => {
+                    currentResumeId === "newResume"
+                      ? toast.error(
+                          "Fill the required details in previous page to view your resume",
+                        )
+                      : navigate("/templates/sde/slr");
+                  }}
+                >
                   <img src={SDESeniorLevel} alt="" />
-                </Link>
+                </button>
               </div>
               <div className="">
                 <div className="my-2 w-fit rounded-md bg-purple-500 px-3 py-1 text-xs font-bold uppercase">
@@ -227,9 +235,17 @@ const Template = () => {
             {/* template-1 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="/templates/da/elr">
+                <button
+                  onClick={() => {
+                    currentResumeId === "newResume"
+                      ? toast.error(
+                          "Fill the required details in previous page to view your resume",
+                        )
+                      : navigate("/templates/da/elr");
+                  }}
+                >
                   <img src={DAEntryLevel} alt="" />
-                </Link>
+                </button>
               </div>
               <div className="">
                 <div className="my-2 w-fit rounded-md bg-purple-500 px-3 py-1 text-xs font-bold uppercase">
@@ -245,9 +261,17 @@ const Template = () => {
             {/* template-2 */}
             <div className="w-[300px]">
               <div className="overflow-hidden rounded-2xl">
-                <Link to="/templates/da/jlr">
+                <button
+                  onClick={() => {
+                    currentResumeId === "newResume"
+                      ? toast.error(
+                          "Fill the required details in previous page to view your resume",
+                        )
+                      : navigate("/templates/da/jlr");
+                  }}
+                >
                   <img src={DAMidLevel} alt="" />
-                </Link>
+                </button>
               </div>
               <div className="">
                 <div className="my-2 w-fit rounded-md bg-purple-500 px-3 py-1 text-xs font-bold uppercase">
