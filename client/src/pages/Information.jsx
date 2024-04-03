@@ -222,7 +222,8 @@ const Information = () => {
     }
   };
 
-  const updateResumeData = async () => {
+  const updateResumeData = async (event) => {
+    event.preventDefault();
     if (resumeId === "newResume") {
       return;
     } else {
@@ -1666,8 +1667,8 @@ const Information = () => {
           onClick={
             resumeId !== "newResume"
               ? null
-              : () => {
-                  handleDataSubmission();
+              : (event) => {
+                  handleDataSubmission(event);
                   toast.success("Resume Data Saved successfully");
                 }
           }
@@ -1684,8 +1685,8 @@ const Information = () => {
           onClick={
             resumeId === "newResume"
               ? null
-              : () => {
-                  updateResumeData();
+              : (event) => {
+                  updateResumeData(event);
                   toast.success("Resume Data Updated successfully");
                 }
           }
