@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { BASEURL } from "../assets/API/api.js";
 import { useParams } from "react-router-dom";
 import moment from "moment";
+import toast, { Toaster } from "react-hot-toast";
 
 const Information = () => {
   const [isSaveButtonActive, setIsSaveButtonActive] = useState(true);
@@ -275,6 +276,7 @@ const Information = () => {
 
   return (
     <div className="flex flex-col items-center justify-center border-white pb-5">
+      <Toaster position="bottom-right" reverseOrder={false} />
       {/* image container */}
       <div className="relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-banner bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -1661,7 +1663,14 @@ const Information = () => {
       </div>
       <div className="flex w-[760px] items-center justify-between">
         <button
-          onClick={handleDataSubmission}
+          onClick={
+            resumeId !== "newResume"
+              ? null
+              : () => {
+                  handleDataSubmission();
+                  toast.success("Resume Data Saved successfully");
+                }
+          }
           // className="w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
           className={
             isSaveButtonActive
@@ -1672,7 +1681,14 @@ const Information = () => {
           Save
         </button>
         <button
-          onClick={updateResumeData}
+          onClick={
+            resumeId === "newResume"
+              ? null
+              : () => {
+                  updateResumeData();
+                  toast.success("Resume Data Updated successfully");
+                }
+          }
           className={
             isUpdateButtonActive
               ? "w-[200px] rounded-lg bg-purple-500 py-2 text-sm font-semibold"
