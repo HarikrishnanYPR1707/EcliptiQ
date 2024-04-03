@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { useReactToPrint } from "react-to-print";
 import Cookies from "js-cookie";
 import { updateResumeTemplateRoute, fetchData } from "@/utils/DataFunctions";
+import { Link } from "react-router-dom";
 
 const SdeElr = () => {
   const sdeElrComponentDownloadRef = useRef(null);
@@ -251,12 +252,20 @@ const SdeElr = () => {
             </div>
           </div>
         </div>
-        <button
-          onClick={handlePrint}
-          className="rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
-        >
-          Download Template
-        </button>
+        <div className="mb-5 flex w-[800px] items-center justify-around">
+          <button
+            onClick={handlePrint}
+            className="w-[200px] rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
+          >
+            Download Template
+          </button>
+          <Link
+            to={`/information/${currentResumeId}`}
+            className="w-[200px] rounded-lg bg-purple-500 px-3 py-2 text-center text-sm font-bold"
+          >
+            Update
+          </Link>
+        </div>
       </div>
     </div>
   );
