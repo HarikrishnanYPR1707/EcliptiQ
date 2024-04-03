@@ -83,7 +83,7 @@ const Navbar = () => {
               to={`/profile/${userEmail}`}
               className="w-[50px] overflow-hidden rounded-full border-2 border-purple-500"
             >
-              <img src={auth?.currentUser?.photoURL} alt="" />
+              <img src={userData?.photoURL} alt="" />
             </Link>
             <Button
               className=" bg-red-600 hover:bg-red-700"
