@@ -1,6 +1,7 @@
 import { fetchData, updateResumeTemplateRoute } from "@/utils/DataFunctions";
 import Cookies from "js-cookie";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 
 const BkSlr = () => {
@@ -239,12 +240,20 @@ const BkSlr = () => {
             </div>
           </div>
         </div>
-        <button
-          onClick={handlePrint}
-          className="rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
-        >
-          Download Template
-        </button>
+        <div className="mb-5 flex w-[800px] items-center justify-around">
+          <button
+            onClick={handlePrint}
+            className="w-[200px] rounded-lg bg-purple-500 px-3 py-2 text-sm font-bold"
+          >
+            Download Template
+          </button>
+          <Link
+            to={`/information/${currentResumeId}`}
+            className="w-[200px] rounded-lg bg-purple-500 px-3 py-2 text-center text-sm font-bold"
+          >
+            Update
+          </Link>
+        </div>
       </div>
     </div>
   );
