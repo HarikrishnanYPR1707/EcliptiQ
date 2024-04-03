@@ -82,11 +82,17 @@ const SdeSlr = () => {
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData?.experience?.experience1?.startDate}
+                      {resumeData?.experience?.experience1?.startDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData?.experience?.experience1?.endDate}
+                      {resumeData?.experience?.experience1?.endDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                   </p>
                   <p className="">
@@ -120,11 +126,17 @@ const SdeSlr = () => {
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData?.experience?.experience2?.startDate}
+                      {resumeData?.experience?.experience2?.startDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData?.experience?.experience2?.endDate}
+                      {resumeData?.experience?.experience2?.endDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                   </p>
                   <p className="">
@@ -158,11 +170,17 @@ const SdeSlr = () => {
                 <div className="flex items-center justify-between text-gray-500">
                   <p className="">
                     <span className="">
-                      {resumeData?.experience?.experience3?.startDate}
+                      {resumeData?.experience?.experience3?.startDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                     {" - "}
                     <span className="">
-                      {resumeData?.experience?.experience3?.endDate}
+                      {resumeData?.experience?.experience3?.endDate.substr(
+                        0,
+                        10,
+                      )}
                     </span>
                   </p>
                   <p className="">
@@ -199,9 +217,13 @@ const SdeSlr = () => {
               {/* Date and place section */}
               <div className="flex items-center justify-between text-gray-500">
                 <p className="">
-                  <span className="">{resumeData?.education?.startDate}</span>
+                  <span className="">
+                    {resumeData?.education?.startDate.substr(0, 10)}
+                  </span>
                   {" - "}
-                  <span className="">{resumeData?.education?.endDate}</span>
+                  <span className="">
+                    {resumeData?.education?.endDate.substr(0, 10)}
+                  </span>
                 </p>
                 <p className="">{resumeData?.education?.place}</p>
               </div>
