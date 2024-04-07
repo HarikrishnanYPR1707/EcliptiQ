@@ -7,6 +7,7 @@ Welcome to EcliptiQ, your ultimate destination for creating professional resumes
 - **Modern Templates**: Choose from a variety of sleek and stylish templates designed to impress employers.
 - **Easy Editing**: Our intuitive editor allows you to customize every aspect of your resume effortlessly.
 - **Tech Stack**: Built with cutting-edge technologies including **Reactjs**, **MongoDB**, **Express**, **Nodejs** & **GSAP** for a seamless user experience.
+- **Keywords Section**: Choose the necessary keywords according to your domain
 
 <!-- ## How It Works
 
