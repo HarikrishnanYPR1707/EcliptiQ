@@ -16,9 +16,3 @@ Welcome to EcliptiQ, your ultimate destination for creating professional resumes
 2. **Choose Templates**: Browse through our diverse selection of professionally designed templates. Select the one that best suits your style and profession, and watch your resume come to life instantly.
 
 3. **Download & Share**: Once you're satisfied with your resume, simply download it in PDF format or share it directly with employers and recruiters. It's that easy!
-
-<!-- ## Why Choose Us
-
-- **Professional Results**: Our templates and tools are crafted to help you create polished resumes that leave a lasting impression.
-- **Efficiency**: Save time and effort with our streamlined process, allowing you to focus on what matters most – your career.
-- **Cutting-Edge Technology**: Powered by the latest technologies, we provide a seamless user experience for creating resumes. -->
