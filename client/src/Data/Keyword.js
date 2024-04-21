@@ -335,7 +335,7 @@ export const naKeywordData = {
 };
 
 export const dbaKeywordData = {
-  title: "Network Administrator",
+  title: "Database Administrator",
   keywords: [
     "Database Administration",
     "SQL",
@@ -389,7 +389,7 @@ export const dbaKeywordData = {
   ],
 };
 export const fsdKeywordData = {
-  title: "Network Administrator",
+  title: "Full-Stack Developer",
   keywords: [
     "Full-Stack Development",
     "Frontend Development",
