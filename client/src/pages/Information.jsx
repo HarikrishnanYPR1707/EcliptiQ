@@ -271,6 +271,10 @@ const Information = () => {
     return formattedDateString;
   };
 
+  const fillForm = () => {
+    setUserResumeData();
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -286,6 +290,7 @@ const Information = () => {
           Drop your deets in the data zone
           {/* Build Your Career Canvas: Input Your Details */}
         </p>
+        <div className="" onClick={() => fillForm()} />
       </div>
       {/* Main Input Container */}
       <div className="flex w-full max-w-[800px] flex-col items-center justify-center gap-5 px-5 py-10">
