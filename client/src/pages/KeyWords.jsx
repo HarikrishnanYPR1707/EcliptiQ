@@ -25,7 +25,7 @@ const KeyWords = () => {
       </div>
       {/* keyword section */}
       <div className="w-[850px] border border-blue-500">
-        <div className="my-5 flex gap-5 overflow-x-scroll border border-red-500">
+        <div className="my-5 flex gap-5 overflow-x-scroll border border-red-500 px-5 py-2">
           <button
             onClick={() => setDomain(sdeKeywordData)}
             className="whitespace-nowrap rounded-lg bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
