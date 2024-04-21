@@ -4,6 +4,9 @@ import {
   gdKeywordData,
   mgnKeywordData,
   daKeywordData,
+  fsdKeywordData,
+  dbaKeywordData,
+  naKeywordData,
 } from "@/Data/Keyword";
 
 const KeyWords = () => {
@@ -21,31 +24,49 @@ const KeyWords = () => {
         </p>
       </div>
       {/* keyword section */}
-      <div className="w-[850px]">
-        <div className="my-5 flex items-center justify-center gap-5">
+      <div className="w-[850px] border border-blue-500">
+        <div className="my-5 flex gap-5 overflow-x-scroll border border-red-500">
           <button
             onClick={() => setDomain(sdeKeywordData)}
-            className="rounded-lg bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+            className="whitespace-nowrap rounded-lg bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
           >
             Software Development Engineer
           </button>
           <button
             onClick={() => setDomain(gdKeywordData)}
-            className="rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+            className="whitespace-nowrap rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
           >
             Graphic Designer
           </button>
           <button
             onClick={() => setDomain(mgnKeywordData)}
-            className="rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+            className="whitespace-nowrap rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
           >
             Management
           </button>
           <button
             onClick={() => setDomain(daKeywordData)}
-            className="rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+            className="whitespace-nowrap rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
           >
             Data Analyst
+          </button>
+          <button
+            onClick={() => setDomain(fsdKeywordData)}
+            className="whitespace-nowrap rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+          >
+            Full-Stack Developer
+          </button>
+          <button
+            onClick={() => setDomain(dbaKeywordData)}
+            className="whitespace-nowrap rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+          >
+            Database Administrator
+          </button>
+          <button
+            onClick={() => setDomain(naKeywordData)}
+            className="whitespace-nowrap rounded-xl bg-purple-500 px-5 py-2 font-bold hover:bg-purple-600"
+          >
+            Network Administrator
           </button>
         </div>
         {/* sde section */}
